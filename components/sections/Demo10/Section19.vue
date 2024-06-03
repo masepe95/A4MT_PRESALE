@@ -18,7 +18,8 @@
                     <div id="bp-1-1" class="blog-post wow fadeInUp">
                         <!-- BLOG POST IMAGE -->
                         <div class="blog-post-img mb-35">
-                            <img class="img-fluid r-16" src="/assets/images/blog/post-8-img.jpg" alt="blog-post-image" />
+                            <img class="img-fluid r-16" src="/assets/images/blog/post-8-img.jpg"
+                                alt="blog-post-image" />
                         </div>
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
@@ -26,18 +27,24 @@
                             <span class="post-tag color--pink-400">Product News</span>
                             <!-- Post Link -->
                             <h6 class="s-20 w-700">
-                                <NuxtLink tp="/single-post">Aliqum mullam porta blandit: tempor sapien and gravida</NuxtLink>
+                                <NuxtLink tp="/single-post">Aliqum mullam porta blandit: tempor sapien and gravida
+                                </NuxtLink>
                             </h6>
                             <!-- Text -->
-                            <p>Egestas luctus vitae augue and ipsum ultrice quisque in cursus lacus feugiat congue diam ultrice laoreet sagittis</p>
+                            <p>Egestas luctus vitae augue and ipsum ultrice quisque in cursus lacus feugiat congue diam
+                                ultrice laoreet sagittis</p>
                             <!-- Post Meta -->
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
-                                    <li><p class="p-sm w-500">By Helen J.</p></li>
+                                    <li>
+                                        <p class="p-sm w-500">By Helen J.</p>
+                                    </li>
                                     <li class="meta-list-divider">
                                         <p><span class="flaticon-minus"></span></p>
                                     </li>
-                                    <li><p class="p-sm">Apr 28, 2024</p></li>
+                                    <li>
+                                        <p class="p-sm">Apr 28, 2024</p>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -50,7 +57,8 @@
                     <div id="bp-1-2" class="blog-post wow fadeInUp">
                         <!-- BLOG POST IMAGE -->
                         <div class="blog-post-img mb-35">
-                            <img class="img-fluid r-16" src="/assets/images/blog/post-2-img.jpg" alt="blog-post-image" />
+                            <img class="img-fluid r-16" src="/assets/images/blog/post-2-img.jpg"
+                                alt="blog-post-image" />
                         </div>
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
@@ -58,18 +66,23 @@
                             <span class="post-tag color--green-400">Community</span>
                             <!-- Post Link -->
                             <h6 class="s-20 w-700">
-                                <NuxtLink tp="/single-post">Porttitor cursus fusce egestas CEO cursus at magna sapien suscipit and egestas ipsum</NuxtLink>
+                                <NuxtLink tp="/single-post">Porttitor cursus fusce egestas CEO cursus at magna sapien
+                                    suscipit and egestas ipsum</NuxtLink>
                             </h6>
                             <!-- Text -->
                             <p>Aliqum mullam ipsum vitae and blandit vitae tempor sapien and donec lipsum</p>
                             <!-- Post Meta -->
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
-                                    <li><p class="p-sm w-500">By Martex Team</p></li>
+                                    <li>
+                                        <p class="p-sm w-500">By A4ManagementTools Team</p>
+                                    </li>
                                     <li class="meta-list-divider">
                                         <p><span class="flaticon-minus"></span></p>
                                     </li>
-                                    <li><p class="p-sm">Apr 14, 2024</p></li>
+                                    <li>
+                                        <p class="p-sm">Apr 14, 2024</p>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -82,7 +95,8 @@
                     <div id="bp-1-3" class="blog-post wow fadeInUp">
                         <!-- BLOG POST IMAGE -->
                         <div class="blog-post-img mb-35">
-                            <img class="img-fluid r-16" src="/assets/images/blog/post-5-img.jpg" alt="blog-post-image" />
+                            <img class="img-fluid r-16" src="/assets/images/blog/post-5-img.jpg"
+                                alt="blog-post-image" />
                         </div>
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
@@ -90,18 +104,24 @@
                             <span class="post-tag color--purple-400">Freelancer Tips</span>
                             <!-- Post Link -->
                             <h6 class="s-20 w-700">
-                                <NuxtLink tp="/single-post">Cubilia laoreet augue egestas and Martex magna impedit</NuxtLink>
+                                <NuxtLink tp="/single-post">Cubilia laoreet augue egestas and A4ManagementTools magna
+                                    impedit</NuxtLink>
                             </h6>
                             <!-- Text -->
-                            <p>Luctus vitae egestas augue and ipsum ultrice quisque in cursus lacus feugiat egets congue ultrice sagittis laoreet</p>
+                            <p>Luctus vitae egestas augue and ipsum ultrice quisque in cursus lacus feugiat egets congue
+                                ultrice sagittis laoreet</p>
                             <!-- Post Meta -->
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
-                                    <li><p class="p-sm w-500">By Miranda Green</p></li>
+                                    <li>
+                                        <p class="p-sm w-500">By Miranda Green</p>
+                                    </li>
                                     <li class="meta-list-divider">
                                         <p><span class="flaticon-minus"></span></p>
                                     </li>
-                                    <li><p class="p-sm">Mar 27, 2024</p></li>
+                                    <li>
+                                        <p class="p-sm">Mar 27, 2024</p>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
