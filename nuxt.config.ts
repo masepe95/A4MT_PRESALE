@@ -1,4 +1,5 @@
 import { resolve } from "path";
+
 export default defineNuxtConfig({
     alias: {
         "@": resolve(__dirname, "/")
@@ -11,21 +12,21 @@ export default defineNuxtConfig({
         }
     },
     css: [
-      "~/assets/css/vendors/bootstrap.min.css",
-      "~/assets/css/vendors/flaticon.css",
-      "~/assets/css/vendors/menu.css",
-      "~/assets/css/vendors/fade-down.css",
-      "~/assets/css/vendors/magnific-popup.css",
-      "~/assets/css/vendors/animate.css",
-      "~/assets/css/main.scss",
-      "~/assets/css/responsive.scss",
-      "~/assets/css/color-scheme/blue.scss",
-      "~/assets/css/color-scheme/crocus.scss",
-      "~/assets/css/color-scheme/green.scss",
-      "~/assets/css/color-scheme/magenta.scss",
-      "~/assets/css/color-scheme/pink.scss",
-      "~/assets/css/color-scheme/skyblue.scss",
-      "~/assets/css/color-scheme/violet.scss",
+        "~/assets/css/vendors/bootstrap.min.css",
+        "~/assets/css/vendors/flaticon.css",
+        "~/assets/css/vendors/menu.css",
+        "~/assets/css/vendors/fade-down.css",
+        "~/assets/css/vendors/magnific-popup.css",
+        "~/assets/css/vendors/animate.css",
+        "~/assets/css/main.scss",
+        "~/assets/css/responsive.scss",
+        "~/assets/css/color-scheme/blue.scss",
+        "~/assets/css/color-scheme/crocus.scss",
+        "~/assets/css/color-scheme/green.scss",
+        "~/assets/css/color-scheme/magenta.scss",
+        "~/assets/css/color-scheme/pink.scss",
+        "~/assets/css/color-scheme/skyblue.scss",
+        "~/assets/css/color-scheme/violet.scss",
     ],
     modules: [
         [
@@ -48,4 +49,8 @@ export default defineNuxtConfig({
         ],
         "nuxt-swiper"
     ],
+    plugins: [
+        '~/plugins/bootstrap.client.js',
+        '~/plugins/wow.client.js'
+    ]
 });

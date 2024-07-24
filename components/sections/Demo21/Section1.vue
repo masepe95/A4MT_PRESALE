@@ -6,7 +6,7 @@
                 <div class="col-md-10 col-lg-9">
                     <div class="hero-21-txt wow fadeInUp">
                         <!-- Title -->
-                        <h2 class="s-56 w-700">Innovative Management Solutions for Modern Businesses</h2>
+                        <h2 class="s-56 w-700">80+ Tools for managers, designed by managers!</h2>
                         <!-- Buttons -->
                         <div class="btns-group">
                             <a href="#banner-13" class="btn r-04 btn--theme hover--theme">Get started</a>
