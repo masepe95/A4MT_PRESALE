@@ -1,24 +1,23 @@
 <template>
-    <form @submit.prevent="handleFormSubmit">
-        <div class="searchbar input-group px-2 position-relative">
+    <form @submit.prevent="handleFormSubmit" class="search-form">
+        <div class="searchbar input-group">
             <input type="text" v-model="searchQuery" class="form-control" :placeholder="inputProps.placeholder"
                 aria-describedby="button-addon2" @input="handleInput" @focus="handleFocus" @blur="handleBlur" />
             <button type="button" class="clear-btn" v-if="searchQuery" @click="clearSearchQuery">
-                <i class="material-icons">close</i>
+                X
             </button>
-            <button type="submit" class="d-flex align-items-center search-btn" id="button-addon2">
-                <i class="material-icons fs-5 px-4">search</i>
+            <button type="submit" class="search-btn" id="button-addon2">
+                Inspire me
             </button>
         </div>
-        <div v-if="showSuggestions && suggestions.length > 0" class="position-relative me-5">
-            <ul class="dropdown-menu" aria-labelledby="searchQuery" style="display: block;">
+        <div v-if="showSuggestions && suggestions.length > 0" class="suggestions">
+            <ul class="list-group">
                 <li v-for="(suggestion, index) in suggestions" :key="suggestion.id"
-                    @mousedown.prevent="handleSuggestionSelected(suggestion)" class="dropdown-item">
+                    @mousedown.prevent="handleSuggestionSelected(suggestion)" class="list-group-item">
                     {{ suggestion.description }}
                 </li>
             </ul>
         </div>
-        <div style="height: 30px;"></div>
     </form>
 </template>
 
@@ -115,125 +114,102 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+.search-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .searchbar {
     width: 100%;
+    max-width: 600px;
+    /* Adjust this value to make the search bar narrower */
+    margin: 0 auto;
+    /* Center the search bar */
+    display: flex;
+    align-items: center;
     position: relative;
-
-    input {
-        border-radius: 30px;
-        position: relative;
-        padding-right: 40px;
-
-        &:focus {
-            outline-style: none;
-            box-shadow: none;
-            border-right-color: rgba(black, 0.8);
-            box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.7);
-        }
-    }
-
-    button.clear-btn {
-        position: absolute;
-        top: 55%;
-        transform: translateY(-50%);
-        right: 100px;
-        background: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: 6;
-
-        i {
-            color: black;
-        }
-
-        &:hover {
-            i {
-                color: #000;
-            }
-        }
-    }
-
-    button.search-btn {
-        height: 40px;
-        background-color: white;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-        border: none;
-        transition: background-color 0.2s;
-
-        i {
-            color: black;
-        }
-
-        &:hover {
-            background-color: #000;
-
-            i {
-                color: white;
-            }
-        }
-    }
 }
 
-input[type="text"]:focus {
-    outline-style: none;
-    box-shadow: none;
-    border-right-color: rgba(black, 0.8);
-    box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.7);
+input {
+    width: 100%;
+    border-radius: 30px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
 }
 
-ul {
-    width: 37%;
-    left: 60px;
-    max-height: 300px;
-    overflow-y: auto;
-
-    @media (max-width: 767px) {
-        width: 90%;
-        left: 5%;
-        padding: 0;
-        max-height: 150px;
-    }
+input:focus {
+    border-color: #000;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-li {
-    list-style-type: none;
-    word-wrap: break-word;
-
-    &:hover {
-        background-color: rgba(black, 0.25);
-    }
-}
-
-.dropdown-menu {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+.clear-btn {
     position: absolute;
-    left: 20px;
-    width: 92%;
-
-    @media (max-width: 767px) {
-        width: 90%;
-        left: 5%;
-        padding: 0;
-    }
+    top: 50%;
+    right: 130px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-a {
-    text-decoration: none;
+.clear-btn i {
+    color: #000;
 }
 
-.dropdown-item {
-    white-space: normal;
-    padding: 10px;
+.clear-btn:hover i {
+    color: #555;
+}
 
-    &:hover {
-        cursor: pointer;
-    }
+.search-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.search-btn i {
+    color: #000;
+}
+
+.search-btn:hover i {
+    color: #555;
+}
+
+.suggestions {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-group-item {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background: #f0f0f0;
 }
 </style>

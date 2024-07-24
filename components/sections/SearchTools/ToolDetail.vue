@@ -1,57 +1,31 @@
 <template>
     <transition name="modal">
-        <div class="modal fade show" tabindex="-1" role="dialog" v-if="show">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade show d-flex align-items-center justify-content-center" tabindex="-1" role="dialog"
+            v-if="show" @click.self="closeModal">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="modal-background"
-                        :style="{ backgroundImage: `url(${tool && tool.image ? '/assets/images/' + tool.image : '/assets/images/A4XXX_Hidden_Banner.jpg'})` }">
-                    </div>
-                    <div class="modal-background-overlay"></div>
-                    <div class="modal-overlay">
-                        <div class="modal-header">
-                            <h5 class="modal-title">{{ tool ? tool.name : 'Tool Details' }}</h5>
-                            <button type="button" class="btn-close" @click="closeModal"></button>
+                    <div class="card">
+                        <div class="card-img-top-wrapper position-relative">
+                            <img class="card-img-top"
+                                :src="tool && tool.image ? '/assets/images/' + tool.image : '/assets/images/A4XXX_Hidden_Banner.jpg'"
+                                alt="Tool Image">
+                            <button type="button" class="close btn-close" @click="closeModal">&times;</button>
                         </div>
-                        <div class="modal-body">
-                            <nav v-if="tool">
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active font-weight-bold" id="nav-summary-tab"
-                                        data-bs-toggle="tab" href="#nav-summary" role="tab" aria-controls="nav-summary"
-                                        aria-selected="true">Description</a>
-                                    <a class="nav-item nav-link font-weight-bold" id="nav-problems-tab"
-                                        data-bs-toggle="tab" href="#nav-problems" role="tab"
-                                        aria-controls="nav-problems" aria-selected="false">Solved Problems</a>
-                                    <a class="nav-item nav-link font-weight-bold" id="nav-results-tab"
-                                        data-bs-toggle="tab" href="#nav-results" role="tab" aria-controls="nav-results"
-                                        aria-selected="false">Key Results</a>
+                        <div class="card-body">
+                            <h5 class="card-title mb-4 text-center">{{ tool ? tool.name : 'Tool Details' }}</h5>
+                            <div v-if="tool" class="row">
+                                <div class="col-md-6">
+                                    <h6 class="mb-3 text-center">Solved Problems</h6>
+                                    <ul class="list-group list-group-flush" v-html="formattedSolvedProblems"></ul>
                                 </div>
-                            </nav>
-                            <div class="tab-content" id="nav-tabContent" v-if="tool">
-                                <div class="tab-pane fade show active modal-scroll-content" id="nav-summary"
-                                    role="tabpanel" aria-labelledby="nav-summary-tab">
-                                    <div class="content-scroll">
-                                        <p>{{ tool.syntax }}</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade modal-scroll-content" id="nav-problems" role="tabpanel"
-                                    aria-labelledby="nav-problems-tab">
-                                    <div class="content-scroll">
-                                        <ul class="my-text-blue" v-html="formattedSolvedProblems"></ul>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade modal-scroll-content" id="nav-results" role="tabpanel"
-                                    aria-labelledby="nav-results-tab">
-                                    <div class="content-scroll">
-                                        <ul class="my-text-blue" v-html="formattedKeyResults"></ul>
-                                    </div>
+                                <div class="col-md-6">
+                                    <h6 class="mb-3 text-center">Key Results</h6>
+                                    <ul class="list-group list-group-flush" v-html="formattedKeyResults"></ul>
                                 </div>
                             </div>
                             <div v-else>
                                 <p>No tool selected.</p>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn my-btn" @click="closeModal">Chiudi</button>
                         </div>
                     </div>
                 </div>
@@ -81,7 +55,7 @@ export default {
                 .split('.')
                 .map(problem => problem.trim())
                 .filter(problem => problem.length > 0)
-                .map(problem => `<li>${problem}</li>`)
+                .map(problem => `<li class="list-group-item">${problem}</li>`)
                 .join('');
         },
         formattedKeyResults() {
@@ -90,7 +64,7 @@ export default {
                 .split('.')
                 .map(result => result.trim())
                 .filter(result => result.length > 0)
-                .map(result => `<li>${result}</li>`)
+                .map(result => `<li class="list-group-item">${result}</li>`)
                 .join('');
         }
     },
@@ -111,7 +85,7 @@ export default {
 .modal-dialog {
     max-width: 80vw;
     width: auto;
-    height: 80vh;
+    height: auto;
     position: relative;
 }
 
@@ -124,133 +98,51 @@ export default {
     height: 100%;
 }
 
-.modal-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: -1;
-}
-
-.modal-background-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    z-index: -1;
-}
-
-.modal-overlay {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 20px;
-    width: 60%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.modal-header {
-    border-bottom: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.modal-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #225E83;
-}
-
-.btn-close {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    line-height: 1;
-    color: #000;
-    opacity: 0.5;
-    cursor: pointer;
-}
-
-.btn-close:hover {
-    opacity: 0.8;
-}
-
-.nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
-    color: #225E83;
-    background-color: transparent;
-    border-color: transparent transparent #225E83;
-    border-bottom: 2px solid #225E83;
-}
-
-.nav-tabs .nav-link {
-    border: 1px solid transparent;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    color: #225E83;
-    opacity: 0.8;
-    font-weight: 700;
-}
-
-.nav-tabs .nav-link:hover {
-    border-color: transparent transparent #e9ecef;
-    opacity: 1;
-}
-
-.tab-content {
-    padding-top: 15px;
-    flex-grow: 1;
-}
-
-.tab-content h6 {
-    color: #225E83;
-}
-
-.tab-content p {
-    color: #225E83;
-    font-weight: 500;
-    text-align: justify;
-}
-
-.content-scroll {
-    max-height: 200px;
+.card {
+    max-height: 80vh;
     overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
-.content-scroll::-webkit-scrollbar {
-    display: none;
+.card-body {
+    position: relative;
 }
 
-.modal-enter-active,
-.modal-leave-active {
-    transition: opacity 0.5s;
+
+.card-img-top-wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
 }
 
-.modal-enter,
-.modal-leave-to {
-    opacity: 0;
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (min-width: 992px) {
+    .card-img-top {
+        max-height: 500px;
+    }
 }
 
 @media (max-width: 768px) {
     .modal-dialog {
-        max-width: 90vw;
-        height: 70vh;
+        max-width: 95vw;
     }
 
-    .modal-overlay {
-        width: 90%;
-        height: 70%;
+    .card {
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        max-width: 100vw;
+    }
+
+    .card {
+        max-height: 60vh;
     }
 }
 </style>
