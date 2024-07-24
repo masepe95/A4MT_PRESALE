@@ -117,6 +117,7 @@ export default {
 <style scoped>
 .search-form {
     width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,10 +125,6 @@ export default {
 
 .searchbar {
     width: 100%;
-    max-width: 600px;
-    /* Adjust this value to make the search bar narrower */
-    margin: 0 auto;
-    /* Center the search bar */
     display: flex;
     align-items: center;
     position: relative;
@@ -194,7 +191,7 @@ input:focus {
     border: 1px solid #ccc;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    max-height: 400px;
+    max-height: 200px;
     overflow-y: auto;
 }
 
