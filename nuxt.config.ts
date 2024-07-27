@@ -51,6 +51,7 @@ export default defineNuxtConfig({
     ],
     plugins: [
         '~/plugins/bootstrap.client.js',
-        '~/plugins/wow.client.js'
+        '~/plugins/wow.client.js',
+        '~/plugins/v-click-outside.js',
     ]
 });

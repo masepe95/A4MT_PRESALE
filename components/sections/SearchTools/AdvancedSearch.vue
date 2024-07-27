@@ -2,39 +2,33 @@
     <div id="advanced-search">
         <div class="container">
             <div class="filter-section">
-                <div class="filter-group">
-                    <div class="dropdown">
-                        <button class="dropbtn">Select Categories</button>
-                        <div class="dropdown-content">
-                            <div v-for="category in categories" :key="category.id" class="dropdown-item">
-                                <input type="checkbox" :id="'category-' + category.id" :value="category.id"
-                                    v-model="form.selectedCategories" @change="filteredTools">
-                                <label :for="'category-' + category.id">{{ category.description }}</label>
-                            </div>
+                <div class="filter-group" v-click-outside="() => closeDropdown('categories')">
+                    <button class="dropbtn" @click="toggleDropdown('categories')">Select Categories</button>
+                    <div class="dropdown-content" :class="{ show: dropdowns.categories }">
+                        <div v-for="category in categories" :key="category.id" class="dropdown-item">
+                            <input type="checkbox" :id="'category-' + category.id" :value="category.id"
+                                v-model="form.selectedCategories" @change="filteredTools">
+                            <label :for="'category-' + category.id">{{ category.description }}</label>
                         </div>
                     </div>
                 </div>
-                <div class="filter-group">
-                    <div class="dropdown">
-                        <button class="dropbtn">Select Levels</button>
-                        <div class="dropdown-content">
-                            <div v-for="level in levels" :key="level.id" class="dropdown-item">
-                                <input type="checkbox" :id="'level-' + level.id" :value="level.id"
-                                    v-model="form.selectedLevels" @change="filteredTools">
-                                <label :for="'level-' + level.id">{{ level.description }}</label>
-                            </div>
+                <div class="filter-group" v-click-outside="() => closeDropdown('levels')">
+                    <button class="dropbtn" @click="toggleDropdown('levels')">Select Levels</button>
+                    <div class="dropdown-content" :class="{ show: dropdowns.levels }">
+                        <div v-for="level in levels" :key="level.id" class="dropdown-item">
+                            <input type="checkbox" :id="'level-' + level.id" :value="level.id"
+                                v-model="form.selectedLevels" @change="filteredTools">
+                            <label :for="'level-' + level.id">{{ level.description }}</label>
                         </div>
                     </div>
                 </div>
-                <div class="filter-group">
-                    <div class="dropdown">
-                        <button class="dropbtn">Select Programs</button>
-                        <div class="dropdown-content">
-                            <div v-for="program in programs" :key="program.id" class="dropdown-item">
-                                <input type="checkbox" :id="'program-' + program.id" :value="program.id"
-                                    v-model="form.selectedPrograms" @change="filteredTools">
-                                <label :for="'program-' + program.id">{{ program.description }}</label>
-                            </div>
+                <div class="filter-group" v-click-outside="() => closeDropdown('programs')">
+                    <button class="dropbtn" @click="toggleDropdown('programs')">Select Programs</button>
+                    <div class="dropdown-content" :class="{ show: dropdowns.programs }">
+                        <div v-for="program in programs" :key="program.id" class="dropdown-item">
+                            <input type="checkbox" :id="'program-' + program.id" :value="program.id"
+                                v-model="form.selectedPrograms" @change="filteredTools">
+                            <label :for="'program-' + program.id">{{ program.description }}</label>
                         </div>
                     </div>
                 </div>
@@ -91,12 +85,25 @@ export default {
             isLoading: false,
             selectedTool: null,
             showModal: false,
+            dropdowns: {
+                categories: false,
+                levels: false,
+                programs: false
+            }
         };
     },
     watch: {
-        promptId: 'filteredTools'
+        promptId() {
+            this.filteredTools();
+        }
     },
     methods: {
+        toggleDropdown(dropdown) {
+            this.dropdowns[dropdown] = !this.dropdowns[dropdown];
+        },
+        closeDropdown(dropdown) {
+            this.dropdowns[dropdown] = false;
+        },
         async filteredTools() {
             this.tools = [];
             const params = {
@@ -225,7 +232,7 @@ export default {
     color: #333;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-content.show {
     display: block;
 }
 
@@ -281,14 +288,11 @@ export default {
 @media (max-width: 576px) {
     .dropbtn {
         font-size: 14px;
+        padding: 8px 10px;
     }
 
     .dropdown-content .dropdown-item {
-        font-size: 14px;
-    }
-
-    .results-container {
-        height: calc(100vh - 380px);
+        padding: 6px 8px;
     }
 }
 </style>
