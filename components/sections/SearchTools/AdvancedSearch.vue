@@ -1,23 +1,43 @@
 <template>
     <div id="advanced-search">
-
         <div class="container">
             <div class="filter-section">
-                <select v-model="form.selectedCategory" class="form-select" @change="filteredTools">
-                    <option value="">Filter Categories</option>
-                    <option v-for="category in categories" :key="category.id" :value="category.id">{{
-                        category.description }}</option>
-                </select>
-                <select v-model="form.selectedLevel" class="form-select" @change="filteredTools">
-                    <option value="">Filter Levels</option>
-                    <option v-for="level in levels" :key="level.id" :value="level.id">{{ level.description }}
-                    </option>
-                </select>
-                <select v-model="form.selectedProgram" class="form-select" @change="filteredTools">
-                    <option value="">Filter Programs</option>
-                    <option v-for="program in programs" :key="program.id" :value="program.id">{{ program.description
-                        }}</option>
-                </select>
+                <div class="filter-group">
+                    <div class="dropdown">
+                        <button class="dropbtn">Select Categories</button>
+                        <div class="dropdown-content">
+                            <div v-for="category in categories" :key="category.id" class="dropdown-item">
+                                <input type="checkbox" :id="'category-' + category.id" :value="category.id"
+                                    v-model="form.selectedCategories" @change="filteredTools">
+                                <label :for="'category-' + category.id">{{ category.description }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <div class="dropdown">
+                        <button class="dropbtn">Select Levels</button>
+                        <div class="dropdown-content">
+                            <div v-for="level in levels" :key="level.id" class="dropdown-item">
+                                <input type="checkbox" :id="'level-' + level.id" :value="level.id"
+                                    v-model="form.selectedLevels" @change="filteredTools">
+                                <label :for="'level-' + level.id">{{ level.description }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <div class="dropdown">
+                        <button class="dropbtn">Select Programs</button>
+                        <div class="dropdown-content">
+                            <div v-for="program in programs" :key="program.id" class="dropdown-item">
+                                <input type="checkbox" :id="'program-' + program.id" :value="program.id"
+                                    v-model="form.selectedPrograms" @change="filteredTools">
+                                <label :for="'program-' + program.id">{{ program.description }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="results-count">
                 We have found {{ tools.length }} tools.
@@ -26,8 +46,8 @@
                 <ToolList v-if="!isLoading" :tools="tools" @tool-click="openModal" />
             </div>
         </div>
+        <ToolDetail :tool="selectedTool" :show="showModal" @close="closeModal" />
     </div>
-    <ToolDetail :tool="selectedTool" :show="showModal" @close="closeModal" />
 </template>
 
 <script>
@@ -59,9 +79,9 @@ export default {
         return {
             endpoint: toolsEndpoint,
             form: {
-                selectedCategory: "",
-                selectedLevel: "",
-                selectedProgram: ""
+                selectedCategories: [],
+                selectedLevels: [],
+                selectedPrograms: []
             },
             tools: [],
             categories: [],
@@ -74,49 +94,43 @@ export default {
         };
     },
     watch: {
-        promptId: 'filteredTools',
-        'form.selectedCategory': 'filteredTools',
-        'form.selectedLevel': 'filteredTools',
-        'form.selectedProgram': 'filteredTools',
+        promptId: 'filteredTools'
     },
     methods: {
-        filteredTools() {
+        async filteredTools() {
             this.tools = [];
             const params = {
-                category: this.form.selectedCategory,
-                level: this.form.selectedLevel,
-                program: this.form.selectedProgram,
+                categories: this.form.selectedCategories.join(','),
+                levels: this.form.selectedLevels.join(','),
+                programs: this.form.selectedPrograms.join(','),
                 prompt_id: this.promptId,
             };
+
             this.isLoading = true;
-            axios.get(toolsEndpoint, { params })
-                .then((res) => {
-                    this.tools = res.data;
-                })
-                .catch((err) => { console.error(err) })
-                .then(() => {
-                    this.isLoading = false;
-                });
+            try {
+                const res = await axios.get(toolsEndpoint, { params });
+                this.tools = res.data;
+            } catch (err) {
+                console.error('Errore durante il filtraggio dei tool:', err);
+                this.errors.push('Errore durante il filtraggio dei tool.');
+            } finally {
+                this.isLoading = false;
+            }
         },
 
-        fetchOptions() {
-            axios.get(categoriesEndpoint)
-                .then((res) => {
-                    this.categories = res.data;
-                })
-                .catch((err) => { console.error(err) });
-
-            axios.get(levelsEndpoint)
-                .then((res) => {
-                    this.levels = res.data;
-                })
-                .catch((err) => { console.error(err) });
-
-            axios.get(programsEndpoint)
-                .then((res) => {
-                    this.programs = res.data;
-                })
-                .catch((err) => { console.error(err) });
+        async fetchOptions() {
+            try {
+                const [categoriesRes, levelsRes, programsRes] = await Promise.all([
+                    axios.get(categoriesEndpoint),
+                    axios.get(levelsEndpoint),
+                    axios.get(programsEndpoint)
+                ]);
+                this.categories = categoriesRes.data;
+                this.levels = levelsRes.data;
+                this.programs = programsRes.data;
+            } catch (err) {
+                console.error('Errore nel caricamento delle opzioni:', err);
+            }
         },
 
         openModal(tool) {
@@ -127,8 +141,8 @@ export default {
             this.showModal = false;
         }
     },
-    created() {
-        this.fetchOptions();
+    async created() {
+        await this.fetchOptions();
         this.filteredTools();
     },
 };
@@ -137,7 +151,7 @@ export default {
 <style scoped>
 #advanced-search {
     min-height: 100vh;
-    background-color: #fff;
+    background-color: #f8f9fa;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -147,6 +161,8 @@ export default {
 
 .container {
     padding: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .filter-section {
@@ -154,20 +170,75 @@ export default {
     justify-content: space-between;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+    flex: 1;
+    margin: 10px;
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropbtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 5px;
+}
+
+.dropdown-content .dropdown-item {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content .dropdown-item label {
+    margin-left: 10px;
+    color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .results-count {
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: #333;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .results-container {
-    max-width: 1200px;
     width: 100%;
     overflow-y: auto;
-    padding-bottom: 20px;
 }
 
 .results-container::-webkit-scrollbar {
@@ -194,12 +265,30 @@ export default {
         align-items: center;
     }
 
+    .filter-group {
+        width: 100%;
+    }
+
     .results-count {
         font-size: 1rem;
     }
 
     .results-container {
-        height: calc(100vh - 250px);
+        height: calc(100vh - 320px);
+    }
+}
+
+@media (max-width: 576px) {
+    .dropbtn {
+        font-size: 14px;
+    }
+
+    .dropdown-content .dropdown-item {
+        font-size: 14px;
+    }
+
+    .results-container {
+        height: calc(100vh - 380px);
     }
 }
 </style>

@@ -1,25 +1,25 @@
 <template>
     <form @submit.prevent="handleFormSubmit" class="search-form">
-        <div class="searchbar input-group">
-            <input type="text" v-model="searchQuery" class="form-control" :placeholder="inputProps.placeholder"
-                aria-describedby="button-addon2" @input="handleInput" @focus="handleFocus" @blur="handleBlur" />
-            <button type="button" class="clear-btn" v-if="searchQuery" @click="clearSearchQuery">
-                X
-            </button>
-            <button type="submit" class="search-btn" id="button-addon2">
-                Inspire me
-            </button>
-        </div>
-        <div v-if="showSuggestions && suggestions.length > 0" class="suggestions">
-            <ul class="list-group">
-                <li v-for="(suggestion, index) in suggestions" :key="suggestion.id"
-                    @mousedown.prevent="handleSuggestionSelected(suggestion)" class="list-group-item">
-                    {{ suggestion.description }}
-                </li>
-            </ul>
+        <div class="searchbar-container">
+            <div class="searchbar input-group">
+                <input type="text" v-model="searchQuery" class="form-control" :placeholder="inputProps.placeholder"
+                    aria-describedby="button-addon2" @input="handleInput" @focus="handleFocus" @blur="handleBlur" />
+                <button type="submit" class="search-btn" id="button-addon2">
+                    Inspire me
+                </button>
+            </div>
+            <div v-if="showSuggestions && suggestions.length > 0" class="suggestions">
+                <ul class="list-group">
+                    <li v-for="(suggestion, index) in suggestions" :key="suggestion.id"
+                        @mousedown.prevent="handleSuggestionSelected(suggestion)" class="list-group-item">
+                        {{ suggestion.description }}
+                    </li>
+                </ul>
+            </div>
         </div>
     </form>
 </template>
+
 
 <script>
 export default {
@@ -33,6 +33,7 @@ export default {
     data() {
         return {
             searchQuery: this.initialPrompt,
+            previousQuery: this.initialPrompt,
             suggestions: [],
             allPrompts: [],
             showSuggestions: false,
@@ -53,6 +54,7 @@ export default {
     watch: {
         initialPrompt(newPrompt) {
             this.searchQuery = newPrompt;
+            this.previousQuery = newPrompt;
         }
     },
     methods: {
@@ -95,98 +97,88 @@ export default {
             }
         },
         handleFocus() {
-            if (this.searchQuery.trim() === '') {
-                this.suggestions = this.allPrompts;
-            }
+            this.previousQuery = this.searchQuery;
+            this.searchQuery = '';
             this.showSuggestions = true;
         },
         handleBlur() {
+            if (this.searchQuery.trim() === '') {
+                this.searchQuery = this.previousQuery;
+            }
             setTimeout(() => {
                 this.showSuggestions = false;
             }, 100);
-        },
-        clearSearchQuery() {
-            this.searchQuery = '';
-            this.suggestions = [];
-            this.showSuggestions = false;
         }
     },
 };
+
 </script>
 
 <style scoped>
 .search-form {
     width: 100%;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1rem;
+}
+
+.searchbar-container {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    padding: 10px;
+    /* Add padding here */
 }
 
 .searchbar {
     width: 100%;
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 input {
     width: 100%;
-    border-radius: 30px;
-    padding-right: 40px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     border: 1px solid #ccc;
-    padding: 10px 15px;
+    padding: 12px 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
-    border-color: #000;
+    border-color: #007bff;
     outline: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.clear-btn {
-    position: absolute;
-    top: 50%;
-    right: 130px;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.clear-btn i {
-    color: #000;
-}
-
-.clear-btn:hover i {
-    color: #555;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
 }
 
 .search-btn {
-    border: none;
-    background: transparent;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 1px solid #007bff;
+    background: #007bff;
+    color: white;
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    padding: 10px 20px;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-.search-btn i {
-    color: #000;
-}
-
-.search-btn:hover i {
-    color: #555;
+.search-btn:hover {
+    background: #0056b3;
+    border-color: #0056b3;
 }
 
 .suggestions {
     position: absolute;
-    width: 100%;
     top: 100%;
-    left: 0;
-    z-index: 5;
+    width: 100%;
+    z-index: 1000;
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 0 0 10px 10px;
@@ -204,6 +196,7 @@ input:focus {
 .list-group-item {
     padding: 10px 15px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .list-group-item:hover {
