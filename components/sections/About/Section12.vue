@@ -1,21 +1,30 @@
 <template>
     <section class="bg--white-400 py-100 ct-03 content-section division">
-        <div class="container">
+        <div class="container mt-5">
             <div class="row d-flex align-items-center">
                 <!-- TEXT BLOCK -->
                 <div class="col-md-6 col-lg-5 order-last order-md-2">
                     <div class="txt-block left-column wow fadeInRight">
                         <!-- Section ID -->
-                        <span class="section-id">One-Stop Solution</span>
+                        <!-- <span class="section-id">Benefits for Organizations</span> -->
                         <!-- Title -->
-                        <h2 class="s-46 w-700">Data-driven digital marketing</h2>
+                        <h2 class="s-46 w-700">Benefits for Organizations</h2>
                         <!-- List -->
                         <ul class="simple-list">
                             <li class="list-item">
-                                <p>Tempor sapien quaerat undo ipsum laoreet purus and sapien dolor ociis ultrice ipsum aliquam undo congue dolor cursus congue varius magnis</p>
+                                <p class="mb-0">2 Global Self-assessments. 1 three-year development plan featuring over
+                                    300 suggested
+                                    activities.</p>
                             </li>
                             <li class="list-item">
-                                <p class="mb-0">Cursus purus suscipit vitae cubilia magnis diam volute egestas sapien ultrice auctor</p>
+                                <p class="mb-0">1 Partner with over 80 uniform A4ManagementTools.</p>
+                            </li>
+                            <li class="list-item">
+                                <p class="mb-0">Transfer know-how and key information to the organization by design
+                                    without compromises.</p>
+                            </li>
+                            <li class="list-item">
+                                <p class="mb-0">Correct and documented management practice.</p>
                             </li>
                         </ul>
                     </div>

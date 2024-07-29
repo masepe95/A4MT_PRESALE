@@ -8,22 +8,34 @@
                         <div class="col-md-6 order-last order-md-2">
                             <div class="txt-block left-column wow fadeInRight">
                                 <!-- Section ID -->
-                                <span class="section-id">Enhance Engagement</span>
+                                <!-- <span class="section-id">Enhance Engagement</span> -->
                                 <!-- Title -->
-                                <h2 class="s-46 w-700">Automate your way to success</h2>
+                                <h2 class="s-46 w-700">Benefits for Employees</h2>
                                 <!-- Text -->
-                                <p>Sodales tempor sapien quaerat congue eget ipsum laoreet turpis neque auctor vitae eros dolor luctus placerat magna ligula cursus and purus pretium</p>
-                                <!-- Small Title -->
-                                <h5 class="s-24 w-700 h5-title">The smarter way to work</h5>
-                                <!-- Text -->
-                                <p class="mb-0">Sapien tempor sodales quaerat ipsum undo congue laoreet turpis neque auctor turpis vitae dolor luctus placerat magna and ligula cursus purus vitae</p>
+                                <ul class="simple-list">
+                                    <li class="list-item">
+                                        <p class="mb-0">Immediately employable tools. Results emerge quickly.
+                                        </p>
+                                    </li>
+                                    <li class="list-item">
+                                        <p class="mb-0">Clearer instructions: The integrated procedures simplify the
+                                            task.
+                                        </p>
+                                    </li>
+                                    <li class="list-item">
+                                        <p class="mb-0">10K instructions, tips, and recommendations available step by
+                                            step.
+                                        </p>
+                                    </li>
+
+                                </ul>
                             </div>
                         </div>
                         <!-- END TEXT BLOCK -->
                         <!-- IMAGE BLOCK -->
                         <div class="col-md-6 order-first order-md-2">
                             <div class="img-block right-column wow fadeInLeft">
-                                <img class="img-fluid" src="/assets/images/img-05.png" alt="content-image" />
+                                <img class="img-fluid" src="/assets/images/img-18.png" alt="content-image" />
                             </div>
                         </div>
                     </div>

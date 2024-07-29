@@ -10,7 +10,7 @@
                                 <!-- Section ID -->
                                 <span class="section-id">Our Mission</span>
                                 <!-- Title -->
-                                <h2 class="s-46 w-700">With knowledge, skills & hard work</h2>
+                                <h2 class="s-46 w-700">With knowledge, skills & hard work!</h2>
                                 <!-- Text -->
                                 <p>Reduce the effort of managers and teams by 80%.</p>
                                 <!-- Small Title -->

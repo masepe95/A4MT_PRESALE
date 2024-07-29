@@ -18,10 +18,10 @@
                     </li>
                     <!-- SIMPLE NAVIGATION LINK -->
                     <li class="nl-simple" aria-haspopup="true">
-                        <NuxtLink to="/faqs" class="h-link">Benefits</NuxtLink>
+                        <NuxtLink to="/benefits" class="h-link">Benefits</NuxtLink>
                     </li>
                     <li class="nl-simple" aria-haspopup="true">
-                        <NuxtLink to="/faqs" class="h-link">Solutions</NuxtLink>
+                        <NuxtLink to="/solutions" class="h-link">Solutions</NuxtLink>
                     </li>
                     <li class="nl-simple" aria-haspopup="true">
                         <NuxtLink to="/pricing-1" class="h-link">Prices</NuxtLink>
