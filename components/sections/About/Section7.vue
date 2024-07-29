@@ -6,9 +6,9 @@
                 <div class="col-md-10 col-lg-9">
                     <div class="section-title mb-80">
                         <!-- Title -->
-                        <h2 class="s-50 w-700">All we do is dream and craft amazing products</h2>
+                        <h2 class="s-50 w-700">All we do is develop and simplify!</h2>
                         <!-- Text -->
-                        <p class="s-21 color--grey">Ligula risus auctor tempus magna feugiat lacinia.</p>
+                        <p class="s-21 color--grey">Meet our outstanding team!</p>
                     </div>
                 </div>
             </div>
@@ -21,13 +21,14 @@
                             <!-- Team Member Photo -->
                             <div class="team-member-photo r-14">
                                 <div class="hover-overlay">
-                                    <img class="img-fluid" src="/assets/images/team-1.jpg" alt="team-member-foto" />
+                                    <img class="img-fluid" src="/assets/images/marco-cerulli-rit.png"
+                                        alt="team-member-foto" />
                                     <div class="item-overlay"></div>
                                 </div>
                             </div>
                             <!-- Team Member Data -->
                             <div class="team-member-data">
-                                <h6 class="s-20 w-700 color--black">Jonathan Barnes</h6>
+                                <h6 class="s-20 w-700 color--black">Marco Cerulli</h6>
                                 <p class="color--grey">Founder and CEO</p>
                             </div>
                         </div>
@@ -39,14 +40,15 @@
                             <!-- Team Member Photo -->
                             <div class="team-member-photo r-14">
                                 <div class="hover-overlay">
-                                    <img class="img-fluid" src="/assets/images/team-2.jpg" alt="team-member-foto" />
+                                    <img class="img-fluid" src="/assets/images/marco-sepe-rit.png"
+                                        alt="team-member-foto" />
                                     <div class="item-overlay"></div>
                                 </div>
                             </div>
                             <!-- Team Member Data -->
                             <div class="team-member-data">
-                                <h6 class="s-20 w-700 color--black">Jaime Fletcher</h6>
-                                <p class="color--grey">Software Engineer</p>
+                                <h6 class="s-20 w-700 color--black">Marco Sepe</h6>
+                                <p class="color--grey">IT Manager</p>
                             </div>
                         </div>
                     </div>

@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="results-count">
+            <div class="results-count" v-if="!isLoading">
                 We have found {{ tools.length }} tools.
             </div>
             <div class="results-container">
@@ -120,6 +120,7 @@ export default {
         };
 
         const filteredTools = async (description = '') => {
+            isLoading.value = true;
             tools.value = [];
             const params = {
                 categories: form.value.selectedCategories.join(','),
@@ -129,7 +130,6 @@ export default {
                 description: description || initialPrompt.value
             };
 
-            isLoading.value = true;
             try {
                 const res = await axios.get(toolsEndpoint, { params });
                 tools.value = res.data;

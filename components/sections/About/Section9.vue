@@ -13,13 +13,19 @@
                 <div class="col-md-6">
                     <div class="txt-block right-column wow fadeInLeft">
                         <!-- Section ID -->
-                        <span class="section-id">Strategies That Work</span>
+                        <span class="section-id">Our Credo</span>
                         <!-- Title -->
-                        <h2 class="s-46 w-700">Right strategies & implementations</h2>
+                        <h2 class="s-46 w-700">We take steps toward equity, sustainability, inclusion, and
+                            well-being.</h2>
                         <!-- Text -->
-                        <p>Sodales tempor sapien quaerat ipsum undo congue laoreet turpis neque auctor turpis vitae dolor luctus placerat magna and ligula cursus purus vitae purus an ipsum suscipit</p>
+                        <p>We support 3 of the goals of the United Nations 2030 Agenda for
+                            Sustainable Development:</p>
                         <!-- Text -->
-                        <p class="mb-0">Nemo ipsam egestas volute turpis egestas ipsum and purus sapien ultrice an aliquam quaerat ipsum augue turpis sapien cursus congue magna purus quaerat at ligula purus egestas magna cursus undo varius purus magnis sapien quaerat</p>
+                        <ul class="mb-0">
+                            <li>We offer a substantial discount to charities, and public benefit organizations.</li>
+                            <li>We do not offer benefits to organizations directly or indirectly involved in war or
+                                in conflict with COP and UN goals.</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- END TEXT BLOCK -->

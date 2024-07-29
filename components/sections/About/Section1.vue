@@ -6,9 +6,13 @@
                 <div class="col-md-11 col-lg-10 col-xl-9">
                     <div class="about-2-title mb-60">
                         <!-- Title -->
-                        <h2 class="s-52 w-700 mb-30">We provide solutions for your creative ideas</h2>
+                        <h2 class="s-52 w-700 mb-30">We make managing... easier!</h2>
                         <!-- Text -->
-                        <p class="mb-0">An enim nullam tempor sapien gravida donec pretium ipsum porta justo integer and purus velna vitae auctor integer undo congue diam purus pretium and ligula tempor primis libero at tempus, blandit and cursus varius magnis at sapien egestas purus vitae purus an ipsum</p>
+                        <p class="mb-0">A4ManagementTools innovates the approach to business management, offering over
+                            80 innovative and intuitive tools in A4 format, designed for executives and collaborators.
+                            These tools are conceived to simplify and make more efficient the complex managerial
+                            activities, organizing them in concise single-page documents that ensure clarity and
+                            efficiency.</p>
                     </div>
                 </div>
             </div>
@@ -46,9 +50,15 @@
                                     <span class="flaticon-quote"></span>
                                 </div>
                                 <!-- Text -->
-                                <p>Nullam tempor pretium a gravida donec congue ipsum porta justo integer dolor odio auctor a neque suscipit an ipsum integer congue purus at pretium turpis egestas and volute laoreet quaerat</p>
+                                <p>The distinctive feature of A4ManagementTools is their ease of use made possible
+                                    by a common logical structure that allows, through a single document, to instruct,
+                                    delegate,
+                                    integrate results, and present them without having to reorganize data. This approach
+                                    not
+                                    only ensures the transfer of know-how to the organization but also enables progress
+                                    monitoring 24/7.</p>
                                 <!-- Author -->
-                                <p class="a2-txt-author">Charlie Cheever <span>CEO & CO-FOUNDER</span></p>
+                                <p class="a2-txt-author">Marco Cerulli <span>CEO & FOUNDER</span></p>
                             </div>
                         </div>
                         <!-- IMAGE-4 -->
