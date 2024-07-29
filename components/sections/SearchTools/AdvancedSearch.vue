@@ -1,5 +1,7 @@
 <template>
     <div id="advanced-search">
+        <AppSearchTerm :initialPrompt="initialPrompt" :promptId="routeQueryPromptId" @prompt-id-change="updatePromptId"
+            @form-submit="filteredTools" />
         <div class="container">
             <div class="filter-section">
                 <div class="filter-group" v-click-outside="() => closeDropdown('categories')">
@@ -45,9 +47,12 @@
 </template>
 
 <script>
+import { ref, watch, onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import axios from 'axios';
 import ToolList from '~/components/sections/SearchTools/ToolList.vue';
 import ToolDetail from '~/components/sections/SearchTools/ToolDetail.vue';
+import AppSearchTerm from '~/components/sections/SearchTools/AppSearchTerm.vue';
 
 const toolsEndpoint = "https://antiquewhite-squid-521659.hostingersite.com/api/tools";
 const categoriesEndpoint = "https://antiquewhite-squid-521659.hostingersite.com/api/categories";
@@ -56,7 +61,7 @@ const programsEndpoint = "https://antiquewhite-squid-521659.hostingersite.com/ap
 
 export default {
     name: "AdvancedSearch",
-    components: { ToolList, ToolDetail },
+    components: { ToolList, ToolDetail, AppSearchTerm },
     props: {
         promptId: {
             type: [String, Number],
@@ -69,91 +74,123 @@ export default {
             default: ''
         }
     },
-    data() {
-        return {
-            endpoint: toolsEndpoint,
-            form: {
-                selectedCategories: [],
-                selectedLevels: [],
-                selectedPrograms: []
-            },
-            tools: [],
-            categories: [],
-            levels: [],
-            programs: [],
-            errors: [],
-            isLoading: false,
-            selectedTool: null,
-            showModal: false,
-            dropdowns: {
-                categories: false,
-                levels: false,
-                programs: false
+    setup(props) {
+        const route = useRoute();
+        const router = useRouter();
+        const tools = ref([]);
+        const categories = ref([]);
+        const levels = ref([]);
+        const programs = ref([]);
+        const isLoading = ref(false);
+        const selectedTool = ref(null);
+        const showModal = ref(false);
+        const dropdowns = ref({
+            categories: false,
+            levels: false,
+            programs: false
+        });
+        const form = ref({
+            selectedCategories: [],
+            selectedLevels: [],
+            selectedPrograms: []
+        });
+
+        const initialPrompt = ref(props.promptDescription);
+        const routeQueryPromptId = ref(route.query.prompt_id || props.promptId);
+
+        watch(route, (newRoute) => {
+            if (newRoute.query.prompt_id) {
+                routeQueryPromptId.value = newRoute.query.prompt_id;
             }
+        });
+
+        const updatePromptId = (id) => {
+            routeQueryPromptId.value = id;
+            router.push({ query: { ...route.query, prompt_id: id } });
         };
-    },
-    watch: {
-        promptId() {
-            this.filteredTools();
-        }
-    },
-    methods: {
-        toggleDropdown(dropdown) {
-            this.dropdowns[dropdown] = !this.dropdowns[dropdown];
-        },
-        closeDropdown(dropdown) {
-            this.dropdowns[dropdown] = false;
-        },
-        async filteredTools() {
-            this.tools = [];
+
+        const toggleDropdown = (dropdown) => {
+            dropdowns.value[dropdown] = !dropdowns.value[dropdown];
+        };
+
+        const closeDropdown = (dropdown) => {
+            dropdowns.value[dropdown] = false;
+        };
+
+        const filteredTools = async () => {
+            tools.value = [];
             const params = {
-                categories: this.form.selectedCategories.join(','),
-                levels: this.form.selectedLevels.join(','),
-                programs: this.form.selectedPrograms.join(','),
-                prompt_id: this.promptId,
+                categories: form.value.selectedCategories.join(','),
+                levels: form.value.selectedLevels.join(','),
+                programs: form.value.selectedPrograms.join(','),
+                prompt_id: routeQueryPromptId.value,
             };
 
-            this.isLoading = true;
+            isLoading.value = true;
             try {
                 const res = await axios.get(toolsEndpoint, { params });
-                this.tools = res.data;
+                tools.value = res.data;
             } catch (err) {
                 console.error('Errore durante il filtraggio dei tool:', err);
-                this.errors.push('Errore durante il filtraggio dei tool.');
             } finally {
-                this.isLoading = false;
+                isLoading.value = false;
             }
-        },
+        };
 
-        async fetchOptions() {
+        const fetchOptions = async () => {
             try {
                 const [categoriesRes, levelsRes, programsRes] = await Promise.all([
                     axios.get(categoriesEndpoint),
                     axios.get(levelsEndpoint),
                     axios.get(programsEndpoint)
                 ]);
-                this.categories = categoriesRes.data;
-                this.levels = levelsRes.data;
-                this.programs = programsRes.data;
+                categories.value = categoriesRes.data;
+                levels.value = levelsRes.data;
+                programs.value = programsRes.data;
             } catch (err) {
                 console.error('Errore nel caricamento delle opzioni:', err);
             }
-        },
+        };
 
-        openModal(tool) {
-            this.selectedTool = tool;
-            this.showModal = true;
-        },
-        closeModal() {
-            this.showModal = false;
-        }
-    },
-    async created() {
-        await this.fetchOptions();
-        this.filteredTools();
-    },
+        const openModal = (tool) => {
+            selectedTool.value = tool;
+            showModal.value = true;
+        };
+
+        const closeModal = () => {
+            showModal.value = false;
+        };
+
+        onMounted(async () => {
+            await fetchOptions();
+            await filteredTools();
+        });
+
+        return {
+            form,
+            tools,
+            categories,
+            levels,
+            programs,
+            isLoading,
+            selectedTool,
+            showModal,
+            dropdowns,
+            toggleDropdown,
+            closeDropdown,
+            filteredTools,
+            openModal,
+            closeModal,
+            initialPrompt,
+            routeQueryPromptId,
+            updatePromptId
+        };
+    }
 };
 </script>
+
+
+
 
 <style scoped>
 #advanced-search {

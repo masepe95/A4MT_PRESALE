@@ -27,6 +27,10 @@ export default {
         initialPrompt: {
             type: String,
             default: ''
+        },
+        promptId: {
+            type: [String, Number],
+            default: null
         }
     },
     data() {
@@ -49,11 +53,19 @@ export default {
     },
     created() {
         this.fetchAllPrompts();
+        if (this.promptId) {
+            this.fetchPromptById(this.promptId);
+        }
     },
     watch: {
         initialPrompt(newPrompt) {
             this.searchQuery = newPrompt;
             this.previousQuery = newPrompt;
+        },
+        promptId(newId) {
+            if (newId) {
+                this.fetchPromptById(newId);
+            }
         }
     },
     methods: {
@@ -84,6 +96,18 @@ export default {
                 const data = await response.json();
                 this.allPrompts = data;
                 this.suggestions = this.allPrompts;
+            } catch (error) {
+                console.error('Errore nella chiamata API del backend:', error);
+            }
+        },
+        async fetchPromptById(promptId) {
+            const apiUrl = `https://antiquewhite-squid-521659.hostingersite.com/api/prompts/${promptId}`;
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                this.searchQuery = data.description;
+                this.previousQuery = data.description;
             } catch (error) {
                 console.error('Errore nella chiamata API del backend:', error);
             }

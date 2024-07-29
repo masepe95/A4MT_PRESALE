@@ -1,40 +1,35 @@
-<script>
-
-export default {
-    name: 'AppHero',
-    data() {
-        return {
-            searchPromptId: null,
-        }
-    },
-    emits: ['prompt-id-change', 'form-submit'],
-    methods: {
-        onPromptIdChange(id) {
-            this.searchPromptId = id;
-            this.$emit('prompt-id-change', this.searchPromptId);
-        },
-        handleFormSubmit() {
-            this.$emit('form-submit');
-            if (this.searchPromptId) {
-                this.$router.push({ name: 'AdvancedSearch', query: { prompt_id: this.searchPromptId } });
-            }
-        }
-    }
-}
-</script>
-
 <template>
     <div id="app-hero" ref="hero">
         <div class="hero-overlay">
             <!-- <img src="/A4MT-logo-hero.png" alt="logo" class="hero-logo"> -->
             <h1 class="hero-title mt-5">3-Moves Ahead Management.</h1>
             <div class="search-input">
+                <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
             </div>
         </div>
     </div>
 </template>
 
-<style lang="scss" scoped>
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import AppSearchTerm from '~/components/sections/SearchTools/AppSearchTerm.vue';
+
+const searchPromptId = ref(null);
+const router = useRouter();
+
+const onPromptIdChange = (id) => {
+    searchPromptId.value = id;
+};
+
+const handleFormSubmit = () => {
+    if (searchPromptId.value) {
+        router.push({ name: 'inspiration', query: { prompt_id: searchPromptId.value } });
+    }
+};
+</script>
+
+<style scoped>
 #app-hero {
     height: 100vh;
     background-image: url(../../../assets/images/main_background.jpeg);
