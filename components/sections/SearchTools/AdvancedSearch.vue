@@ -117,13 +117,14 @@ export default {
             dropdowns.value[dropdown] = false;
         };
 
-        const filteredTools = async () => {
+        const filteredTools = async (description = '') => {
             tools.value = [];
             const params = {
                 categories: form.value.selectedCategories.join(','),
                 levels: form.value.selectedLevels.join(','),
                 programs: form.value.selectedPrograms.join(','),
                 prompt_id: routeQueryPromptId.value,
+                description: description || initialPrompt.value
             };
 
             isLoading.value = true;
@@ -188,8 +189,6 @@ export default {
     }
 };
 </script>
-
-
 
 
 <style scoped>

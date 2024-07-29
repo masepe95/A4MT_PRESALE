@@ -1,7 +1,7 @@
 <template>
     <div id="app-hero" ref="hero">
         <div class="hero-overlay">
-            <!-- <img src="/A4MT-logo-hero.png" alt="logo" class="hero-logo"> -->
+            <img :src="logo" alt="logo" class="hero-logo">
             <h1 class="hero-title mt-5">3-Moves Ahead Management.</h1>
             <div class="search-input">
                 <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
@@ -14,17 +14,20 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import AppSearchTerm from '~/components/sections/SearchTools/AppSearchTerm.vue';
+import logo from '~/assets/images/A4MT-logo-hero.png';
 
 const searchPromptId = ref(null);
+const searchQuery = ref(''); // Aggiungi questa riga per mantenere il prompt selezionato
 const router = useRouter();
 
 const onPromptIdChange = (id) => {
     searchPromptId.value = id;
 };
 
-const handleFormSubmit = () => {
+const handleFormSubmit = (description) => {
+    searchQuery.value = description; // Memorizza il prompt selezionato
     if (searchPromptId.value) {
-        router.push({ name: 'inspiration', query: { prompt_id: searchPromptId.value } });
+        router.push({ name: 'inspiration', query: { prompt_id: searchPromptId.value, prompt_description: searchQuery.value } });
     }
 };
 </script>
@@ -36,7 +39,7 @@ const handleFormSubmit = () => {
     background-position: center;
     background-size: cover;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
 
     &::before {
         content: '';
@@ -46,7 +49,6 @@ const handleFormSubmit = () => {
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.2);
-        /* Darker overlay for better text readability */
         z-index: 0;
     }
 }
@@ -56,7 +58,7 @@ const handleFormSubmit = () => {
     max-width: 550px;
     height: auto;
     z-index: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero-overlay {
@@ -69,7 +71,7 @@ const handleFormSubmit = () => {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 10vh;
+    padding-top: 16vh;
     z-index: 1;
 }
 
@@ -79,13 +81,12 @@ const handleFormSubmit = () => {
     color: #ffffff;
     font-size: 2.5rem;
     margin: 1rem 0;
-    z-index: 1;
 }
 
 .search-input {
-    width: 50vw;
-    margin-top: 2rem;
-    z-index: 1;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -98,7 +99,7 @@ const handleFormSubmit = () => {
     }
 
     .search-input {
-        width: 80vw;
+        width: 90%;
     }
 }
 
@@ -112,7 +113,26 @@ const handleFormSubmit = () => {
     }
 
     .search-input {
-        width: 80vw;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    #app-hero {
+        padding-top: 5vh;
+    }
+
+    .hero-logo {
+        width: 60%;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .search-input {
+        width: 90%;
+        margin-top: 0rem;
     }
 }
 </style>

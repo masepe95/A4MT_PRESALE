@@ -76,7 +76,7 @@ export default {
             this.$emit('query-change', suggestion.description);
             this.$emit('prompt-id-change', suggestion.id);
             this.$emit('prompt-selected', suggestion.id);
-            this.$emit('form-submit');
+            this.$emit('form-submit', suggestion.description);
         },
         handleInput() {
             if (this.searchQuery.length > 0) {
@@ -116,7 +116,7 @@ export default {
             if (this.searchQuery.trim() === '') {
                 alert("La query di ricerca non può essere vuota.");
             } else {
-                this.$emit('form-submit');
+                this.$emit('form-submit', this.searchQuery);
             }
         },
         handleFocus() {
@@ -149,7 +149,6 @@ export default {
     max-width: 600px;
     position: relative;
     padding: 0 10px;
-    /* Add padding here */
 }
 
 .searchbar {
@@ -169,7 +168,6 @@ input {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
     height: 46px;
-    /* Set a fixed height to match the button */
 }
 
 input:focus {
@@ -192,7 +190,6 @@ input:focus {
     justify-content: center;
     padding: 0 20px;
     height: 46px;
-    /* Set a fixed height to match the input */
     box-sizing: border-box;
     transition: background 0.3s ease, border-color 0.3s ease;
 }
@@ -233,8 +230,7 @@ input:focus {
 
 @media (max-width: 576px) {
     .searchbar-container {
-        padding: 0 20px;
-        /* Increase padding for mobile view */
+        padding: 0 10px;
     }
 }
 </style>
