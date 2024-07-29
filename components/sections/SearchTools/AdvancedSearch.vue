@@ -43,6 +43,7 @@
             </div>
         </div>
         <ToolDetail :tool="selectedTool" :show="showModal" @close="closeModal" />
+        <PageLoading v-if="isLoading" />
     </div>
 </template>
 
@@ -53,6 +54,7 @@ import axios from 'axios';
 import ToolList from '~/components/sections/SearchTools/ToolList.vue';
 import ToolDetail from '~/components/sections/SearchTools/ToolDetail.vue';
 import AppSearchTerm from '~/components/sections/SearchTools/AppSearchTerm.vue';
+import PageLoading from '~/components/elements/PageLoading.vue'; // Import the PageLoading component
 
 const toolsEndpoint = "https://antiquewhite-squid-521659.hostingersite.com/api/tools";
 const categoriesEndpoint = "https://antiquewhite-squid-521659.hostingersite.com/api/categories";
@@ -61,7 +63,7 @@ const programsEndpoint = "https://antiquewhite-squid-521659.hostingersite.com/ap
 
 export default {
     name: "AdvancedSearch",
-    components: { ToolList, ToolDetail, AppSearchTerm },
+    components: { ToolList, ToolDetail, AppSearchTerm, PageLoading }, // Add PageLoading to components
     props: {
         promptId: {
             type: [String, Number],
@@ -189,7 +191,6 @@ export default {
     }
 };
 </script>
-
 
 <style scoped>
 #advanced-search {
