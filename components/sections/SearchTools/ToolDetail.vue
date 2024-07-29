@@ -15,12 +15,12 @@
                             <h5 class="card-title mb-4 text-center">{{ tool ? tool.name : 'Tool Details' }}</h5>
                             <div v-if="tool" class="row">
                                 <div class="col-md-6">
-                                    <h6 class="mb-3 text-center">Solved Problems</h6>
-                                    <ul class="list-group list-group-flush" v-html="formattedSolvedProblems"></ul>
+                                    <h6 class="mb-3 text-center">Key Results</h6>
+                                    <ul class="list-group list-group-flush mb-5" v-html="formattedKeyResults"></ul>
                                 </div>
                                 <div class="col-md-6">
-                                    <h6 class="mb-3 text-center">Key Results</h6>
-                                    <ul class="list-group list-group-flush" v-html="formattedKeyResults"></ul>
+                                    <h6 class="mb-3 text-center">Solved Problems</h6>
+                                    <ul class="list-group list-group-flush" v-html="formattedSolvedProblems"></ul>
                                 </div>
                             </div>
                             <div v-else>

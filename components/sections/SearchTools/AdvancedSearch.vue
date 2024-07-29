@@ -157,13 +157,11 @@ export default {
 
 <style scoped>
 #advanced-search {
-    min-height: 100vh;
-    background-color: #f8f9fa;
-    background-position: center;
-    background-size: cover;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: transparent;
 }
 
 .container {
@@ -176,18 +174,15 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    flex-wrap: wrap;
     width: 100%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .filter-group {
     flex: 1;
     margin: 10px;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .dropdown {
@@ -197,15 +192,16 @@ export default {
 }
 
 .dropbtn {
-    background-color: #007bff;
+    background-color: transparent;
     color: white;
+    font-weight: 600;
     padding: 10px 15px;
     font-size: 16px;
-    border: none;
+    border: 0px solid white;
     cursor: pointer;
     width: 100%;
     border-radius: 5px;
-    text-align: left;
+    text-align: center;
 }
 
 .dropdown-content {
@@ -219,6 +215,7 @@ export default {
     max-height: 200px;
     overflow-y: auto;
     margin-top: 5px;
+    top: 100%;
 }
 
 .dropdown-content .dropdown-item {
@@ -238,7 +235,7 @@ export default {
 
 .results-count {
     text-align: center;
-    color: #333;
+    color: #ffff;
     font-weight: bold;
     margin: 20px 0;
 }
@@ -287,11 +284,7 @@ export default {
 
 @media (max-width: 576px) {
     .dropbtn {
-        font-size: 14px;
-        padding: 8px 10px;
-    }
-
-    .dropdown-content .dropdown-item {
+        font-size: 12px;
         padding: 6px 8px;
     }
 }

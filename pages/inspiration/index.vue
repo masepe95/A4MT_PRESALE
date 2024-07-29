@@ -35,6 +35,12 @@ useHead({
 <style scoped>
 .page-container {
     padding-top: 100px;
-    /* Adjust this value based on the height of your header */
+    background: url(../../assets/images/main_background.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 </style>

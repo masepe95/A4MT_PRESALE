@@ -20,7 +20,6 @@
     </form>
 </template>
 
-
 <script>
 export default {
     name: 'AppSearchTerm',
@@ -111,7 +110,6 @@ export default {
         }
     },
 };
-
 </script>
 
 <style scoped>
@@ -120,14 +118,13 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1rem;
 }
 
 .searchbar-container {
     width: 100%;
     max-width: 600px;
     position: relative;
-    padding: 10px;
+    padding: 0 10px;
     /* Add padding here */
 }
 
@@ -138,7 +135,7 @@ export default {
 }
 
 input {
-    width: 100%;
+    flex: 1;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     border-top-right-radius: 0;
@@ -146,6 +143,9 @@ input {
     border: 1px solid #ccc;
     padding: 12px 15px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    height: 46px;
+    /* Set a fixed height to match the button */
 }
 
 input:focus {
@@ -165,7 +165,11 @@ input:focus {
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    justify-content: center;
+    padding: 0 20px;
+    height: 46px;
+    /* Set a fixed height to match the input */
+    box-sizing: border-box;
     transition: background 0.3s ease, border-color 0.3s ease;
 }
 
@@ -176,8 +180,8 @@ input:focus {
 
 .suggestions {
     position: absolute;
-    top: 100%;
-    width: 100%;
+    top: calc(100% + 5px);
+    width: 90%;
     z-index: 1000;
     background: #fff;
     border: 1px solid #ccc;
@@ -201,5 +205,12 @@ input:focus {
 
 .list-group-item:hover {
     background: #f0f0f0;
+}
+
+@media (max-width: 576px) {
+    .searchbar-container {
+        padding: 0 20px;
+        /* Increase padding for mobile view */
+    }
 }
 </style>
