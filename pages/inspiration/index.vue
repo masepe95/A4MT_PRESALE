@@ -16,7 +16,7 @@ definePageMeta({
 });
 useHead({
     bodyAttrs: {
-        class: "navbar-dark navbar-dark-2 scheme-blue"
+        class: "navbar-light navbar-dark-2 scheme-blue"
     },
 });
 </script>
