@@ -131,6 +131,7 @@
                 <div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
                     <!-- FOOTER COPYRIGHT -->
                     <div class="col">
+                        <HeaderDarkLightToggle />
                         <div class="footer-copyright">
                             <p class="p-sm">&copy; 2024 A4ManagementTools. <span>All Rights Reserved</span></p>
                         </div>
@@ -159,5 +160,6 @@
         </div>
         <!-- End container -->
         <FooterGoToTop />
+
     </footer>
 </template>
