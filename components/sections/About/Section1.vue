@@ -8,6 +8,9 @@
                         <!-- Title -->
                         <h2 class="s-52 w-700 mb-30">We provide 80+ Tools & Trainings for managers and collaborators
                         </h2>
+                        <div class="search-input">
+                            <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
+                        </div>
                         <!-- Text -->
                         <p class="mb-0">In A4ManagementTools, we offer intuitive digital tools that make complex
                             management tasks more efficient by converting them into concise one-page documents. These
@@ -75,3 +78,29 @@
         <!-- END ABOUT-2 IMAGES -->
     </section>
 </template>
+<style scoped>
+.search-input {
+    width: 90%;
+    margin-bottom: 2rem;
+}
+</style>
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import AppSearchTerm from '~/components/sections/SearchTools/AppSearchTerm.vue';
+
+const searchPromptId = ref(null);
+const searchQuery = ref(''); // Aggiungi questa riga per mantenere il prompt selezionato
+const router = useRouter();
+
+const onPromptIdChange = (id) => {
+    searchPromptId.value = id;
+};
+
+const handleFormSubmit = (description) => {
+    searchQuery.value = description; // Memorizza il prompt selezionato
+    if (searchPromptId.value) {
+        router.push({ name: 'inspiration', query: { prompt_id: searchPromptId.value, prompt_description: searchQuery.value } });
+    }
+};
+</script>

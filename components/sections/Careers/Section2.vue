@@ -18,7 +18,7 @@
                                 </p>
                             </li>
                             <li class="list-item">
-                                <p class="mb-0">Provide consultancy to the General Administrator of the client
+                                <p class="">Provide consultancy to the General Administrator of the client
                                     organization regarding the implementation strategy of the A4ManagementTools.
                                 </p>
                             </li>
@@ -27,15 +27,15 @@
                                 </p>
                             </li>
                             <li class="list-item">
-                                <p class="mb-0"> Respond to the technical, strategic, or operational needs of clients.
-                                    t</p>
+                                <p class=""> Respond to the technical, strategic, or operational needs of clients.
+                                </p>
                             </li>
                             <li class="list-item">
                                 <p>Support in difficult cases.
                                 </p>
                             </li>
                             <li class="list-item">
-                                <p class="mb-0">Optimize the performance of the client organization.
+                                <p class="">Optimize the performance of the client organization.
                                 </p>
                             </li>
                             <li class="list-item">
@@ -43,11 +43,11 @@
                                 </p>
                             </li>
                             <li class="list-item">
-                                <p class="mb-0">Provide anonymous consultancy.
+                                <p class="">Provide anonymous consultancy.
                                 </p>
                             </li>
                             <li class="list-item">
-                                <p class="mb-0">Offer Upselling and Cross-selling services.</p>
+                                <p class="">Offer Upselling and Cross-selling services.</p>
                             </li>
                         </ul>
                     </div>
@@ -70,7 +70,7 @@
                             </p>
                         </li>
                         <li class="list-item">
-                            <p class="mb-0">Explain and delve into all the tools and services offered.
+                            <p class="">Explain and delve into all the tools and services offered.
                             </p>
                         </li>
                         <li class="list-item">
@@ -79,11 +79,11 @@
                             </p>
                         </li>
                         <li class="list-item">
-                            <p class="mb-0"> Offer Upselling and Cross-selling services.
+                            <p class=""> Offer Upselling and Cross-selling services.
                             </p>
                         </li>
                     </ul>
-                    <p class="mt-5">Send your application. Start the selection process and become an Associate Promoter
+                    <p class="mt-3">Send your application. Start the selection process and become an Associate Promoter
                         (applications
                         are evaluated in the order they are received).</p>
                 </div>

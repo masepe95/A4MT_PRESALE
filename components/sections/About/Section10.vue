@@ -29,9 +29,9 @@
                                 <!-- Author -->
                                 <div class="author-data clearfix">
                                     <!-- Avatar -->
-                                    <!-- <div class="review-avatar">
-                                        <img src="/assets/images/review-author-1.jpg" alt="review-avatar" />
-                                    </div> -->
+                                    <div class="review-avatar">
+                                        <img src="/assets/images/simone-pin.jpg" alt="review-avatar" />
+                                    </div>
                                     <!-- Data -->
                                     <div class="review-author">
                                         <h6 class="s-18 w-700">Eng. Simone Pin</h6>
@@ -57,9 +57,9 @@
                                 <!-- Author -->
                                 <div class="author-data clearfix">
                                     <!-- Avatar -->
-                                    <!-- <div class="review-avatar">
-                                        <img src="/assets/images/review-author-2.jpg" alt="review-avatar" />
-                                    </div> -->
+                                    <div class="review-avatar">
+                                        <img src="/assets/images/fabrizio-lasia.jpg" alt="review-avatar" />
+                                    </div>
                                     <!-- Data -->
                                     <div class="review-author">
                                         <h6 class="s-18 w-700">Ten. Col. Fabrizio Lasia</h6>
@@ -87,9 +87,9 @@
                                 <!-- Author -->
                                 <div class="author-data clearfix">
                                     <!-- Avatar -->
-                                    <!-- <div class="review-avatar">
-                                        <img src="/assets/images/review-author-5.jpg" alt="review-avatar" />
-                                    </div> -->
+                                    <div class="review-avatar">
+                                        <img src="/assets/images/loris-allemann.jpeg" alt="review-avatar" />
+                                    </div>
                                     <!-- Data -->
                                     <div class="review-author">
                                         <h6 class="s-18 w-700">Loris Allemann</h6>
@@ -116,13 +116,13 @@
                                 <!-- Author -->
                                 <div class="author-data clearfix">
                                     <!-- Avatar -->
-                                    <!-- <div class="review-avatar">
-                                        <img src="/assets/images/review-author-8.jpg" alt="review-avatar" />
-                                    </div> -->
+                                    <div class="review-avatar">
+                                        <img src="/assets/images/john-baldi.jpg" alt="review-avatar" />
+                                    </div>
                                     <!-- Data -->
                                     <div class="review-author">
-                                        <h6 class="s-18 w-700">John Baldi and Silvia Daniele</h6>
-                                        <p class="p-sm">CEO & Head of Care @ Opera Charitas Foundation, Switzerland</p>
+                                        <h6 class="s-18 w-700">John Baldi & Silvia Daniele</h6>
+                                        <p class="p-sm">CEO & HeadOfCare @ Opera Charitas Found. Switzerland</p>
                                     </div>
                                 </div>
                                 <!-- End Author -->

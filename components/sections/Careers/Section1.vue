@@ -1,13 +1,13 @@
 <template>
     <section class="page-hero-section">
-        <div class="page-hero-section-overlay bg--01 bg--scroll">
+        <div class="page-hero-section-overlay bg--02 bg--scroll">
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <!-- TEXT BLOCK -->
                     <div class="col-md-6">
-                        <div class="txt-block left-column color--white wow fadeInRight">
+                        <div class="txt-block left-column color--black wow fadeInRight">
                             <!-- Section ID -->
-                            <span class="section-id rounded-id bg--tra-white color--white"> Careers </span>
+                            <span class="section-id rounded-id bg--tra-black color--black"> Careers </span>
                             <!-- Title -->
                             <h2 class="s-56 w-700">We are looking for Associate Customer Success Manager</h2>
                             <!-- Text -->

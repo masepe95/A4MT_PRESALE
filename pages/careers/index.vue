@@ -13,7 +13,7 @@
 <script setup>
 useHead({
     bodyAttrs: {
-        class: "navbar-light"
+        class: "navbar-dark"
     },
 })
 </script>
