@@ -32,9 +32,12 @@
                                     <span class="flaticon-quote"></span>
                                 </div>
                                 <!-- Text -->
-                                <p>Nullam tempor pretium a gravida donec congue ipsum porta justo integer dolor odio auctor a neque suscipit an ipsum integer congue purus at pretium turpis egestas and volute laoreet quaerat</p>
+                                <p>We only collaborate with those who demonstrate above-average achievement and
+                                    aptitude.
+                                    That is why we attract talent.
+                                    Do you take up the challenge?</p>
                                 <!-- Author -->
-                                <p class="a2-txt-author">Charlie Cheever <span>CEO & CO-FOUNDER</span></p>
+                                <p class="a2-txt-author">Eng. Marco Cerulli<span>CEO & FOUNDER</span></p>
                             </div>
                         </div>
                         <!-- IMAGE-4 -->

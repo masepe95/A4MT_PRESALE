@@ -11,13 +11,16 @@
                                 <!-- Digit -->
                                 <div class="statistic-digit">
                                     <h2 class="s-44 w-700">
-                                        <span class="count-element d-flex"> <ElementsCounterUp :start="0" :end="93" :duration="2000" /> k </span>
+                                        <span class="count-element d-flex">
+                                            <ElementsCounterUp :start="0" :end="10" :duration="2000" /> k+
+                                        </span>
                                     </h2>
                                 </div>
                                 <!-- Text -->
                                 <div class="statistic-txt">
-                                    <h5 class="s-19 w-700">Happy Customers</h5>
-                                    <p>Porta justo integer and velna vitae auctor and magna quaerat ligula</p>
+                                    <h5 class="s-19 w-700">Tips and Recommendations</h5>
+                                    <p>Practical advice on how to proceed, strategies, and recommendations enabled by AI
+                                        and approved by our experts.</p>
                                 </div>
                             </div>
                         </div>
@@ -30,13 +33,16 @@
                                 <!-- Digit -->
                                 <div class="statistic-digit">
                                     <h2 class="s-44 w-700">
-                                        <span class="count-element d-flex"> <ElementsCounterUp :start="0" :end="13" :duration="2000" />K </span>
+                                        <span class="count-element d-flex">
+                                            <ElementsCounterUp :start="0" :end="35" :duration="2000" />+
+                                        </span>
                                     </h2>
                                 </div>
                                 <!-- Text -->
                                 <div class="statistic-txt">
-                                    <h5 class="s-19 w-700">Positive Ratings</h5>
-                                    <p>Porta justo integer and velna vitae auctor and magna quaerat ligula</p>
+                                    <h5 class="s-19 w-700">Tools with Action Plans</h5>
+                                    <p>A third of our tools integrate an action plan, encouraging users to take concrete
+                                        actions.</p>
                                 </div>
                             </div>
                         </div>
@@ -50,15 +56,16 @@
                                 <div class="statistic-digit">
                                     <h2 class="s-44 w-700">
                                         <span class="count-element d-flex">
-                                            <ElementsCounterUp :start="0" :end="4" :duration="2000" />
-                                            /5
+                                            <ElementsCounterUp :start="0" :end="200" :duration="2000" />
+                                            +
                                         </span>
                                     </h2>
                                 </div>
                                 <!-- Text -->
                                 <div class="statistic-txt">
-                                    <h5 class="s-19 w-700">Rating</h5>
-                                    <p>Porta justo integer and velna vitae auctor and magna quaerat ligula</p>
+                                    <h5 class="s-19 w-700">Examples</h5>
+                                    <p>Application examples and case studies, set to grow to 2000, populated by AI and
+                                        covering over 40 industrial sectors.</p>
                                 </div>
                             </div>
                         </div>

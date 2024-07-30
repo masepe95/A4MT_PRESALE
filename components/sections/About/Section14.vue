@@ -6,14 +6,16 @@
                     <!-- NEWSLETTER TEXT -->
                     <div class="col">
                         <div class="newsletter-txt">
-                            <h4 class="s-34 w-700">Stay up to date with our news, ideas and updates</h4>
+                            <h4 class="s-34 w-700">Stay up-to-date with our specialized articles, ideas, and updates
+                            </h4>
                         </div>
                     </div>
                     <!-- NEWSLETTER FORM -->
                     <div class="col">
                         <form class="newsletter-form">
                             <div class="input-group">
-                                <input type="email" autocomplete="off" class="form-control" placeholder="Your email address" required id="s-email" />
+                                <input type="email" autocomplete="off" class="form-control"
+                                    placeholder="Your email address" required id="s-email" />
                                 <span class="input-group-btn">
                                     <button type="submit" class="btn btn--theme hover--theme">Subscribe Now</button>
                                 </span>

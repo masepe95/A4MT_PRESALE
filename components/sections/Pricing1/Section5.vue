@@ -9,13 +9,16 @@
                         <div class="col">
                             <div class="banner-1-txt color--white">
                                 <!-- Title -->
-                                <h2 class="s-45 w-700">Give it a try, it's free!</h2>
+                                <h2 class="s-45 w-700">Subscribe to A4ManagementTools Public Beta</h2>
                                 <!-- Text -->
-                                <p class="p-xl">It only takes a few clicks to get started</p>
+                                <p class="p-xl">Submit your request so that we can grant you access in order of arrival.
+                                </p>
                                 <!-- Button -->
-                                <NuxtLink to="/signup-1" class="btn r-04 btn--theme hover--tra-white">Get srarted - it's free </NuxtLink>
+                                <NuxtLink to="/signup-1" class="btn r-04 btn--theme hover--tra-white">Get Started!
+                                </NuxtLink>
                                 <!-- Button Text -->
-                                <p class="p-sm btn-txt ico-15 o-85"><span class="flaticon-check"></span> Free for 14 days, no credit card required.</p>
+                                <!-- <p class="p-sm btn-txt ico-15 o-85"><span class="flaticon-check"></span> Free for 14
+                                    days, no credit card required.</p> -->
                             </div>
                         </div>
                         <!-- END BANNER-1 TEXT -->

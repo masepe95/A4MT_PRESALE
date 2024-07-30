@@ -6,9 +6,10 @@
                 <div class="col-md-10 col-lg-9">
                     <div class="section-title mb-70">
                         <!-- Title -->
-                        <h2 class="s-50 w-700">Articles & Resources</h2>
+                        <h2 class="s-50 w-700">Micro-Articles for Managers and Executives</h2>
                         <!-- Text -->
-                        <p class="s-21 color--grey">Ligula risus auctor tempus magna feugiat lacinia.</p>
+                        <p class="s-21 color--grey">In spring 2024 we will launch the advanced A4ManagementTools Beta
+                            platform. Here are a few articles to prepare.</p>
                     </div>
                 </div>
             </div>
@@ -37,13 +38,13 @@
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
                                     <li>
-                                        <p class="p-sm w-500">By Helen J.</p>
+                                        <p class="p-sm w-500">By A4ManagementTools Team</p>
                                     </li>
                                     <li class="meta-list-divider">
                                         <p><span class="flaticon-minus"></span></p>
                                     </li>
                                     <li>
-                                        <p class="p-sm">Apr 28, 2024</p>
+                                        <p class="p-sm">August 1st, 2024</p>
                                     </li>
                                 </ul>
                             </div>
@@ -81,7 +82,7 @@
                                         <p><span class="flaticon-minus"></span></p>
                                     </li>
                                     <li>
-                                        <p class="p-sm">Apr 14, 2024</p>
+                                        <p class="p-sm">August 1st, 2024</p>
                                     </li>
                                 </ul>
                             </div>
@@ -114,13 +115,13 @@
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
                                     <li>
-                                        <p class="p-sm w-500">By Miranda Green</p>
+                                        <p class="p-sm w-500">By A4ManagementTools Team</p>
                                     </li>
                                     <li class="meta-list-divider">
                                         <p><span class="flaticon-minus"></span></p>
                                     </li>
                                     <li>
-                                        <p class="p-sm">Mar 27, 2024</p>
+                                        <p class="p-sm">August 1st, 2024</p>
                                     </li>
                                 </ul>
                             </div>

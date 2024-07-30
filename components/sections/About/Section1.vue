@@ -6,13 +6,13 @@
                 <div class="col-md-11 col-lg-10 col-xl-9">
                     <div class="about-2-title mb-60">
                         <!-- Title -->
-                        <h2 class="s-52 w-700 mb-30">We make managing... easier!</h2>
+                        <h2 class="s-52 w-700 mb-30">We provide 80+ Tools & Trainings for managers and collaborators
+                        </h2>
                         <!-- Text -->
-                        <p class="mb-0">A4ManagementTools innovates the approach to business management, offering over
-                            80 innovative and intuitive tools in A4 format, designed for executives and collaborators.
-                            These tools are conceived to simplify and make more efficient the complex managerial
-                            activities, organizing them in concise single-page documents that ensure clarity and
-                            efficiency.</p>
+                        <p class="mb-0">In A4ManagementTools, we offer intuitive digital tools that make complex
+                            management tasks more efficient by converting them into concise one-page documents. These
+                            tools, enriched with procedures, training and examples, improve employee autonomy and
+                            management perception.</p>
                     </div>
                 </div>
             </div>
@@ -50,13 +50,11 @@
                                     <span class="flaticon-quote"></span>
                                 </div>
                                 <!-- Text -->
-                                <p>The distinctive feature of A4ManagementTools is their ease of use made possible
-                                    by a common logical structure that allows, through a single document, to instruct,
-                                    delegate,
-                                    integrate results, and present them without having to reorganize data. This approach
-                                    not
-                                    only ensures the transfer of know-how to the organization but also enables progress
-                                    monitoring 24/7.</p>
+                                <p>Imagine delegating 1 task in 5 minutes, using 1 A4 sheet containing procedure and
+                                    instructions.
+                                    Imagine consulting the progress 24/7 and presenting the results with the same
+                                    document, with just 1 click and without rearranging the content.
+                                    Welcome to A4ManagementTools.</p>
                                 <!-- Author -->
                                 <p class="a2-txt-author">Marco Cerulli <span>CEO & FOUNDER</span></p>
                             </div>

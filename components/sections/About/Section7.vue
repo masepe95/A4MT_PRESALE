@@ -6,9 +6,10 @@
                 <div class="col-md-10 col-lg-9">
                     <div class="section-title mb-80">
                         <!-- Title -->
-                        <h2 class="s-50 w-700">All we do is develop and simplify!</h2>
+                        <h2 class="s-50 w-700">All we do is dream and project amazing tools</h2>
                         <!-- Text -->
-                        <p class="s-21 color--grey">Meet our outstanding team!</p>
+                        <p class="s-21 color--grey">We are passionate about transforming complex tasks into
+                            ready-to-use, one-page tools.</p>
                     </div>
                 </div>
             </div>

@@ -267,7 +267,7 @@
                             <div class="fbox-txt">
                                 <h6 class="s-22 w-700">5000+ AI Insights</h6>
                                 <p>How-to tips and contents enabled by artificial intelligence and approved by our
-                                    consultants.m</p>
+                                    consultants.</p>
                             </div>
                         </div>
                     </div>

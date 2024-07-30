@@ -8,7 +8,7 @@
                         <!-- Title -->
                         <h2 class="s-52 w-700">Questions & Answers</h2>
                         <!-- Text -->
-                        <p class="s-21 color--grey">Ligula risus auctor tempus magna feugiat lacinia.</p>
+                        <p class="s-21 color--grey">Some questions we usually get.</p>
                     </div>
                 </div>
             </div>
@@ -21,36 +21,31 @@
                             <!-- QUESTION #1 -->
                             <div class="question mb-35 wow fadeInUp">
                                 <!-- Question -->
-                                <h5 class="s-22 w-700"><span>1.</span> Getting started with A4ManagementTools</h5>
+                                <h5 class="s-22 w-700">Is it the Beta Version of the A4ManagementTools
+                                    platform public?</h5>
                                 <!-- Answer -->
-                                <p class="color--grey">Etiam amet mauris suscipit in odio integer congue metus and vitae
-                                    arcu mollis blandit ultrice ligula egestas magna suscipit lectus magna suscipit
-                                    luctus blandit and laoreet</p>
+                                <p class="color--grey">The Advanced Public Beta program begins in spring 2024. Priority
+                                    will be given to universities, executive schools, associate partners, and then
+                                    organizations clients. Please send us your requirements so we can grant you access
+                                    in order of arrival.</p>
                             </div>
                             <!-- QUESTION #2 -->
                             <div class="question mb-35 wow fadeInUp">
                                 <!-- Question -->
-                                <h5 class="s-22 w-700"><span>2.</span> How do I choose a plan?</h5>
+                                <h5 class="s-22 w-700">Is it the Beta Version Free?</h5>
                                 <!-- Answer -->
-                                <p class="color--grey">An enim nullam tempor sapien gravida donec ipsum and enim porta
-                                    justo integer at velna vitae auctor integer congue undo magna laoreet augue pretium
-                                    purus pretium ligula</p>
+                                <p class="color--grey">We will cover the cost of ownership and invest 100% of the
+                                    revenue in accelerating the rollout.</p>
                             </div>
                             <!-- QUESTION #3 -->
                             <div class="question mb-35 wow fadeInUp">
                                 <!-- Question -->
-                                <h5 class="s-22 w-700"><span>3.</span> Do I need a credit card to sign up?</h5>
+                                <h5 class="s-22 w-700">How do I choose a plan?</h5>
                                 <!-- Answer -->
-                                <ul class="simple-list color--grey">
-                                    <li class="list-item">
-                                        <p>Fringilla risus, luctus mauris orci auctor purus ligula euismod pretium purus
-                                            pretium rutrum tempor sapien</p>
-                                    </li>
-                                    <li class="list-item">
-                                        <p>Nemo ipsam egestas volute undo turpis purus lipsum primis aliquam sapien
-                                            quaerat sodales pretium a purus</p>
-                                    </li>
-                                </ul>
+                                <p class="color--grey">Our services rollout will follow the services listed in each of
+                                    our offered plans.
+                                    So rollout will begin from 20 to 40 A4ManagementTools and from the services listed
+                                    in Starter Plan.</p>
                             </div>
                         </div>
                     </div>
@@ -61,31 +56,33 @@
                             <!-- QUESTION #4 -->
                             <div class="question mb-35 wow fadeInUp">
                                 <!-- Question -->
-                                <h5 class="s-22 w-700"><span>4.</span> Discounts for annual plans</h5>
+                                <h5 class="s-22 w-700">How are Customers, Partners and Associate
+                                    Partners trained? </h5>
                                 <!-- Answer -->
-                                <p class="color--grey">Quaerat sodales sapien euismod blandit purus a purus ipsum primis
-                                    in cubilia laoreet augue luctus dolor luctus</p>
-                                <!-- Answer -->
-                                <p class="color--grey">An enim nullam tempor sapien gravida donec congue metus. Vitae
-                                    arcu mollis blandit integer nemo volute velna</p>
+                                <p class="color--grey">Universities, partners, and organization clients will receive
+                                    comprehensive and precise documentation covering from implementation to rollout
+                                    details: S189.Administrators_Kit, S186.Associate_Partners_Kit and
+                                    S158.Onboarding_Starter_Kit.</p>
                             </div>
                             <!-- QUESTION #5 -->
                             <div class="question mb-35 wow fadeInUp">
                                 <!-- Question -->
-                                <h5 class="s-22 w-700"><span>5.</span> How to request a refund?</h5>
+                                <h5 class="s-22 w-700">How are users trained?</h5>
                                 <!-- Answer -->
-                                <p class="color--grey">Cubilia laoreet augue egestas and luctus donec curabite diam
-                                    vitae dapibus libero and quisque gravida donec neque blandit justo aliquam molestie
-                                    nunc sapien justo</p>
+                                <p class="color--grey">Users are supported by clients' superusers and, if desired, by
+                                    internal trainers. Each receives comprehensive documentation, including:
+                                    S187.Superusers_Kit, S111.Teachers_Training_Kit, S145.Students_Training_Kit.</p>
                             </div>
                             <!-- QUESTION #6 -->
                             <div class="question mb-35 wow fadeInUp">
                                 <!-- Question -->
-                                <h5 class="s-22 w-700"><span>6.</span> Can I cancel at anytime?</h5>
+                                <h5 class="s-22 w-700">How is the dissemination of tools ensured within
+                                    the client organization?</h5>
                                 <!-- Answer -->
-                                <p class="color--grey">An enim nullam tempor sapien gravida donec ipsum and enim porta
-                                    justo integer at velna vitae auctor integer congue undo magna laoreet augue pretium
-                                    purus pretium ligula</p>
+                                <p class="color--grey">The S158.Onboarding_Starter_Kit addresses important questions
+                                    about functionalities, roles, tasks, and new opportunities. The guide has been
+                                    prepared to ensure that managers can progressively integrate A4ManagementTools while
+                                    also promoting user autonomy.</p>
                             </div>
                         </div>
                     </div>

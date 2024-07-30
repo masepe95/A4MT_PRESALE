@@ -8,7 +8,7 @@
                         <!-- Title -->
                         <h2 class="s-50 w-700">Here’s what our amazing clients are saying</h2>
                         <!-- Text -->
-                        <p class="s-21 color--grey">Ligula risus auctor tempus magna feugiat lacinia.</p>
+                        <p class="s-21 color--grey">Soon it could be you in their place. We wish you that!</p>
                     </div>
                 </div>
             </div>
@@ -23,17 +23,19 @@
                             <!-- Text -->
                             <div class="review-txt">
                                 <!-- Text -->
-                                <p>Quaerat sodales sapien euismod blandit aliquet ipsum primis undo and cubilia laoreet augue and luctus magna dolor luctus egestas sapien vitae</p>
+                                <p>I applied my first A4ManagementTools for project management and got the result in 30
+                                    minutes without prior instructions. Astonishing!
+                                </p>
                                 <!-- Author -->
                                 <div class="author-data clearfix">
                                     <!-- Avatar -->
-                                    <div class="review-avatar">
+                                    <!-- <div class="review-avatar">
                                         <img src="/assets/images/review-author-1.jpg" alt="review-avatar" />
-                                    </div>
+                                    </div> -->
                                     <!-- Data -->
                                     <div class="review-author">
-                                        <h6 class="s-18 w-700">Scott Boxer</h6>
-                                        <p class="p-sm">@scott_boxer</p>
+                                        <h6 class="s-18 w-700">Eng. Simone Pin</h6>
+                                        <p class="p-sm">Manager @ Swiss Federal Railways Ltd.</p>
                                     </div>
                                 </div>
                                 <!-- End Author -->
@@ -50,17 +52,19 @@
                             <!-- Text -->
                             <div class="review-txt">
                                 <!-- Text -->
-                                <p>At sagittis congue augue and magna ipsum vitae a purus ipsum primis diam a cubilia laoreet augue egestas luctus a donec vitae ultrice ligula magna suscipit lectus gestas augue into cubilia</p>
+                                <p>Leading through A4ManagementTools allowed me to do it clearly and convincingly.
+                                    I lead 70 employees. I wouldn't go back.</p>
                                 <!-- Author -->
                                 <div class="author-data clearfix">
                                     <!-- Avatar -->
-                                    <div class="review-avatar">
+                                    <!-- <div class="review-avatar">
                                         <img src="/assets/images/review-author-2.jpg" alt="review-avatar" />
-                                    </div>
+                                    </div> -->
                                     <!-- Data -->
                                     <div class="review-author">
-                                        <h6 class="s-18 w-700">Joel Peterson</h6>
-                                        <p class="p-sm">Internet Surfer</p>
+                                        <h6 class="s-18 w-700">Ten. Col. Fabrizio Lasia</h6>
+                                        <p class="p-sm"> Commander Gotthard Intervention Centre <br> (Swiss Armed Forces
+                                            First Aid Organization)</p>
                                     </div>
                                 </div>
                                 <!-- End Author -->
@@ -77,17 +81,19 @@
                             <!-- Text -->
                             <div class="review-txt">
                                 <!-- Text -->
-                                <p>An augue cubilia laoreet magna suscipit egestas and ipsum a lectus purus ipsum primis and augue ultrice ligula and egestas a suscipit lectus gestas undo auctor tempus feugiat impedit quaerat</p>
+                                <p>We have review our strategy, improved alignment with the mission and made it possible
+                                    to be immediately operational.
+                                    The innovative one-page A4ManagementTools are invaluable.</p>
                                 <!-- Author -->
                                 <div class="author-data clearfix">
                                     <!-- Avatar -->
-                                    <div class="review-avatar">
+                                    <!-- <div class="review-avatar">
                                         <img src="/assets/images/review-author-5.jpg" alt="review-avatar" />
-                                    </div>
+                                    </div> -->
                                     <!-- Data -->
                                     <div class="review-author">
-                                        <h6 class="s-18 w-700">Jennifer Harper</h6>
-                                        <p class="p-sm">App Developer</p>
+                                        <h6 class="s-18 w-700">Loris Allemann</h6>
+                                        <p class="p-sm">CEO, Girotondo Ltd. Children's Therapy Centers</p>
                                     </div>
                                 </div>
                                 <!-- End Author -->
@@ -104,17 +110,19 @@
                             <!-- Text -->
                             <div class="review-txt">
                                 <!-- Text -->
-                                <p>Augue at vitae purus tempus egestas volutpat augue undo cubilia laoreet magna suscipit luctus dolor blandit at purus tempus feugiat impedit</p>
+                                <p>Over the past few years, the development projects of our Foundation, which were
+                                    initiated with about ten A4ManagementTools, have been significant. We have reached a
+                                    point where we are very satisfied with the progress made.</p>
                                 <!-- Author -->
                                 <div class="author-data clearfix">
                                     <!-- Avatar -->
-                                    <div class="review-avatar">
+                                    <!-- <div class="review-avatar">
                                         <img src="/assets/images/review-author-8.jpg" alt="review-avatar" />
-                                    </div>
+                                    </div> -->
                                     <!-- Data -->
                                     <div class="review-author">
-                                        <h6 class="s-18 w-700">Evelyn Martinez</h6>
-                                        <p class="p-sm">WordPress Consultant</p>
+                                        <h6 class="s-18 w-700">John Baldi and Silvia Daniele</h6>
+                                        <p class="p-sm">CEO & Head of Care @ Opera Charitas Foundation, Switzerland</p>
                                     </div>
                                 </div>
                                 <!-- End Author -->
