@@ -23,17 +23,17 @@
                             </li>
                             <li>
                                 <p>
-                                    <NuxtLink to="/blog-listing">About Us</NuxtLink>
+                                    <NuxtLink to="/careers">Careers</NuxtLink>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <NuxtLink to="/reviews">Customers</NuxtLink>
+                                    <NuxtLink to="/benefits">Benefits</NuxtLink>
                                 </p>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <p><a href="#">Community</a></p>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -45,14 +45,14 @@
                         <h6 class="s-17 w-700">Product</h6>
                         <!-- Links -->
                         <ul class="foo-links clearfix">
-                            <li>
+                            <!-- <li>
                                 <p>
                                     <NuxtLink to="/features">Integration</NuxtLink>
                                 </p>
-                            </li>
+                            </li> -->
                             <li>
                                 <p>
-                                    <NuxtLink to="/download">What's New</NuxtLink>
+                                    <NuxtLink to="/inspiration">Inspirational Board</NuxtLink>
                                 </p>
                             </li>
                             <li>
@@ -62,7 +62,7 @@
                             </li>
                             <li>
                                 <p>
-                                    <NuxtLink to="/help-center">Help Center</NuxtLink>
+                                    <NuxtLink to="/contacts">Contact Us</NuxtLink>
                                 </p>
                             </li>
                         </ul>
@@ -91,11 +91,11 @@
                                     <NuxtLink to="/cookies">Cookie Policy</NuxtLink>
                                 </p>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <p>
                                     <NuxtLink to="/cookies">Site Map</NuxtLink>
                                 </p>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>

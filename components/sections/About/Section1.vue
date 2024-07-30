@@ -53,7 +53,7 @@
                                 <p>Imagine delegating 1 task in 5 minutes, using 1 A4 sheet containing procedure and
                                     instructions.
                                     Imagine consulting the progress 24/7 and presenting the results with the same
-                                    document, with just 1 click and without rearranging the content.
+                                    document, with just 1 click and without rearranging the content. <br>
                                     Welcome to A4ManagementTools.</p>
                                 <!-- Author -->
                                 <p class="a2-txt-author">Marco Cerulli <span>CEO & FOUNDER</span></p>

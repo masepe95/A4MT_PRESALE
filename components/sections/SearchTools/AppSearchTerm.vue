@@ -167,7 +167,7 @@ input {
     padding: 12px 15px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
-    height: 46px;
+    height: 50px;
 }
 
 input:focus {
@@ -181,15 +181,15 @@ input:focus {
     border-bottom-left-radius: 0;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    border: 1px solid #007bff;
-    background: #007bff;
+    border: 1px solid #294e80;
+    background: #294e80;
     color: white;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    height: 46px;
+    height: 50px;
     box-sizing: border-box;
     transition: background 0.3s ease, border-color 0.3s ease;
 }
@@ -208,7 +208,7 @@ input:focus {
     border: 1px solid #ccc;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    max-height: 200px;
+    max-height: 400px;
     overflow-y: auto;
 }
 
