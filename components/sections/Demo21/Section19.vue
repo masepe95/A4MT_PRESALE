@@ -2,23 +2,26 @@
     <div id="app-hero" ref="hero">
         <div class="hero-overlay">
             <img :src="logo" alt="logo" class="hero-logo">
-            <h1 class="hero-title mt-5">3-Moves Ahead Management.</h1>
+            <h1 class="hero-title mt-5"><span ref="typedText"></span></h1>
             <div class="search-input">
                 <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
             </div>
+            <SectionsAboutSection6 style="width: 100%;" />
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
+import Typed from 'typed.js';
 import AppSearchTerm from '~/components/sections/SearchTools/AppSearchTerm.vue';
 import logo from '~/assets/images/A4MT-logo-hero.png';
 
 const searchPromptId = ref(null);
 const searchQuery = ref(''); // Aggiungi questa riga per mantenere il prompt selezionato
 const router = useRouter();
+const typedText = ref(null);
 
 const onPromptIdChange = (id) => {
     searchPromptId.value = id;
@@ -30,6 +33,16 @@ const handleFormSubmit = (description) => {
         router.push({ name: 'inspiration', query: { prompt_id: searchPromptId.value, prompt_description: searchQuery.value } });
     }
 };
+
+onMounted(() => {
+    const options = {
+        strings: ['3-Moves Ahead Management.'],
+        typeSpeed: 80,
+        showCursor: false,
+    };
+
+    new Typed(typedText.value, options);
+});
 </script>
 
 <style scoped>

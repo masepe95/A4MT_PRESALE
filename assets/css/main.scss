@@ -1433,9 +1433,9 @@ p.btns-group-txt span.txt-data a:hover {
 }
 .btn--tra-black,
 .hover--tra-black:hover {
-    color: #ffff !important;
+    color: #000000 !important;
     background-color: transparent !important;
-    border-color: #ffff !important;
+    border-color: #000000 !important;
 }
 /*------------------------------------------*/
 /*  GREY BUTTON
@@ -10595,3 +10595,10 @@ body.theme--dark {
 		}
 	}
 }
+
+.swiper-wrapper{
+    display: flex;
+    align-items: center;
+    filter: grayscale(0.5);
+}
+

@@ -4,13 +4,13 @@
             <!-- BRANDS TITLE -->
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-9">
-                    <div class="brands-title mb-50">
+                    <!-- <div class="brands-title mb-50">
                         <h5 class="s-18">A4ManagementTools is loved and trusted by our partners:</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- BRANDS CAROUSEL -->
-            <div class="row">
+            <div class="row mt-100">
                 <div class="col text-center">
                     <SlidersBrandLogos />
                 </div>
@@ -19,5 +19,4 @@
         </div>
         <!-- End container -->
     </div>
-    <hr class="divider" />
 </template>
