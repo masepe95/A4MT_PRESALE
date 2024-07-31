@@ -14,29 +14,29 @@
                 <ul class="wsmenu-list nav-theme">
                     <!-- SIMPLE NAVIGATION LINK -->
                     <li class="nl-simple" aria-haspopup="true">
-                        <NuxtLink to="/about" class="h-link">About</NuxtLink>
+                        <NuxtLink to="/about" class="h-link" @click="handleLinkClick">About</NuxtLink>
                     </li>
                     <!-- SIMPLE NAVIGATION LINK -->
                     <li class="nl-simple" aria-haspopup="true">
-                        <NuxtLink to="/solutions" class="h-link">Solutions</NuxtLink>
+                        <NuxtLink to="/solutions" class="h-link" @click="handleLinkClick">Solutions</NuxtLink>
                     </li>
                     <li class="nl-simple" aria-haspopup="true">
-                        <NuxtLink to="/benefits" class="h-link">Benefits</NuxtLink>
+                        <NuxtLink to="/benefits" class="h-link" @click="handleLinkClick">Benefits</NuxtLink>
                     </li>
                     <li class="nl-simple" aria-haspopup="true">
-                        <NuxtLink to="/pricing-1" class="h-link">Prices</NuxtLink>
+                        <NuxtLink to="/pricing-1" class="h-link" @click="handleLinkClick">Prices</NuxtLink>
                     </li>
                     <li class="nl-simple" aria-haspopup="true">
-                        <NuxtLink to="/contacts" class="h-link">Contact</NuxtLink>
+                        <NuxtLink to="/contacts" class="h-link" @click="handleLinkClick">Contact</NuxtLink>
                     </li>
                     <!-- SIGN IN LINK -->
                     <li class="nl-simple reg-fst-link mobile-last-link" aria-haspopup="true">
-                        <NuxtLink to="/login-2" class="h-link">Sign in</NuxtLink>
+                        <NuxtLink to="/login-2" class="h-link" @click="handleLinkClick">Sign in</NuxtLink>
                     </li>
                     <!-- SIGN UP BUTTON -->
                     <li class="nl-simple" aria-haspopup="true">
-                        <NuxtLink to="/signup-2" class="btn r-04 btn--theme hover--tra-black last-link">Sign up
-                        </NuxtLink>
+                        <NuxtLink to="/signup-2" class="btn r-04 btn--theme hover--tra-black last-link"
+                            @click="handleLinkClick">Sign up</NuxtLink>
                     </li>
                 </ul>
             </nav>
@@ -44,6 +44,7 @@
         </div>
     </div>
 </template>
+
 <script>
 import { reactive } from 'vue';
 export default {
@@ -54,8 +55,12 @@ export default {
         const toggle = (index) => {
             state.isOpen[index] = !state.isOpen[index];
         };
+        const toggleMobileMenu = () => {
+            document.body.classList.toggle("wsactive");
+        };
         return {
             toggle,
+            toggleMobileMenu,
             isOpen: state.isOpen
         };
     },
@@ -76,6 +81,14 @@ export default {
                 menu.classList.remove("scroll");
                 header.classList.remove("scroll");
             }
+        },
+        handleLinkClick() {
+            if (window.innerWidth <= 768) {
+                this.toggleMobileMenu();
+            }
+        },
+        toggleMobileMenu() {
+            document.body.classList.toggle("wsactive");
         }
     }
 };
