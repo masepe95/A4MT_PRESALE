@@ -24,11 +24,12 @@
                                 <span>Choose a topic, so we know who to send your request to: </span>
                                 <select class="form-select subject" aria-label="Default select example">
                                     <option selected>This question is about...</option>
-                                    <option>Registering/Authorising</option>
-                                    <option>Using Application</option>
-                                    <option>Troubleshooting</option>
-                                    <option>Backup/Restore</option>
-                                    <option>Other</option>
+                                    <option>I would like a quote</option>
+                                    <option>I would like guidance and a quote</option>
+                                    <option>I intend to evaluate the organization and define an action plan and priority
+                                        tools</option>
+                                    <option>I am a consultant, I have a request.</option>
+                                    <option>I am a costumer, I have a request.</option>
                                 </select>
                             </div>
                             <!-- Contact Form Input -->
@@ -44,11 +45,35 @@
                                     placeholder="Email Address*" />
                             </div>
                             <div class="col-md-12">
+                                <p class="p-lg">Your Phone Number:</p>
+                                <span>Please include your country code (Ex. +41)</span>
+                                <input type="tel" name="tel" class="form-control phone"
+                                    placeholder="+41 ## ### ## ##" />
+                            </div>
+                            <div class="col-md-12">
+                                <p class="p-lg">Your Company Name:</p>
+                                <span>Please enter your company name: </span>
+                                <input type="text" name="company" class="form-control company"
+                                    placeholder="Your Company Name" />
+                            </div>
+                            <!-- Form Select -->
+                            <div class="col-md-12 input-subject">
+                                <p class="p-lg">How many employees does your company have?</p>
+                                <span>Choose a range, so we know what is best suited for you: </span>
+                                <select class="form-select subject" aria-label="Default select example">
+                                    <option selected disabled>Number of Employees...</option>
+                                    <option>1 - 5</option>
+                                    <option>6 - 10</option>
+                                    <option>11 - 50</option>
+                                    <option>51 - 200</option>
+                                    <option>> 200</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
                                 <p class="p-lg">Explain your question in details:</p>
-                                <span>Your OS version, A4ManagementTools version & build, steps you did. Be VERY
-                                    precise!</span>
+                                <span>Please describe what can we do for you!</span>
                                 <textarea class="form-control message" name="message" rows="6"
-                                    placeholder="I have a problem with..."></textarea>
+                                    placeholder="I have a question about..."></textarea>
                             </div>
                             <!-- Contact Form Button -->
                             <div class="col-md-12 mt-15 form-btn text-right">
