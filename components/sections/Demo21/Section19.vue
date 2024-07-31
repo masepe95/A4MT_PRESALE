@@ -6,7 +6,7 @@
             <div class="search-input">
                 <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
             </div>
-            <SectionsAboutSection6 style="width: 100%;" />
+            <SectionsAboutSection6 style="width: 100vh;" />
         </div>
     </div>
 </template>
