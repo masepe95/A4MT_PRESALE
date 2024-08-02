@@ -48,7 +48,7 @@
                                     <p class="color--grey m-0">CHF 19.99 / 40 Tools to choose</p>
                                     <p class="color--grey m-0">CHF 29.99 / 60 Tools to choose</p>
                                     <p class="color--grey m-0">CHF 39.99 / 80 Tools to choose</p>
-                                    <p class="color--grey m-0">by month, up to 100 licenses</p>
+                                    <!-- <p class="color--grey m-0">by month, up to 100 licenses</p> -->
                                 </div>
                             </div>
                             <!-- END TABLE HEADER -->
@@ -59,7 +59,7 @@
                                     <p><span class="flaticon-check"></span> 80+ A4ManagementTools</p>
                                 </li>
                                 <li>
-                                    <p><span class="flaticon-check"></span> Student Teaching Material Kit</p>
+                                    <p><span class="flaticon-check"></span> Student Training Kit</p>
                                 </li>
                                 <li>
                                     <p><span class="flaticon-check"></span> 5000+ AI Insights</p>
@@ -156,11 +156,11 @@
                                 <!-- Price -->
                                 <div class="price mt-3">
                                     <!-- Monthly Price -->
-                                    <div class="price2" v-if="showPrice2">
+                                    <!-- <div class="price2" v-if="showPrice2">
                                         <sup class="color--black">CHF</sup>
-                                        <span class="color--black price">X.99</span>
-                                        <!-- <sup class="validity color--grey">&nbsp;/&ensp;mo</sup> -->
-                                    </div>
+                                        <span class="color--black price"></span>
+                                        <sup class="validity color--grey">&nbsp;/&ensp;mo</sup>
+                                    </div> -->
                                     <!-- Yearly Price -->
                                     <div class="price1" v-if="showPrice1">
                                         <sup class="color--black">$</sup>
@@ -172,7 +172,7 @@
                                         </div>
                                     </div>
                                     <!-- Text -->
-                                    <p class="color--grey m-0">for each user, by month.</p>
+                                    <!-- <p class="color--grey m-0">for each user, by month.</p> -->
                                 </div>
                             </div>
                             <!-- END TABLE HEADER -->
@@ -236,8 +236,8 @@
                                 <div class="price mt-3">
                                     <!-- Monthly Price -->
                                     <div class="price2" v-if="showPrice2">
-                                        <sup class="color--black">CHF</sup>
-                                        <span class="color--black price">X.99</span>
+                                        <!-- <sup class="color--black">CHF</sup>
+                                        <span class="color--black price"></span> -->
                                         <!-- <sup class="validity color--grey">&nbsp;/&ensp;mo</sup> -->
                                     </div>
                                     <!-- Yearly Price -->
@@ -251,10 +251,10 @@
                                         </div>
                                     </div>
                                     <!-- Text -->
-                                    <p class="color--grey m-0">for each user, by month.
+                                    <!-- <p class="color--grey m-0">for each user, by month.
                                     </p>
                                     <p class="color--grey m-0">Pro services are included.
-                                    </p>
+                                    </p> -->
                                 </div>
                             </div>
                             <!-- END TABLE HEADER -->
@@ -275,7 +275,7 @@
                                     <p><span class="flaticon-check"></span> Certified document distribution</p>
                                 </li>
                                 <li>
-                                    <p><span class="flaticon-check"></span> Teacher's educational material kit</p>
+                                    <p><span class="flaticon-check"></span> Teacher's training kit</p>
                                 </li>
                                 <li>
                                     <p><span class="flaticon-check"></span> Task synchronization</p>
@@ -347,7 +347,7 @@
                                     <!-- Monthly Price -->
                                     <div class="price2" v-if="showPrice2">
                                         <!-- <sup class="color--black">CHF</sup> -->
-                                        <span class="color--black price-big">One Demand</span>
+                                        <!-- <span class="color--black price-big">One Demand</span> -->
                                         <!-- <sup class="validity color--grey">&nbsp;/&ensp;mo</sup> -->
                                     </div>
                                     <!-- Yearly Price -->
@@ -361,8 +361,8 @@
                                         </div>
                                     </div>
                                     <!-- Text -->
-                                    <p class="color--grey m-0">Special features.
-                                    </p>
+                                    <!-- <p class="color--grey m-0">Special features.
+                                    </p> -->
                                 </div>
                             </div>
                             <!-- END TABLE HEADER -->
@@ -462,7 +462,7 @@ export default {
 </script>
 <style scoped>
 li p {
-    font-size: 17px;
+    font-size: 13px;
 }
 
 sup {
@@ -471,5 +471,31 @@ sup {
 
 .price-big {
     font-size: 38px;
+}
+
+.pricing-features li {
+    padding: 5px 8px;
+}
+
+.price span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.price sup.validity {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    top: -2px;
+    left: 0;
+}
+
+.price p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 0.6rem;
 }
 </style>

@@ -34,10 +34,10 @@
                         <NuxtLink to="/login-2" class="h-link" @click="handleLinkClick">Sign in</NuxtLink>
                     </li>
                     <!-- SIGN UP BUTTON -->
-                    <li class="nl-simple" aria-haspopup="true">
+                    <!-- <li class="nl-simple" aria-haspopup="true">
                         <NuxtLink to="/signup-2" class="btn r-04 btn--theme hover--tra-black last-link"
                             @click="handleLinkClick">Sign up</NuxtLink>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
             <!-- END MAIN MENU -->

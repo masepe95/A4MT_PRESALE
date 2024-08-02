@@ -6,7 +6,7 @@
             <div class="search-input">
                 <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
             </div>
-            <SectionsAboutSection6 style="width: 100%;" />
+            <!-- <SectionsAboutSection6 style="width: 100%;" /> -->
         </div>
     </div>
 </template>
@@ -36,7 +36,7 @@ const handleFormSubmit = (description) => {
 
 onMounted(() => {
     const options = {
-        strings: ['3-Moves Ahead Management.'],
+        strings: ['80+ Tools for managers - A4 Format'],
         typeSpeed: 80,
         showCursor: false,
     };

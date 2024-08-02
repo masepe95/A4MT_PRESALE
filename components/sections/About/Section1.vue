@@ -6,13 +6,15 @@
                 <div class="col-md-11 col-lg-10 col-xl-9">
                     <div class="about-2-title mb-60">
                         <!-- Title -->
-                        <h2 class="s-52 w-700 mb-30">We provide 80+ Tools & Trainings for managers and collaborators
+                        <h2 class="s-52 w-700 mb-30 ">We provide 80+ Tools & Trainings for managers and
+                            collaborators
                         </h2>
                         <div class="search-input">
                             <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
                         </div>
                         <!-- Text -->
-                        <p class="mb-0">In A4ManagementTools, we offer intuitive digital tools that make complex
+                        <p class="mb-0 ">In A4ManagementTools, we offer intuitive digital tools that make
+                            complex
                             management tasks more efficient by converting them into concise one-page documents. These
                             tools, enriched with procedures, training and examples, improve employee autonomy and
                             management perception.</p>
@@ -65,7 +67,8 @@
                         <!-- IMAGE-4 -->
                         <div class="col-md-5 col-lg-6">
                             <div class="about-2-img a-2-4 r-12">
-                                <img class="img-fluid" src="/assets/images/a2-4.jpg" alt="about-image" />
+                                <img style="z-index: 5;" class="img-fluid" src="/assets/images/a2-4.jpg"
+                                    alt="about-image" />
                             </div>
                         </div>
                     </div>
@@ -104,3 +107,30 @@ const handleFormSubmit = (description) => {
     }
 };
 </script>
+<style scoped>
+/* #about-2 {
+    height: 100vh;
+    background-image: url(../../../assets/images/main_background.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.115);
+        z-index: 0;
+    }
+} */
+
+.search-form {
+    align-items: start;
+}
+</style>
