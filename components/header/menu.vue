@@ -3,11 +3,13 @@
         <div class="wsmainwp clearfix">
             <!-- HEADER BLACK LOGO -->
             <div class="desktoplogo">
-                <NuxtLink to="/" class="logo-black"><img src="/assets/images/A4MT-logo.png" alt="logo" /></NuxtLink>
+                <NuxtLink to="/" class="logo-black"><img src="/assets/images/A4MT-logo-small.png" alt="logo" />
+                </NuxtLink>
             </div>
             <!-- HEADER WHITE LOGO -->
             <div class="desktoplogo">
-                <NuxtLink to="/" class="logo-white"><img src="/assets/images/A4MT-logo.png" alt="logo" /></NuxtLink>
+                <NuxtLink to="/" class="logo-white"><img src="/assets/images/A4MT-logo-small.png" alt="logo" />
+                </NuxtLink>
             </div>
             <!-- MAIN MENU -->
             <nav class="wsmenu clearfix">

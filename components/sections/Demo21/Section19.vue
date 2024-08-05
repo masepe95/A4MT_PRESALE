@@ -16,7 +16,7 @@ import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import Typed from 'typed.js';
 import AppSearchTerm from '~/components/sections/SearchTools/AppSearchTerm.vue';
-import logo from '~/assets/images/A4MT-logo-hero.png';
+import logo from '~/assets/images/A4MT-logo-hero.png'
 
 const searchPromptId = ref(null);
 const searchQuery = ref(''); // Aggiungi questa riga per mantenere il prompt selezionato
@@ -36,7 +36,7 @@ const handleFormSubmit = (description) => {
 
 onMounted(() => {
     const options = {
-        strings: ['80+ Tools for managers - A4 Format'],
+        strings: ['80+ Tools for Managers - A4 Format.'],
         typeSpeed: 80,
         showCursor: false,
     };

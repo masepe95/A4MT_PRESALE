@@ -66,7 +66,7 @@
                             </div>
                             <!-- Team Member Data -->
                             <div class="team-member-data">
-                                <h6 class="s-20 w-700 color--black">Les Bakker</h6>
+                                <h6 class="s-20 w-700 color--black">Candidate</h6>
                                 <p class="color--grey">Software Engineer</p>
                             </div>
                         </div>
@@ -84,8 +84,8 @@
                             </div>
                             <!-- Team Member Data -->
                             <div class="team-member-data">
-                                <h6 class="s-20 w-700 color--black">Alyssa Garrison</h6>
-                                <p class="color--grey">Web Development</p>
+                                <h6 class="s-20 w-700 color--black">Candidate</h6>
+                                <p class="color--grey">Customer Success Manager</p>
                             </div>
                         </div>
                     </div>
@@ -102,8 +102,8 @@
                             </div>
                             <!-- Team Member Data -->
                             <div class="team-member-data">
-                                <h6 class="s-20 w-700 color--black">Charlotte Johnson</h6>
-                                <p class="color--grey">Content Manager</p>
+                                <h6 class="s-20 w-700 color--black">Candidate</h6>
+                                <p class="color--grey">Customer Success Manager</p>
                             </div>
                         </div>
                     </div>
@@ -120,8 +120,8 @@
                             </div>
                             <!-- Team Member Data -->
                             <div class="team-member-data">
-                                <h6 class="s-20 w-700 color--black">Olivia Steiner</h6>
-                                <p class="color--grey">Head of Marketing</p>
+                                <h6 class="s-20 w-700 color--black">Candidate</h6>
+                                <p class="color--grey">Customer Success Manager</p>
                             </div>
                         </div>
                     </div>
@@ -138,8 +138,8 @@
                             </div>
                             <!-- Team Member Data -->
                             <div class="team-member-data">
-                                <h6 class="s-20 w-700 color--black">Charles Fairless</h6>
-                                <p class="color--grey">Operations Manager</p>
+                                <h6 class="s-20 w-700 color--black">Candidate</h6>
+                                <p class="color--grey">Customer Success Manager</p>
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                             <!-- Team Member Data -->
                             <div class="team-member-data">
                                 <h6 class="s-20 w-700 color--black">Grow with Us!</h6>
-                                <p class="color--grey"><a href="mailto:youremail@mail.com">hireme@domain.com</a></p>
+                                <p class="color--grey"><a href="/careers">Careers</a></p>
                             </div>
                         </div>
                     </div>

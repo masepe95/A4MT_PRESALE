@@ -3178,7 +3178,7 @@ span.sm-info {
 }
 .nav-yellow-500 .sm-info {
     background-color: #ffba01;
-}
+}ƒ
 .nav-yellow-400 .sm-info {
     background-color: #ffbd45;
 }
@@ -10599,6 +10599,14 @@ body.theme--dark {
 .swiper-wrapper{
     display: flex;
     align-items: center;
-    filter: grayscale(0.5);
+    filter: grayscale(1);
 }
 
+#main-menu{
+    display: flex;
+    justify-content: center;
+}
+
+.desktoplogo{
+    margin-right: 40px;
+}
