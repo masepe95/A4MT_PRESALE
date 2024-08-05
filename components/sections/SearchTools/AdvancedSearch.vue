@@ -341,7 +341,7 @@ export default {
     }
 
     .dropbtn {
-        font-size: 9px;
+        font-size: 12px;
         padding: 6px 8px;
     }
 
@@ -352,5 +352,10 @@ export default {
     .results-container {
         height: calc(100vh - 320px);
     }
+
+    .dropdown-content {
+        left: 0;
+    }
+
 }
 </style>
