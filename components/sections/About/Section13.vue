@@ -18,10 +18,10 @@
                 <div class="col-md-6 col-lg-4">
                     <div id="bp-1-1" class="blog-post wow fadeInUp">
                         <!-- BLOG POST IMAGE -->
-                        <div class="blog-post-img mb-35">
+                        <!-- <div class="blog-post-img mb-35">
                             <img class="img-fluid r-16" src="/assets/images/blog/post-8-img.jpg"
                                 alt="blog-post-image" />
-                        </div>
+                        </div> -->
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
                             <!-- Post Tag -->
@@ -57,10 +57,10 @@
                 <div class="col-md-6 col-lg-4">
                     <div id="bp-1-2" class="blog-post wow fadeInUp">
                         <!-- BLOG POST IMAGE -->
-                        <div class="blog-post-img mb-35">
+                        <!-- <div class="blog-post-img mb-35">
                             <img class="img-fluid r-16" src="/assets/images/blog/post-2-img.jpg"
                                 alt="blog-post-image" />
-                        </div>
+                        </div> -->
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
                             <!-- Post Tag -->
@@ -95,10 +95,10 @@
                 <div class="col-md-12 col-lg-4">
                     <div id="bp-1-3" class="blog-post wow fadeInUp">
                         <!-- BLOG POST IMAGE -->
-                        <div class="blog-post-img mb-35">
+                        <!-- <div class="blog-post-img mb-35">
                             <img class="img-fluid r-16" src="/assets/images/blog/post-5-img.jpg"
                                 alt="blog-post-image" />
-                        </div>
+                        </div> -->
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
                             <!-- Post Tag -->

@@ -149,5 +149,9 @@ export default {
     .card {
         max-height: 60vh;
     }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
 }
 </style>

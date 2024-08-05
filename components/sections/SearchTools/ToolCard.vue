@@ -67,6 +67,15 @@ export default {
 
 .card-body {
     padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-title,
+.card-subtitle,
+.card-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .card-title {
@@ -95,6 +104,7 @@ export default {
 
     .card-body {
         padding: 20px;
+        overflow: hidden;
     }
 
     .card-title {
@@ -122,18 +132,19 @@ export default {
 
     .card-body {
         padding: 20px;
+        overflow: hidden;
     }
 
     .card-title {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
 
     .card-subtitle {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 
     .card-text {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 }
 </style>

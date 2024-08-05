@@ -5,7 +5,7 @@
         <div class="container">
             <div class="filter-section">
                 <div class="filter-group" v-click-outside="() => closeDropdown('categories')">
-                    <button class="dropbtn" @click="toggleDropdown('categories')">Select Categories</button>
+                    <button class="dropbtn" @click="toggleDropdown('categories')">Filter Categories</button>
                     <div class="dropdown-content" :class="{ show: dropdowns.categories }">
                         <div v-for="category in categories" :key="category.id" class="dropdown-item">
                             <input type="checkbox" :id="'category-' + category.id" :value="category.id"
@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="filter-group" v-click-outside="() => closeDropdown('levels')">
-                    <button class="dropbtn" @click="toggleDropdown('levels')">Select Levels</button>
+                    <button class="dropbtn" @click="toggleDropdown('levels')">Filter Levels</button>
                     <div class="dropdown-content" :class="{ show: dropdowns.levels }">
                         <div v-for="level in levels" :key="level.id" class="dropdown-item">
                             <input type="checkbox" :id="'level-' + level.id" :value="level.id"
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="filter-group" v-click-outside="() => closeDropdown('programs')">
-                    <button class="dropbtn" @click="toggleDropdown('programs')">Select Programs</button>
+                    <button class="dropbtn" @click="toggleDropdown('programs')">Filter Programs</button>
                     <div class="dropdown-content" :class="{ show: dropdowns.programs }">
                         <div v-for="program in programs" :key="program.id" class="dropdown-item">
                             <input type="checkbox" :id="'program-' + program.id" :value="program.id"
@@ -302,12 +302,20 @@ export default {
 
 @media (max-width: 768px) {
     .filter-section {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .filter-group {
-        width: 100%;
+        width: auto;
+        margin: 5px;
+    }
+
+    .dropbtn {
+        font-size: 14px;
+        padding: 8px 10px;
     }
 
     .results-count {
@@ -320,9 +328,29 @@ export default {
 }
 
 @media (max-width: 576px) {
+    .filter-section {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-group {
+        width: auto;
+        margin: 5px;
+    }
+
     .dropbtn {
-        font-size: 12px;
+        font-size: 10px;
         padding: 6px 8px;
+    }
+
+    .results-count {
+        font-size: 0.9rem;
+    }
+
+    .results-container {
+        height: calc(100vh - 320px);
     }
 }
 </style>
