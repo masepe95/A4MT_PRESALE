@@ -118,7 +118,7 @@ onMounted(() => {
 
 @media (max-width: 576px) {
     .hero-title {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .hero-logo {
