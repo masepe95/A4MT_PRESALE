@@ -249,7 +249,6 @@ export default {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
-    max-height: 200px;
     overflow-y: auto;
     margin-top: 5px;
     top: 100%;
