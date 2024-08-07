@@ -122,6 +122,12 @@ export default {
         const filteredTools = async (description = '') => {
             isLoading.value = true;
             tools.value = [];
+
+            if (!routeQueryPromptId.value && !initialPrompt.value) {
+                isLoading.value = false;
+                return;
+            }
+
             const params = {
                 categories: form.value.selectedCategories.join(','),
                 levels: form.value.selectedLevels.join(','),
@@ -191,6 +197,7 @@ export default {
     }
 };
 </script>
+
 
 <style scoped>
 #advanced-search {
