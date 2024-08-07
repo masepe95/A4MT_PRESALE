@@ -24,12 +24,14 @@
                                 <span>Choose a topic, so we know who to send your request to: </span>
                                 <select class="form-select subject" aria-label="Default select example">
                                     <option selected>This question is about...</option>
-                                    <option>I would like a quote</option>
-                                    <option>I would like guidance and a quote</option>
-                                    <option>I intend to evaluate the organization and define an action plan and priority
-                                        tools</option>
-                                    <option>I am a consultant, I have a request.</option>
-                                    <option>I am a costumer, I have a request.</option>
+                                    <option>I would like a quotation</option>
+                                    <option>I would like to assess my organisation and establish an action plan.
+                                    </option>
+                                    <option>I would like to candidate myself as an Associate Success Manager / Partner.
+                                    </option>
+                                    <option>I am a customer. I have a request.
+                                    </option>
+                                    <option>Other...</option>
                                 </select>
                             </div>
                             <!-- Contact Form Input -->
@@ -62,11 +64,21 @@
                                 <span>Choose a range, so we know what is best suited for you: </span>
                                 <select class="form-select subject" aria-label="Default select example">
                                     <option selected disabled>Number of Employees...</option>
-                                    <option>1 - 5</option>
-                                    <option>6 - 10</option>
-                                    <option>11 - 50</option>
-                                    <option>51 - 200</option>
-                                    <option>> 200</option>
+                                    <option>
+                                        < 10 </option>
+                                    <option>
+                                        < 50</option>
+                                    <option>
+                                        < 100</option>
+                                    <option>
+                                        < 200</option>
+                                    <option>
+                                        < 500</option>
+                                    <option>
+                                        < 1000</option>
+                                    <option>
+                                        < 9999</option>
+                                    <option> > 10'000</option>
                                 </select>
                             </div>
                             <div class="col-md-12">

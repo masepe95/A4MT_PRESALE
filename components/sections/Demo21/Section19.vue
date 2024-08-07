@@ -36,8 +36,8 @@ const handleFormSubmit = (description) => {
 
 onMounted(() => {
     const options = {
-        strings: ['80+ Tools for Managers - A4 Format.'],
-        typeSpeed: 80,
+        strings: ['80+ Tools for Managers &#x2022; A4 Format.'],
+        typeSpeed: 40,
         showCursor: false,
     };
 
