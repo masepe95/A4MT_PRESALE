@@ -114,7 +114,7 @@ export default {
         },
         handleFormSubmit() {
             if (this.searchQuery.trim() === '') {
-                alert("La query di ricerca non può essere vuota.");
+                alert("Please, select an option to search.");
             } else {
                 this.$emit('form-submit', this.searchQuery);
             }
