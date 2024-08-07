@@ -25,15 +25,18 @@
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
                             <!-- Post Tag -->
-                            <span class="post-tag color--pink-400">Product News</span>
+                            <span class="post-tag color--pink-400">Intro</span>
                             <!-- Post Link -->
                             <h6 class="s-20 w-700">
-                                <NuxtLink tp="/single-post">Aliqum mullam porta blandit: tempor sapien and gravida
+                                <NuxtLink tp="/single-post">Introduction to micro-articles for executives.
                                 </NuxtLink>
                             </h6>
                             <!-- Text -->
-                            <p>Egestas luctus vitae augue and ipsum ultrice quisque in cursus lacus feugiat congue diam
-                                ultrice laoreet sagittis</p>
+                            <p>Our micro-articles are a valuable resource for disseminating advanced techniques in
+                                business
+                                management
+                                and personnel leadership. We support continuous learning and the adoption of refined
+                                business practices ...</p>
                             <!-- Post Meta -->
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
@@ -64,14 +67,17 @@
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
                             <!-- Post Tag -->
-                            <span class="post-tag color--green-400">Community</span>
+                            <span class="post-tag color--green-400">Self Improvements</span>
                             <!-- Post Link -->
                             <h6 class="s-20 w-700">
-                                <NuxtLink tp="/single-post">Porttitor cursus fusce egestas CEO cursus at magna sapien
-                                    suscipit and egestas ipsum</NuxtLink>
+                                <NuxtLink tp="/single-post">Becoming an Executive</NuxtLink>
                             </h6>
                             <!-- Text -->
-                            <p>Aliqum mullam ipsum vitae and blandit vitae tempor sapien and donec lipsum</p>
+                            <p>Whether you are trained as an architect, lawyer, technician, or entrepreneur, leading a
+                                team, managing
+                                projects, or running an entire company requires additional skills. The role of a manager
+                                adds to the
+                                expertise acquired during your years of training ...</p>
                             <!-- Post Meta -->
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
@@ -102,15 +108,19 @@
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
                             <!-- Post Tag -->
-                            <span class="post-tag color--purple-400">Freelancer Tips</span>
+                            <span class="post-tag color--purple-400">Business Improvements</span>
                             <!-- Post Link -->
                             <h6 class="s-20 w-700">
-                                <NuxtLink tp="/single-post">Cubilia laoreet augue egestas and A4ManagementTools magna
-                                    impedit</NuxtLink>
+                                <NuxtLink tp="/single-post">Creating
+                                    value and
+                                    omitting the superfluous</NuxtLink>
                             </h6>
                             <!-- Text -->
-                            <p>Luctus vitae egestas augue and ipsum ultrice quisque in cursus lacus feugiat egets congue
-                                ultrice sagittis laoreet</p>
+                            <p>Is it possible to enhance the value of the content in a document with a simple action?
+                                Yes, by setting a single specific criterion.
+                                During the review of certification projects for an executive Master's program, we
+                                observed an average
+                                quality of content ...</p>
                             <!-- Post Meta -->
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
