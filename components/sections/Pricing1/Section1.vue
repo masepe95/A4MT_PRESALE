@@ -265,8 +265,7 @@
                                     <p><span class="flaticon-check"></span> 1 ClickToPlay</p>
                                 </li>
                                 <li>
-                                    <p><span class="flaticon-check"></span> A4ManagementTools filled by Artificial
-                                        Intelligence</p>
+                                    <p><span class="flaticon-check"></span> A4ManagementTools compiled by AI</p>
                                 </li>
                                 <li>
                                     <p><span class="flaticon-check"></span> 1 HR planning tool</p>
@@ -290,13 +289,13 @@
                                     <p><span class="flaticon-check"></span> SSO</p>
                                 </li>
                                 <li class="disabled-option">
-                                    <p><span class="flaticon-check"></span> Proprietary software interface</p>
+                                    <p><span class="flaticon-check"></span> Interface with owned software</p>
                                 </li>
                                 <li class="disabled-option">
                                     <p><span class="flaticon-check"></span> DMS interface</p>
                                 </li>
                                 <li class="disabled-option">
-                                    <p><span class="flaticon-check"></span> Communication vitality index</p>
+                                    <p><span class="flaticon-check"></span> Communication Vitality Index</p>
                                 </li>
                                 <li class="disabled-option">
                                     <p><span class="flaticon-check"></span> Deluxe catalog</p>
