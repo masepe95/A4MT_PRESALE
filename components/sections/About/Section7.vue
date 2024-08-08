@@ -56,7 +56,7 @@
                     <!-- END TEAM MEMBER #2 -->
                     <!-- TEAM MEMBER #3 -->
                     <div class="col">
-                        <div class="team-member mb-50 wow fadeInUp">
+                        <div class="team-member mb-50 wow fadeInUp candidate-card" @click="redirectToCareers">
                             <!-- Team Member Photo -->
                             <div class="team-member-photo r-14">
                                 <div class="hover-overlay">
@@ -74,7 +74,7 @@
                     <!-- END TEAM MEMBER #3 -->
                     <!-- TEAM MEMBER #4 -->
                     <div class="col">
-                        <div class="team-member mb-50 wow fadeInUp">
+                        <div class="team-member mb-50 wow fadeInUp candidate-card" @click="redirectToCareers">
                             <!-- Team Member Photo -->
                             <div class="team-member-photo r-14">
                                 <div class="hover-overlay">
@@ -85,14 +85,14 @@
                             <!-- Team Member Data -->
                             <div class="team-member-data">
                                 <h6 class="s-20 w-700 color--black">Candidate</h6>
-                                <p class="color--grey">Customer Success Manager</p>
+                                <p class="color--grey"> Associate Customer Success Manager</p>
                             </div>
                         </div>
                     </div>
                     <!-- END TEAM MEMBER #4 -->
                     <!-- TEAM MEMBER #5 -->
                     <div class="col">
-                        <div class="team-member mb-50 wow fadeInUp">
+                        <div class="team-member mb-50 wow fadeInUp candidate-card" @click="redirectToCareers">
                             <!-- Team Member Photo -->
                             <div class="team-member-photo r-14">
                                 <div class="hover-overlay">
@@ -103,14 +103,14 @@
                             <!-- Team Member Data -->
                             <div class="team-member-data">
                                 <h6 class="s-20 w-700 color--black">Candidate</h6>
-                                <p class="color--grey">Customer Success Manager</p>
+                                <p class="color--grey"> Associate Customer Success Manager</p>
                             </div>
                         </div>
                     </div>
                     <!-- END TEAM MEMBER #5 -->
                     <!-- TEAM MEMBER #6 -->
                     <div class="col">
-                        <div class="team-member mb-50 wow fadeInUp">
+                        <div class="team-member mb-50 wow fadeInUp candidate-card" @click="redirectToCareers">
                             <!-- Team Member Photo -->
                             <div class="team-member-photo r-14">
                                 <div class="hover-overlay">
@@ -121,14 +121,14 @@
                             <!-- Team Member Data -->
                             <div class="team-member-data">
                                 <h6 class="s-20 w-700 color--black">Candidate</h6>
-                                <p class="color--grey">Customer Success Manager</p>
+                                <p class="color--grey">Associate Promoter</p>
                             </div>
                         </div>
                     </div>
                     <!-- END TEAM MEMBER #6 -->
                     <!-- TEAM MEMBER #7 -->
                     <div class="col">
-                        <div class="team-member mb-50 wow fadeInUp">
+                        <div class="team-member mb-50 wow fadeInUp candidate-card" @click="redirectToCareers">
                             <!-- Team Member Photo -->
                             <div class="team-member-photo r-14">
                                 <div class="hover-overlay">
@@ -139,14 +139,14 @@
                             <!-- Team Member Data -->
                             <div class="team-member-data">
                                 <h6 class="s-20 w-700 color--black">Candidate</h6>
-                                <p class="color--grey">Customer Success Manager</p>
+                                <p class="color--grey">Associate Promoter</p>
                             </div>
                         </div>
                     </div>
                     <!-- END TEAM MEMBER #7 -->
                     <!-- TEAM MEMBER #8 -->
                     <div class="col">
-                        <div class="team-member mb-50 wow fadeInUp">
+                        <div class="team-member mb-50 wow fadeInUp candidate-card" @click="redirectToCareers">
                             <!-- Team Member Photo -->
                             <div class="team-member-photo r-14">
                                 <div class="hover-overlay">
@@ -178,3 +178,19 @@
         <!-- End container -->
     </section>
 </template>
+
+<script>
+export default {
+    methods: {
+        redirectToCareers() {
+            this.$router.push('/careers');
+        }
+    }
+}
+</script>
+
+<style>
+.candidate-card {
+    cursor: pointer;
+}
+</style>
