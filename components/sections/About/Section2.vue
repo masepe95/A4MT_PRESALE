@@ -37,16 +37,15 @@
                         <!-- Title -->
                         <h5 class="s-24 w-700 mb-20">Problems we have encountered and solved</h5>
                         <!-- Text -->
-                        <p>As business management strategy consultants, we have encountered multiple organizational
+                        <p>As business management strategy consultants, we encountered multiple organisational
                             challenges, including the difficulty of executives in delegating, frequent interruptions of
-                            managers, the use of uncoordinated management techniques, and the difficulty of transferring
-                            know-how to the organization. We have addressed issues such as the dispersion of key
-                            information, significant time spent reorganizing data, poor cooperation with partners on
-                            shared documents, and the high time and cost involved in transferring training to practical
-                            application.</p>
+                            managers, the use of uncoordinated management techniques, and the failure to transfer
+                            know-how to the organisation. We found the frequent dispersion of key information, the time
+                            it takes to reorganise data, the lack of cooperation with partners on shared documents, and
+                            the high time and cost of transferring training into working practice.</p>
                         <!-- Text -->
-                        <p class="mb-5">Through the A4ManagementTools we solve these problems every day and are proud to
-                            soon be also available online.</p>
+                        <p class="mb-5">Through the A4ManagementTools we have solved these problems and are proud to be
+                            available online soon.</p>
                     </div>
                 </div>
                 <!-- END ABOUT-3 TEXT -->

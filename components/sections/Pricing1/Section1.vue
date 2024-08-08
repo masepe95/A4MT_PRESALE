@@ -45,8 +45,8 @@
                                     <sup class="color--black">CHF</sup>
                                     <span class="color--black price">13.99</span>
                                     <sup class="validity color--grey">&nbsp;/&ensp;20 Tools</sup>
-                                    <p class="color--grey m-0">CHF 19.99 / 40 Tools to choose</p>
-                                    <p class="color--grey m-0">CHF 29.99 / 60 Tools to choose</p>
+                                    <p class="color--grey m-0">CHF 23.99 / 40 Tools to choose</p>
+                                    <p class="color--grey m-0">CHF 33.99 / 60 Tools to choose</p>
                                     <p class="color--grey m-0">CHF 39.99 / 80 Tools to choose</p>
                                     <!-- <p class="color--grey m-0">by month, up to 100 licenses</p> -->
                                 </div>

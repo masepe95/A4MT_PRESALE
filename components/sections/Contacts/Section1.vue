@@ -41,8 +41,8 @@
                                 <input type="text" name="name" class="form-control name" placeholder="Your Name*" />
                             </div>
                             <div class="col-md-12">
-                                <p class="p-lg">Your Email Address:</p>
-                                <span>Please carefully check your email address for accuracy</span>
+                                <p class="p-lg">Your Professional Email Address:</p>
+                                <span>We do not accept personal e-mail addresses.</span>
                                 <input type="text" name="email" class="form-control email"
                                     placeholder="Email Address*" />
                             </div>
@@ -53,14 +53,14 @@
                                     placeholder="+41 ## ### ## ##" />
                             </div>
                             <div class="col-md-12">
-                                <p class="p-lg">Your Company Name:</p>
-                                <span>Please enter your company name: </span>
+                                <p class="p-lg">Organization Name:</p>
+                                <span>Please enter your organization name: </span>
                                 <input type="text" name="company" class="form-control company"
-                                    placeholder="Your Company Name" />
+                                    placeholder="Organization Name" />
                             </div>
                             <!-- Form Select -->
                             <div class="col-md-12 input-subject">
-                                <p class="p-lg">How many employees does your company have?</p>
+                                <p class="p-lg">Number of collaborators</p>
                                 <span>Choose a range, so we know what is best suited for you: </span>
                                 <select class="form-select subject" aria-label="Default select example">
                                     <option selected disabled>Number of Employees...</option>
@@ -83,9 +83,25 @@
                             </div>
                             <div class="col-md-12">
                                 <p class="p-lg">Explain your question in details:</p>
-                                <span>Please describe what can we do for you!</span>
+                                <span>Be VERY precise so we can help you super fast.</span>
                                 <textarea class="form-control message" name="message" rows="6"
-                                    placeholder="I have a question about..."></textarea>
+                                    placeholder=""></textarea>
+                            </div>
+                            <p class="p-lg">Would you like to know what happens in before the public?</p>
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                        checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Yes!
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        No.
+                                    </label>
+                                </div>
                             </div>
                             <!-- Contact Form Button -->
                             <div class="col-md-12 mt-15 form-btn text-right">
