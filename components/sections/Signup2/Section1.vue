@@ -11,15 +11,15 @@
                                 <div class="register-page-form">
                                     <form name="signupform" class="row sign-up-form">
                                         <!-- Google Button -->
-                                        <div class="col-md-12">
+                                        <!-- <div class="col-md-12">
                                             <a href="#" class="btn btn-google ico-left"> <img
                                                     src="/assets/images/png_icons/google.png" alt="google-icon" /> Sign
                                                 up with Google </a>
-                                        </div>
+                                        </div> -->
                                         <!-- Login Separator -->
-                                        <div class="col-md-12 text-center">
+                                        <!-- <div class="col-md-12 text-center">
                                             <div class="separator-line">Or, sign up with your email</div>
-                                        </div>
+                                        </div> -->
                                         <!-- Form Input -->
                                         <div class="col-md-12">
                                             <p class="p-sm input-header">Full name</p>
@@ -67,15 +67,16 @@
                             <!-- END SIGN UP FORM -->
                             <!-- SIGN UP PAGE TEXT -->
                             <div class="col-md-6">
-                                <div class="register-page-txt color--white">
+                                <div class="register-page-txt">
                                     <!-- Section ID -->
                                     <span class="section-id">Start for free</span>
                                     <!-- Title -->
                                     <h2 class="s-48 w-700">Create</h2>
                                     <h2 class="s-48 w-700">an account</h2>
+                                    <img class="img-fluid mt-4" src="/assets/images/A4MT-logo.png" alt="logo-image" />
                                     <!-- Text -->
-                                    <p class="p-md mt-25">Integer congue sagittis and velna augue egestas magna suscipit
-                                        purus aliquam</p>
+                                    <!-- <p class="p-md mt-25">Integer congue sagittis and velna augue egestas magna suscipit
+                                        purus aliquam</p> -->
                                     <!-- Copyright -->
                                     <div class="register-page-copyright">
                                         <p class="p-sm">&copy; 2024 A4ManagementTools. <span>All Rights Reserved</span>

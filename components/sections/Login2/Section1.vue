@@ -8,15 +8,15 @@
                         <div class="row">
                             <!-- LOGIN PAGE TEXT -->
                             <div class="col-md-6">
-                                <div class="register-page-txt color--white">
+                                <div class="register-page-txt">
                                     <!-- Logo -->
                                     <img class="img-fluid" src="/assets/images/A4MT-logo.png" alt="logo-image" />
                                     <!-- Title -->
-                                    <h2 class="s-42 w-700">Welcome</h2>
-                                    <h2 class="s-42 w-700">back to A4ManagementTools</h2>
+                                    <h2 class="s-42 w-700">Welcome back to</h2>
+                                    <h2 class="s-42 w-700">A4ManagementTools.</h2>
                                     <!-- Text -->
-                                    <p class="p-md mt-25">Integer congue sagittis and velna augue egestas magna suscipit
-                                        purus aliquam</p>
+                                    <!-- <p class="p-md mt-25">Integer congue sagittis and velna augue egestas magna suscipit
+                                        purus aliquam</p> -->
                                     <!-- Copyright -->
                                     <div class="register-page-copyright">
                                         <p class="p-sm">&copy; 2024 A4ManagementTools. <span>All Rights Reserved</span>
@@ -30,15 +30,15 @@
                                 <div class="register-page-form">
                                     <form name="signinform" class="row sign-in-form">
                                         <!-- Google Button -->
-                                        <div class="col-md-12">
+                                        <!-- <div class="col-md-12">
                                             <a href="#" class="btn btn-google ico-left"> <img
                                                     src="/assets/images/png_icons/google.png" alt="google-icon" /> Sign
                                                 in with Google </a>
-                                        </div>
+                                        </div> -->
                                         <!-- Login Separator -->
-                                        <div class="col-md-12 text-center">
+                                        <!-- <div class="col-md-12 text-center">
                                             <div class="separator-line">Or, sign in with your email</div>
-                                        </div>
+                                        </div> -->
                                         <!-- Form Input -->
                                         <div class="col-md-12">
                                             <p class="p-sm input-header">Email address</p>
