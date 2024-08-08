@@ -87,19 +87,11 @@
                                 <textarea class="form-control message" name="message" rows="6"
                                     placeholder=""></textarea>
                             </div>
-                            <p class="p-lg">Would you like to know what happens in before the public?</p>
                             <div class="col-md-12">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                        checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Yes!
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" id="flexCheckDefault" checked>
                                     <label class="form-check-label" for="flexCheckDefault">
-                                        No.
+                                        Yes, I would like to know what happens in before the public.
                                     </label>
                                 </div>
                             </div>
