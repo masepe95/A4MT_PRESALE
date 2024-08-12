@@ -1,6 +1,10 @@
 <template>
     <section id="contacts-1" class="pb-50 inner-page-hero contacts-section division">
         <div class="container">
+            <!-- FEEDBACK MESSAGE -->
+            <div v-if="feedbackMessage" :class="['feedback-message', feedbackClass]" class="text-center mb-4">
+                <h1>{{ feedbackMessage }}</h1>
+            </div>
             <!-- SECTION TITLE -->
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-9">
@@ -17,12 +21,13 @@
             <div class="row justify-content-center">
                 <div class="col-md-11 col-lg-10 col-xl-8">
                     <div class="form-holder">
-                        <form name="contactform" class="row contact-form">
+                        <form @submit.prevent="handleSubmit" name="contactform" class="row contact-form">
                             <!-- Form Select -->
                             <div class="col-md-12 input-subject">
                                 <p class="p-lg">This question is about:</p>
                                 <span>Choose a topic, so we know who to send your request to: </span>
-                                <select class="form-select subject" aria-label="Default select example">
+                                <select v-model="form.subject" class="form-select subject"
+                                    aria-label="Default select example">
                                     <option selected>This question is about...</option>
                                     <option>I would like a quotation</option>
                                     <option>I would like to assess my organisation and establish an action plan.
@@ -38,58 +43,61 @@
                             <div class="col-md-12">
                                 <p class="p-lg">Your Name:</p>
                                 <span>Please enter your real name: </span>
-                                <input type="text" name="name" class="form-control name" placeholder="Your Name*" />
+                                <input v-model="form.name" type="text" name="name" class="form-control name"
+                                    placeholder="Your Name*" />
                             </div>
                             <div class="col-md-12">
                                 <p class="p-lg">Your Professional Email Address:</p>
                                 <span>We do not accept personal e-mail addresses.</span>
-                                <input type="text" name="email" class="form-control email"
+                                <input v-model="form.email" type="text" name="email" class="form-control email"
                                     placeholder="Email Address*" />
                             </div>
                             <div class="col-md-12">
                                 <p class="p-lg">Your Phone Number:</p>
                                 <span>Please include your country code (Ex. +41)</span>
-                                <input type="tel" name="tel" class="form-control phone"
+                                <input v-model="form.tel" type="tel" name="tel" class="form-control phone"
                                     placeholder="+41 ## ### ## ##" />
                             </div>
                             <div class="col-md-12">
                                 <p class="p-lg">Organization Name:</p>
                                 <span>Please enter your organization name: </span>
-                                <input type="text" name="company" class="form-control company"
+                                <input v-model="form.company" type="text" name="company" class="form-control company"
                                     placeholder="Organization Name" />
                             </div>
                             <!-- Form Select -->
                             <div class="col-md-12 input-subject">
                                 <p class="p-lg">Number of collaborators</p>
                                 <span>Choose a range, so we know what is best suited for you: </span>
-                                <select class="form-select subject" aria-label="Default select example">
+                                <select v-model="form.employees" class="form-select subject"
+                                    aria-label="Default select example">
                                     <option selected disabled>Number of Employees...</option>
-                                    <option>
-                                        < 10 </option>
-                                    <option>
+                                    <option value="<10">
+                                        < 10</option>
+                                    <option value="<50">
                                         < 50</option>
-                                    <option>
+                                    <option value="<100">
                                         < 100</option>
-                                    <option>
+                                    <option value="<200">
                                         < 200</option>
-                                    <option>
+                                    <option value="<500">
                                         < 500</option>
-                                    <option>
+                                    <option value="<1000">
                                         < 1000</option>
-                                    <option>
+                                    <option value="<9999">
                                         < 9999</option>
-                                    <option> > 10'000</option>
+                                    <option value=">10000">> 10'000</option>
                                 </select>
                             </div>
                             <div class="col-md-12">
                                 <p class="p-lg">Explain your question in details:</p>
                                 <span>Be VERY precise so we can help you super fast.</span>
-                                <textarea class="form-control message" name="message" rows="6"
+                                <textarea v-model="form.message" class="form-control message" name="message" rows="6"
                                     placeholder=""></textarea>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="flexCheckDefault" checked>
+                                    <input v-model="form.checkbox" class="form-check-input" type="checkbox"
+                                        id="flexCheckDefault" checked>
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Yes, I would like to know what happens in before the public.
                                     </label>
@@ -119,3 +127,92 @@
     </section>
     <hr class="divider" />
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            form: {
+                subject: '',
+                name: '',
+                email: '',
+                tel: '',
+                company: '',
+                employees: '',
+                message: '',
+                checkbox: false
+            },
+            feedbackMessage: '',
+            feedbackClass: ''  // Aggiungi una variabile per la classe del messaggio di feedback
+        };
+    },
+    methods: {
+        async handleSubmit() {
+            try {
+                console.log(this.form); // Aggiungi questo per vedere cosa stai inviando
+
+                const formData = new FormData();
+                formData.append('subject', this.form.subject);
+                formData.append('name', this.form.name);
+                formData.append('email', this.form.email);
+                formData.append('tel', this.form.tel);
+                formData.append('company', this.form.company);
+                formData.append('employees', this.form.employees);
+                formData.append('message', this.form.message);
+                formData.append('checkbox', this.form.checkbox ? 1 : 0); // Converti booleano in intero
+
+                // const response = await fetch('http://127.0.0.1:8000/api/contact', {
+                //     method: 'POST',
+                //     body: formData,
+                // });
+
+                const response = await fetch('https://antiquewhite-squid-521659.hostingersite.com/api/contact', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    console.error('Validation Errors:', errorData.errors);
+                    this.feedbackMessage = 'Validation failed. Please check your input.';
+                    this.feedbackClass = 'text-danger';  // Aggiungi una classe per errore
+                } else {
+                    const data = await response.json();
+                    this.feedbackMessage = data.message;
+                    this.feedbackClass = 'text-success';  // Aggiungi una classe per successo
+                    this.resetForm();
+                }
+
+                // Scroll to top of the page
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            } catch (error) {
+                console.error('Error:', error);
+                this.feedbackMessage = 'An error occurred. Please try again later.';
+                this.feedbackClass = 'text-danger';  // Aggiungi una classe per errore
+                window.scrollTo({ top: 0, behavior: 'smooth' });  // Scroll to top on error as well
+            }
+        },
+        resetForm() {
+            this.form.subject = '';
+            this.form.name = '';
+            this.form.email = '';
+            this.form.tel = '';
+            this.form.company = '';
+            this.form.employees = '';
+            this.form.message = '';
+            this.form.checkbox = false;
+        }
+    }
+}
+</script>
+
+<style>
+.feedback-message.text-success h1 {
+    color: green;
+}
+
+.feedback-message.text-danger h1 {
+    color: red;
+}
+</style>
