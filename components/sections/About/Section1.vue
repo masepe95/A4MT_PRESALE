@@ -5,19 +5,23 @@
             <div class="row">
                 <div class="col-md-11 col-lg-10 col-xl-9">
                     <div class="about-2-title mb-60">
-                        <!-- Title -->
-                        <h2 class="s-52 w-700 mb-30 ">We provide 80+ Tools & Trainings for managers and
-                            collaborators
-                        </h2>
-                        <div class="search-input">
-                            <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
+                        <!-- Layer Scuro sul Contenuto di Testo -->
+                        <div class="text-overlay">
+                            <!-- Title -->
+                            <h2 class="s-52 w-700 mb-30 text-white">We provide 80+ Tools & Trainings for managers and
+                                collaborators
+                            </h2>
+                            <div class="search-input">
+                                <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
+                            </div>
+                            <!-- Text -->
+                            <p class="mb-0 text-white">In A4ManagementTools, we offer intuitive digital tools that make
+                                complex
+                                management tasks more efficient by converting them into concise one-page documents.
+                                These
+                                tools, enriched with procedures, training and examples, improve employee autonomy and
+                                management perception.</p>
                         </div>
-                        <!-- Text -->
-                        <p class="mb-0 ">In A4ManagementTools, we offer intuitive digital tools that make
-                            complex
-                            management tasks more efficient by converting them into concise one-page documents. These
-                            tools, enriched with procedures, training and examples, improve employee autonomy and
-                            management perception.</p>
                     </div>
                 </div>
             </div>
@@ -81,56 +85,45 @@
         <!-- END ABOUT-2 IMAGES -->
     </section>
 </template>
+
 <style scoped>
 .search-input {
     width: 90%;
     margin-bottom: 2rem;
 }
-</style>
-<script setup>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-import AppSearchTerm from '~/components/sections/SearchTools/AppSearchTerm.vue';
 
-const searchPromptId = ref(null);
-const searchQuery = ref(''); // Aggiungi questa riga per mantenere il prompt selezionato
-const router = useRouter();
+#about-2 {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
 
-const onPromptIdChange = (id) => {
-    searchPromptId.value = id;
-};
-
-const handleFormSubmit = (description) => {
-    searchQuery.value = description; // Memorizza il prompt selezionato
-    if (searchPromptId.value) {
-        router.push({ name: 'inspiration', query: { prompt_id: searchPromptId.value, prompt_description: searchQuery.value } });
-    }
-};
-</script>
-<style scoped>
-/* #about-2 {
-    height: 100vh;
+#about-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(../../../assets/images/main_background.jpeg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    filter: blur(8px);
+    /* Applica l'effetto blur all'immagine di sfondo */
+    z-index: -1;
+    /* Mantiene il background dietro gli altri elementi */
+}
+
+/* Layer Scuro sul Contenuto di Testo */
+.text-overlay {
     position: relative;
-    overflow-y: auto;
-    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.263);
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.115);
-        z-index: 0;
-    }
-} */
-
-.search-form {
-    align-items: start;
+    /* Compatibilità con browser WebKit */
+    padding: 20px;
+    border-radius: 12px;
+    /* Bordo leggermente trasparente */
 }
 </style>

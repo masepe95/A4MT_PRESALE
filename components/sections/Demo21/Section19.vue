@@ -48,22 +48,26 @@ onMounted(() => {
 <style scoped>
 #app-hero {
     height: 100vh;
+    position: relative;
+    overflow: auto;
+    z-index: 1;
+    /* Assicurati che il contenuto sia sopra l'immagine sfocata */
+}
+
+#app-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(../../../assets/images/main_background.jpeg);
     background-position: center;
     background-size: cover;
-    position: relative;
-    overflow: auto;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.2);
-        z-index: 0;
-    }
+    filter: blur(5px);
+    /* Applica l'effetto blur solo all'immagine di sfondo */
+    z-index: -1;
+    /* Mantieni il background dietro gli altri elementi */
 }
 
 .hero-logo {
