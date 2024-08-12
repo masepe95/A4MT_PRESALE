@@ -21,11 +21,13 @@
                 <!-- IMAGE BLOCK -->
                 <div class="col-md-6 order-first order-md-2">
                     <div class="img-block j-img video-preview right-column wow fadeInLeft">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/4v-PWQDcqgQ?si=8HlDeaCbgapdJpuZ"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/4v-PWQDcqgQ?si=8HlDeaCbgapdJpuZ&rel=0&controls=0&modestbranding=1&showinfo=0"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -34,3 +36,30 @@
         <!-- End container -->
     </section>
 </template>
+<style scoped>
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+    /* 16:9 ratio */
+}
+
+.embed-responsive .embed-responsive-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+</style>
