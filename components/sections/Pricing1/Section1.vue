@@ -503,23 +503,25 @@ sup {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
+    background-image: url(../../../assets/images/main_background.jpeg);
+    /* Background image */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-#pricing-1::before {
-    content: '';
+#pricing-1::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../../../assets/images/main_background.jpeg);
-    /* Percorso dell'immagine di background */
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    filter: blur(8px);
-    /* Effetto sfocatura */
+    backdrop-filter: blur(5px);
+    /* Apply the blur effect */
+    pointer-events: none;
+    /* Make the overlay click-through */
     z-index: -1;
-    /* Mantiene il background dietro gli altri elementi */
+    /* Ensure it stays behind the content */
 }
 </style>

@@ -50,8 +50,14 @@
 <style scoped>
 .bg--white-400 {
     position: relative;
+    min-height: 100vh;
+    /* Ensure it covers the full viewport height */
     overflow: hidden;
     z-index: 1;
+    background-image: url(../../../assets/images/main_background.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .bg--white-400::before {
@@ -61,14 +67,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../../../assets/images/main_background.jpeg);
-    /* Percorso all'immagine di background */
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    filter: blur(5px);
-    /* Effetto sfocatura */
+    backdrop-filter: blur(5px);
+    /* Apply the blur effect */
+    pointer-events: none;
+    /* Make the overlay click-through */
     z-index: -1;
+    /* Ensure it stays behind the content */
 }
 
 .search-input {

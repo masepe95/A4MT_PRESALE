@@ -126,23 +126,26 @@ const handleFormSubmit = (description) => {
 #about-2 {
     position: relative;
     min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
+    background-image: url(../../../assets/images/main_background.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-#about-2::before {
-    content: '';
+#about-2::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../../../assets/images/main_background.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    filter: blur(5px);
+    backdrop-filter: blur(5px);
+    /* Apply the blur */
+    pointer-events: none;
+    /* Make the overlay click-through */
     z-index: -1;
+    /* Ensure it stays behind the content */
 }
 
 .text-overlay {

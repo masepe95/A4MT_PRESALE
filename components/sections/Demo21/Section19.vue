@@ -49,9 +49,8 @@ onMounted(() => {
 #app-hero {
     height: 100vh;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     z-index: 1;
-    /* Assicurati che il contenuto sia sopra l'immagine sfocata */
 }
 
 #app-hero::before {
@@ -64,10 +63,26 @@ onMounted(() => {
     background-image: url(../../../assets/images/main_background.jpeg);
     background-position: center;
     background-size: cover;
-    filter: blur(5px);
-    /* Applica l'effetto blur solo all'immagine di sfondo */
-    z-index: -1;
-    /* Mantieni il background dietro gli altri elementi */
+    z-index: -2;
+    /* Place behind the hero-overlay */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 16vh;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    /* Apply the blur to the background */
+    -webkit-backdrop-filter: blur(5px);
+    /* Ensure compatibility with Safari */
 }
 
 .hero-logo {
