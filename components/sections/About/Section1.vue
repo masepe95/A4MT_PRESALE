@@ -8,14 +8,14 @@
                         <!-- Layer Scuro sul Contenuto di Testo -->
                         <div class="text-overlay">
                             <!-- Title -->
-                            <h2 class="s-52 w-700 mb-30 text-white">We provide 80+ Tools & Trainings for managers and
+                            <h2 class="s-52 w-700 mb-30">We provide 80+ Tools & Trainings for managers and
                                 collaborators
                             </h2>
                             <div class="search-input">
                                 <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
                             </div>
                             <!-- Text -->
-                            <p class="mb-0 text-white">In A4ManagementTools, we offer intuitive digital tools that make
+                            <p class="mb-0">In A4ManagementTools, we offer intuitive digital tools that make
                                 complex
                                 management tasks more efficient by converting them into concise one-page documents.
                                 These
@@ -113,7 +113,7 @@ const handleFormSubmit = (description) => {
     margin-bottom: 2rem;
 }
 
-.search-form{
+.search-form {
     display: block;
 }
 
@@ -144,10 +144,10 @@ const handleFormSubmit = (description) => {
 /* Layer Scuro sul Contenuto di Testo */
 .text-overlay {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.263);
+    background-color: rgba(255, 255, 255, 0.827);
 
     /* Compatibilità con browser WebKit */
-    padding: 20px;
+    padding: 40px;
     border-radius: 12px;
     /* Bordo leggermente trasparente */
 }

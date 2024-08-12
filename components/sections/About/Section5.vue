@@ -34,8 +34,8 @@
                                 <!-- End Icon -->
                                 <!-- Text -->
                                 <div class="fbox-txt">
-                                    <h6 class="s-22 w-700 text-white">80+ A4ManagementTools</h6>
-                                    <p class="text-white">80+ Tools, A4 format with integrated procedures of key
+                                    <h6 class="s-22 w-700 ">80+ A4ManagementTools</h6>
+                                    <p class="">80+ Tools, A4 format with integrated procedures of key
                                         business and HR management activities.</p>
                                 </div>
                             </div>
@@ -56,9 +56,9 @@
                                 <!-- End Icon -->
                                 <!-- Text -->
                                 <div class="fbox-txt">
-                                    <h6 class="s-22 w-700 text-white">2 Comprehensive Assessments of the Organization
+                                    <h6 class="s-22 w-700 ">2 Comprehensive Assessments of the Organization
                                     </h6>
-                                    <p class="text-white">2 Self-assessments (business management and process
+                                    <p class="">2 Self-assessments (business management and process
                                         management) based on international standards. 2 Three-year development plans
                                         with 300+ development activities integrated by A4ManagementTools.</p>
                                 </div>
@@ -80,8 +80,8 @@
                                 <!-- End Icon -->
                                 <!-- Text -->
                                 <div class="fbox-txt">
-                                    <h6 class="s-22 w-700 text-white">80+ Self-paced Reverse Training</h6>
-                                    <p class="text-white">150+ hours-lessons of self-paced trainings inherent to each
+                                    <h6 class="s-22 w-700 ">80+ Self-paced Reverse Training</h6>
+                                    <p class="">150+ hours-lessons of self-paced trainings inherent to each
                                         A4ManagementTool. A practice-based digital learning place. At the user's pace,
                                         online or in-person.</p>
                                 </div>
@@ -103,8 +103,8 @@
                                 <!-- End Icon -->
                                 <!-- Text -->
                                 <div class="fbox-txt">
-                                    <h6 class="s-22 w-700 text-white">1 HR Development Planner</h6>
-                                    <p class="text-white">1 HR development planning tool. Automated summons.</p>
+                                    <h6 class="s-22 w-700 ">1 HR Development Planner</h6>
+                                    <p class="">1 HR development planning tool. Automated summons.</p>
                                 </div>
                             </div>
                         </div>
@@ -124,8 +124,8 @@
                                 <!-- End Icon -->
                                 <!-- Text -->
                                 <div class="fbox-txt">
-                                    <h6 class="s-22 w-700 text-white">1ClickToPlay</h6>
-                                    <p class="text-white">The new Integrated Presentation Technology (IPT). Project
+                                    <h6 class="s-22 w-700 ">1ClickToPlay</h6>
+                                    <p class="">The new Integrated Presentation Technology (IPT). Project
                                         progress to your team or superiors with 1 click, 0 minutes of preparation and 0
                                         PowerPoint.</p>
                                 </div>
@@ -147,8 +147,8 @@
                                 <!-- End Icon -->
                                 <!-- Text -->
                                 <div class="fbox-txt">
-                                    <h6 class="s-22 w-700 text-white">Customer Success Managers</h6>
-                                    <p class="text-white">Managers dedicated to customer success. Facilitation of
+                                    <h6 class="s-22 w-700 ">Customer Success Managers</h6>
+                                    <p class="">Managers dedicated to customer success. Facilitation of
                                         implementation of A4ManagementTools.</p>
                                 </div>
                             </div>
@@ -169,8 +169,8 @@
                                 <!-- End Icon -->
                                 <!-- Text -->
                                 <div class="fbox-txt">
-                                    <h6 class="s-22 w-700 text-white">4 Postgraduate Training</h6>
-                                    <p class="text-white">70% tool practice, 30% theory. Comparison of managers with 10+
+                                    <h6 class="s-22 w-700 ">4 Postgraduate Training</h6>
+                                    <p class="">70% tool practice, 30% theory. Comparison of managers with 10+
                                         years of experience. In partnership with the Swiss University of Applied
                                         Sciences (SUP).</p>
                                 </div>
@@ -192,8 +192,8 @@
                                 <!-- End Icon -->
                                 <!-- Text -->
                                 <div class="fbox-txt">
-                                    <h6 class="s-22 w-700 text-white">5000+ Ghost Advice</h6>
-                                    <p class="text-white">Recommendations. Instructions, advanced techniques, risks and
+                                    <h6 class="s-22 w-700 ">5000+ Ghost Advice</h6>
+                                    <p class="">Recommendations. Instructions, advanced techniques, risks and
                                         remedies, insights and common mistakes to avoid.</p>
                                 </div>
                             </div>
@@ -214,8 +214,8 @@
                                 <!-- End Icon -->
                                 <!-- Text -->
                                 <div class="fbox-txt">
-                                    <h6 class="s-22 w-700 text-white">5000+ AI Insights</h6>
-                                    <p class="text-white">How-to tips and contents enabled by artificial intelligence
+                                    <h6 class="s-22 w-700 ">5000+ AI Insights</h6>
+                                    <p class="">How-to tips and contents enabled by artificial intelligence
                                         and approved by our consultants.</p>
                                 </div>
                             </div>
@@ -280,7 +280,7 @@ const handleFormSubmit = (description) => {
 
 .glass-effect {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.189);
+    background-color: rgba(255, 255, 255, 0.85);
 
     /* Compatibilità con browser WebKit */
     padding: 20px;
@@ -289,10 +289,9 @@ const handleFormSubmit = (description) => {
 }
 
 /* Mantieni i colori del testo e delle icone in bianco */
-h6,
 p,
 .fbox-ico span {
-    color: white;
+    color: rgb(67, 72, 85);
 }
 
 .search-input {
