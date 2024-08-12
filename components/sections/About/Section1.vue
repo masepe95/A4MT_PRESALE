@@ -110,7 +110,13 @@ const handleFormSubmit = (description) => {
 <style scoped>
 .search-input {
     width: 90%;
+    max-width: 600px;
+    /* Limita la larghezza massima della search bar su schermi grandi */
     margin-bottom: 2rem;
+    padding-left: 0;
+    /* Rimuovi padding a sinistra */
+    padding-right: 0;
+    /* Rimuovi padding a destra */
 }
 
 .search-form {
@@ -136,19 +142,46 @@ const handleFormSubmit = (description) => {
     background-size: cover;
     background-attachment: fixed;
     filter: blur(5px);
-    /* Applica l'effetto blur all'immagine di sfondo */
     z-index: -1;
-    /* Mantiene il background dietro gli altri elementi */
 }
 
-/* Layer Scuro sul Contenuto di Testo */
 .text-overlay {
     position: relative;
     background-color: rgba(255, 255, 255, 0.827);
-
-    /* Compatibilità con browser WebKit */
     padding: 40px;
     border-radius: 12px;
-    /* Bordo leggermente trasparente */
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .search-input {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .text-overlay {
+        padding: 30px;
+    }
+
+    .about-2-title h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-input {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .text-overlay {
+        padding: 20px;
+    }
+
+    .about-2-title h2 {
+        font-size: 1.5rem;
+    }
 }
 </style>
