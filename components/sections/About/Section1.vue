@@ -86,10 +86,35 @@
     </section>
 </template>
 
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import AppSearchTerm from '~/components/sections/SearchTools/AppSearchTerm.vue';
+
+const searchPromptId = ref(null);
+const searchQuery = ref(''); // Aggiungi questa riga per mantenere il prompt selezionato
+const router = useRouter();
+
+const onPromptIdChange = (id) => {
+    searchPromptId.value = id;
+};
+
+const handleFormSubmit = (description) => {
+    searchQuery.value = description; // Memorizza il prompt selezionato
+    if (searchPromptId.value) {
+        router.push({ name: 'inspiration', query: { prompt_id: searchPromptId.value, prompt_description: searchQuery.value } });
+    }
+};
+</script>
+
 <style scoped>
 .search-input {
     width: 90%;
     margin-bottom: 2rem;
+}
+
+.search-form{
+    display: block;
 }
 
 #about-2 {
