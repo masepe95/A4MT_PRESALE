@@ -1,9 +1,15 @@
 <template>
     <section class="pt-100 ws-wrapper content-section">
         <div class="container">
-            <div class="bc-1-wrapper bg--white-400 bg--fixed r-16">
+            <div class="bc-1-wrapper bg--fixed r-16">
                 <div class="section-overlay">
                     <div class="row d-flex align-items-center">
+                        <!-- IMAGE BLOCK -->
+                        <div class="col-md-6 order-first order-md-2">
+                            <div class="img-block right-column wow fadeInLeft">
+                                <img class="img-fluid" src="/assets/images/img-18.png" alt="content-image" />
+                            </div>
+                        </div>
                         <!-- TEXT BLOCK -->
                         <div class="col-md-6 order-last order-md-2">
                             <div class="txt-block left-column wow fadeInRight">
@@ -32,12 +38,6 @@
                             </div>
                         </div>
                         <!-- END TEXT BLOCK -->
-                        <!-- IMAGE BLOCK -->
-                        <div class="col-md-6 order-first order-md-2">
-                            <div class="img-block right-column wow fadeInLeft">
-                                <img class="img-fluid" src="/assets/images/img-18.png" alt="content-image" />
-                            </div>
-                        </div>
                     </div>
                     <!-- End row -->
                 </div>

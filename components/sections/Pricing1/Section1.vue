@@ -6,7 +6,7 @@
                 <div class="col-md-10 col-lg-8">
                     <div class="section-title mb-70">
                         <!-- Title -->
-                        <h2 class="s-52 w-700">Simple Pricing</h2>
+                        <h2 class="s-52 w-700 text-white">Simple Pricing</h2>
                         <!-- TOGGLE BUTTON -->
                         <div class="toggle-btn ext-toggle-btn toggle-btn-md mt-30">
                             <!-- <span class="toggler-txt">Billed monthly</span> -->
@@ -19,7 +19,8 @@
                             </label> -->
                             <!-- <span class="toggler-txt">Billed yearly</span> -->
                             <!-- Text -->
-                            <p class="color--theme">An ecosystem for the entire company, try it for free with your team!
+                            <p class=" text-white">An ecosystem for the entire company, try it for free with
+                                your team!
                             </p>
                         </div>
                     </div>
@@ -496,5 +497,29 @@ sup {
     margin-top: 25px;
     margin-bottom: 25px;
     font-size: 0.6rem;
+}
+
+#pricing-1 {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#pricing-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../assets/images/main_background.jpeg);
+    /* Percorso dell'immagine di background */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(8px);
+    /* Effetto sfocatura */
+    z-index: -1;
+    /* Mantiene il background dietro gli altri elementi */
 }
 </style>

@@ -3,12 +3,6 @@
         <div class="container">
             <!-- SECTION CONTENT (ROW) -->
             <div class="row d-flex align-items-center">
-                <!-- IMAGE BLOCK -->
-                <div class="col-md-6">
-                    <div class="img-block left-column wow fadeInRight">
-                        <img class="img-fluid" src="/assets/images/img-13.png" alt="content-image" />
-                    </div>
-                </div>
                 <!-- TEXT BLOCK -->
                 <div class="col-md-6">
                     <div class="txt-block right-column wow fadeInLeft">
@@ -36,10 +30,15 @@
                                 <p class="mb-0">Numerous motivational factors.
                                 </p>
                             </li>
-
                         </ul>
                     </div>
                     <!-- END TEXT BOX -->
+                </div>
+                <!-- IMAGE BLOCK -->
+                <div class="col-md-6 mt-3">
+                    <div class="img-block left-column wow fadeInRight">
+                        <img class="img-fluid" src="/assets/images/img-13.png" alt="content-image" />
+                    </div>
                 </div>
             </div>
             <!-- END TEXT BLOCK -->
