@@ -6,187 +6,61 @@
                     <!-- INNER PAGE TITLE -->
                     <div class="inner-page-title">
                         <h2 class="s-52 w-700">Cookies Policy</h2>
-                        <p class="p-lg">This policy is effective as of 2th March 2022</p>
+                        <p class="p-lg">This policy is effective as of 1st August 2024</p>
                     </div>
                     <!-- TEXT BLOCK -->
                     <div class="txt-block legal-info">
                         <!-- Text -->
-                        <p>Integer congue sagittis augue egestas <a href="#" class="color--theme">Global Privacy
-                                Policy</a> nec suscipit egestas magna undo aliquam ipsum vitae purus justo lacus ligula
-                            ipsum primis cubilia donec undo augue luctus vitae egestas a molestie donec libero <NuxtLink
-                                to="/privacy" class="color--theme">Privacy Policy</NuxtLink> tempor undo quisque fusce a
-                            cursus neque diam augue fusce sapien nulla a primis lacinia ipsum a molestie blandit and
-                            justo an aliquet eget molestie cursus quaerat</p>
-                        <!-- Text -->
-                        <p>Sagittis congue augue egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec <a href="#"
-                                class="color--theme">https://A4ManagementTools.com/software</a> undo quisque fusce
-                            cursus neque blandit fusce an aliquam nulla lacinia justo molestie blandit justo diam
-                            aliquet tortor non molestie sagittis lacinia</p>
+                        <p>At A4ManagementTools, we take your privacy seriously. This Cookie Policy explains what
+                            cookies are, how we use them on our site, and how you can manage them. For more information
+                            on how we process personal data, please refer to our <NuxtLink to="/privacy"
+                                class="color--theme">Privacy Policy</NuxtLink>.</p>
+
                         <!-- Title -->
                         <h4 class="s-30 w-700"><span>1.</span> What is a Cookie?</h4>
                         <!-- Text -->
-                        <p>Sagittis congue augue egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque blandit fusce lacinia placerat and nulla justo molestie blandit justo diam aliquet
-                            tortor molestie sagittis lacinia undo and mullam molestie diam luctus donec bibendum aliquet
-                            massa elementum. Libero quisque lacus and ligula massa lorem.</p>
-                        <!-- Text -->
-                        <p>Sagittis congue augue egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque blandit fusce an aliquam nulla lacinia justo molestie blandit justo diam aliquet
-                            tortor molestie non sagittis lacinia</p>
+                        <p>Cookies are small text files that are stored on your device when you visit a website. They
+                            are widely used to make websites work more efficiently and provide information to the owners
+                            of the site. Cookies can be either temporary (session cookies) or persistent (stored for a
+                            set period of time).</p>
+
                         <!-- Title -->
-                        <h4 class="s-30 w-700"><span>2.</span> What Types of Cookies Are There?</h4>
+                        <h4 class="s-30 w-700"><span>2.</span> What Types of Cookies Do We Use?</h4>
+
                         <!-- Small Title -->
-                        <h5 class="s-24 w-700"><span>2.1.</span> Essential cookies</h5>
+                        <h5 class="s-24 w-700"><span>2.1.</span> Third-Party Cookies</h5>
                         <!-- Text -->
-                        <p>Congue augue sagittis egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque blandit fusce lorem nulla an aliquam lacinia justo molestie blandit justo diam an
-                            aliquet tortor sagittis lacinia molestie diam egestas</p>
-                        <!-- List -->
-                        <ul class="simple-list">
-                            <li class="list-item">
-                                <p>Quaerat sodales sapien undo velna purus euismod purus velna blandit vitae auctor and
-                                    congue magna tempor sapien gravida laoreet turpis urna augue, viverra a augue eget
-                                    dictum tempor</p>
-                            </li>
-                            <li class="list-item">
-                                <p>Nemo ipsam egestas volute turpis dolores ut aliquam quaerat sodales sapien congue and
-                                    augue egestas</p>
-                            </li>
-                            <li class="list-item">
-                                <p>Nemo ipsam egestas volute turpis dolores ut aliquam quaerat sodales sapien congue
-                                    augue egestas sagittis massa lorem fusce cursus fusce nulla vitae massa placerat
-                                    vulputate purus</p>
-                            </li>
-                            <li class="list-item">
-                                <p>Sapien sodales quaerat undo velna purus euismod purus velna blandit vitae auctor and
-                                    congue magna tempor sapien gravida laoreet turpis urna augue, viverra a augue eget
-                                    dictum pulvinar</p>
-                            </li>
-                        </ul>
-                        <!-- Small Title -->
-                        <h5 class="s-24 w-700"><span>2.2.</span> Performance cookies</h5>
-                        <!-- Text -->
-                        <p>Congue sagittis augue egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque blandit fusce aliquam</p>
-                        <!-- Text -->
-                        <p>Sagittis congue augue egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque blandit fusce an aliquam nulla lacinia justo molestie blandit justo diam aliquet
-                            tortor molestie non sagittis lacinia</p>
-                        <!-- Small Title -->
-                        <h5 class="s-24 w-700"><span>2.3.</span> Functionality cookies</h5>
-                        <!-- Text -->
-                        <p>Integer congue sagittis augue egestas velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque diam augue fusce sapien nulla a primis lacinia ipsum a molestie blandit and justo an
-                            aliquet eget molestie sagittis at quaerat sodales</p>
-                        <!-- List -->
-                        <ul class="simple-list">
-                            <li class="list-item">
-                                <p>Quaerat sodales sapien undo velna purus euismod purus velna blandit vitae auctor and
-                                    congue magna tempor sapien gravida laoreet turpis urna augue, viverra a augue eget
-                                    dictum tempor</p>
-                            </li>
-                            <li class="list-item">
-                                <p>Nemo ipsam egestas volute turpis dolores ut aliquam quaerat sodales sapien congue and
-                                    augue egestas</p>
-                            </li>
-                        </ul>
-                        <!-- Small Title -->
-                        <h5 class="s-24 w-700"><span>2.4.</span> Targeting/advertising cookies</h5>
-                        <!-- Text -->
-                        <p>Sagittis congue augue egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque blandit fusce lacinia placerat and nulla justo molestie blandit justo diam aliquet
-                            tortor molestie sagittis lacinia undo and mullam molestie diam luctus donec bibendum aliquet
-                            massa elementum. Libero quisque lacus and ligula massa lorem.</p>
+                        <p>Our site includes an embedded video from YouTube. When you view this video, YouTube may place
+                            cookies on your device to track your interaction with the video. These cookies are managed
+                            by YouTube, and we recommend reviewing their privacy policy for more details.</p>
+
                         <!-- Title -->
                         <h4 class="s-30 w-700"><span>3.</span> Third-Party Cookies on Our Site</h4>
                         <!-- Text -->
-                        <p>Integer congue sagittis augue egestas velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque diam augue fusce sapien nulla a rimis lacinia ipsum a molestie blandit and justo an
-                            aliquet eget molestie sagittis at quaerat sodales</p>
-                        <!-- Text -->
-                        <p>Aliqum mullam tincidunt a sapien gravida and diam donec porta.</p>
-                        <!-- Text -->
-                        <p>Integer congue sagittis augue egestas velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque diam augue fusce sapien nulla a primis lacinia ipsum a molestie blandit and justo an
-                            aliquet eget molestie sagittis at quaerat sodales</p>
-                        <!-- Small Title -->
-                        <h5 class="s-24 w-700"><span>3.1.</span> Targeting/advertising cookies</h5>
-                        <!-- Text -->
-                        <p>Sagittis congue augue egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque blandit fusce lacinia placerat and nulla justo molestie blandit justo diam aliquet
-                            tortor molestie sagittis lacinia undo and mullam molestie diam luctus donec bibendum aliquet
-                            massa elementum. Libero quisque lacus and ligula massa lorem.</p>
+                        <p>As mentioned, our site uses third-party cookies primarily through the embedded YouTube video.
+                            We do not use any other cookies for tracking, analytics, or advertising purposes.</p>
+
                         <!-- Title -->
                         <h4 class="s-30 w-700"><span>4.</span> Cookies and Your Personal Information</h4>
                         <!-- Text -->
-                        <p>Congue augue sagittis egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque blandit fusce lorem nulla an aliquam lacinia justo molestie blandit justo diam an
-                            aliquet tortor sagittis lacinia molestie diam egestas</p>
-                        <!-- Text -->
-                        <p>Sagittis augue congue egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque aliquam fusce blandit</p>
+                        <p>We collect personal data through our contact form and newsletter subscription form, including
+                            your name, email address, company, and the reason for contact. This information is used
+                            solely to respond to your inquiries and send newsletters. We do not share your data with
+                            third parties without your consent.</p>
+
                         <!-- Title -->
                         <h4 class="s-30 w-700"><span>5.</span> How to Configure and Disable Cookies</h4>
                         <!-- Text -->
-                        <p>Integer congue sagittis augue egestas velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque diam augue fusce sapien</p>
-                        <!-- List -->
-                        <ul class="simple-list">
-                            <li class="list-item">
-                                <p>Quaerat sodales sapien undo velna purus euismod purus velna blandit vitae auctor and
-                                    congue magna tempor sapien gravida laoreet turpis urna augue, viverra a augue eget
-                                    tempor pulvinar</p>
-                            </li>
-                            <li class="list-item">
-                                <p>Nemo ipsam egestas volute turpis dolores ut aliquam quaerat sodales sapien congue and
-                                    augue egestas</p>
-                            </li>
-                        </ul>
-                        <!-- Text -->
-                        <p>Augue congue sagittis egestas integer velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque donec and ipsum porta diam lorem sodales an aliquam lacinia justo sapien congue
-                            aliquet and sodales a quaerat tortor lacinia egestas</p>
+                        <p>You can manage your cookie preferences directly through your browser settings. Most browsers
+                            allow you to refuse cookies or receive a notification before a cookie is stored on your
+                            device. Please note that disabling third-party cookies may prevent you from viewing the
+                            embedded YouTube video correctly.</p>
+
                         <!-- Title -->
                         <h4 class="s-30 w-700"><span>6.</span> How to Contact Us</h4>
                         <!-- Text -->
-                        <p>Integer congue sagittis augue egestas velna purus purus magna nec suscipit and egestas magna
-                            aliquam ipsum vitae purus justo lacus ligula ipsum primis cubilia donec undo augue luctus
-                            vitae egestas a molestie donec libero sapien dapibus congue tempor undo quisque fusce cursus
-                            neque diam augue fusce sapien</p>
-                        <!-- Text -->
-                        <p>If you have any questions or suggestions about this Terms of Service, do not hesitate to
-                            contact us at <a href="mailto:yourdomain@mail.com"
-                                class="color--theme">hello@yourdomain.com</a></p>
+                        <p>If you have any questions or suggestions about this Cookie Policy or how we handle your
+                            personal data, please do not hesitate to contact us.</p>
                     </div>
                     <!-- END TEXT BLOCK -->
                 </div>
