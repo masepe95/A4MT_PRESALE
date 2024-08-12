@@ -110,7 +110,7 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    filter: blur(8px);
+    filter: blur(5px);
     /* Applica l'effetto blur all'immagine di sfondo */
     z-index: -1;
     /* Mantiene il background dietro gli altri elementi */

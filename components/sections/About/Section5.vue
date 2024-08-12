@@ -274,7 +274,7 @@ const handleFormSubmit = (description) => {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    filter: blur(8px);
+    filter: blur(5px);
     z-index: -1;
 }
 
