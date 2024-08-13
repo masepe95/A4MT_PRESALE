@@ -91,7 +91,7 @@
                 <div class="col-sm-10 col-md-8 col-lg-4 col-xl-3">
                     <div class="footer-form">
                         <!-- Title -->
-                        <h6 class="s-17 w-700">Join the Community</h6>
+                        <h6 class="s-17 w-700">Be part of the community!</h6>
                         <!-- Newsletter Form Input -->
                         <form class="newsletter-form" @submit.prevent="handleSubmit">
                             <div class="input-group r-06">

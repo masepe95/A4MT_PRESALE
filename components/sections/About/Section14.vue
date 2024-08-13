@@ -6,8 +6,9 @@
                     <!-- NEWSLETTER TEXT -->
                     <div class="col">
                         <div class="newsletter-txt">
-                            <h4 class="s-34 w-700">Stay up-to-date with our specialized articles, ideas, and updates
+                            <h4 class="s-34 w-700">Enhance your skills!
                             </h4>
+                            <p class="p-lg">We commit to offering you concrete, immediately applicable value.</p>
                         </div>
                     </div>
                     <!-- NEWSLETTER FORM -->
