@@ -12,10 +12,10 @@
                     </div>
                     <!-- NEWSLETTER FORM -->
                     <div class="col">
-                        <form class="newsletter-form">
+                        <form class="newsletter-form" @submit.prevent="handleSubmit">
                             <div class="input-group">
                                 <input type="email" autocomplete="off" class="form-control"
-                                    placeholder="Your email address" required id="s-email" />
+                                    placeholder="Your email address" required v-model="email" />
                                 <span class="input-group-btn">
                                     <button type="submit" class="btn btn--theme hover--theme">Subscribe Now</button>
                                 </span>
@@ -36,3 +36,22 @@
     <!-- DIVIDER LINE -->
     <hr class="divider" />
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            email: ''
+        };
+    },
+    methods: {
+        handleSubmit() {
+            // Reindirizza l'utente alla pagina /contacts con l'email come parametro
+            if (this.email) {
+                const encodedEmail = encodeURIComponent(this.email);
+                this.$router.push(`/contacts?email=${encodedEmail}`);
+            }
+        }
+    }
+}
+</script>

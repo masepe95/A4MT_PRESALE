@@ -31,9 +31,6 @@
                                     <NuxtLink to="/benefits">Benefits</NuxtLink>
                                 </p>
                             </li>
-                            <!-- <li>
-                                <p><a href="#">Community</a></p>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -45,11 +42,6 @@
                         <h6 class="s-17 w-700">Product</h6>
                         <!-- Links -->
                         <ul class="foo-links clearfix">
-                            <!-- <li>
-                                <p>
-                                    <NuxtLink to="/features">Integration</NuxtLink>
-                                </p>
-                            </li> -->
                             <li>
                                 <p>
                                     <NuxtLink to="/inspiration">Inspirational Board</NuxtLink>
@@ -91,11 +83,6 @@
                                     <NuxtLink to="/cookies">Cookie Policy</NuxtLink>
                                 </p>
                             </li>
-                            <!-- <li>
-                                <p>
-                                    <NuxtLink to="/cookies">Site Map</NuxtLink>
-                                </p>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -104,12 +91,12 @@
                 <div class="col-sm-10 col-md-8 col-lg-4 col-xl-3">
                     <div class="footer-form">
                         <!-- Title -->
-                        <h6 class="s-17 w-700">Follow the Best</h6>
+                        <h6 class="s-17 w-700">Join the Community</h6>
                         <!-- Newsletter Form Input -->
-                        <form class="newsletter-form">
+                        <form class="newsletter-form" @submit.prevent="handleSubmit">
                             <div class="input-group r-06">
-                                <input type="email" class="form-control" placeholder="Email Address" required
-                                    id="s-email" />
+                                <input v-model="email" type="email" class="form-control" placeholder="Email Address"
+                                    required id="s-email" />
                                 <span class="input-group-btn ico-15">
                                     <button type="submit" class="btn color--theme">
                                         <span class="flaticon-right-arrow-1"></span>
@@ -163,3 +150,21 @@
 
     </footer>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            email: ''
+        };
+    },
+    methods: {
+        handleSubmit() {
+            if (this.email) {
+                const encodedEmail = encodeURIComponent(this.email);
+                this.$router.push(`/contacts?email=${encodedEmail}`);
+            }
+        }
+    }
+}
+</script>

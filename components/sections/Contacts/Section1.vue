@@ -135,7 +135,7 @@ export default {
             form: {
                 subject: '',
                 name: '',
-                email: '',
+                email: this.$route.query.email || '', // Precompila il campo email se presente nella query string
                 tel: '',
                 company: '',
                 employees: '',
