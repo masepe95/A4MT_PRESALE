@@ -151,6 +151,24 @@ export default {
             try {
                 console.log(this.form); // Aggiungi questo per vedere cosa stai inviando
 
+                const domainBlacklist = [
+                    'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'live.com', 'aol.com',
+                    'icloud.com', 'mail.com', 'protonmail.com', 'yandex.com', 'gmx.com', 'zoho.com',
+                    'inbox.com', 'me.com', 'mac.com', 'msn.com', 'aim.com', 'rediffmail.com',
+                    'lycos.com', 'comcast.net', 'sbcglobal.net', 'frontier.com', 'verizon.net',
+                    'att.net', 'charter.net', 'optonline.net', 'rocketmail.com', 'fastmail.com',
+                    'hushmail.com', 'btinternet.com'
+                ];
+
+                const emailDomain = this.form.email.split('@')[1].toLowerCase();
+
+                if (domainBlacklist.includes(emailDomain)) {
+                    this.feedbackMessage = 'Please use a professional or company email address.';
+                    this.feedbackClass = 'text-danger';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return;
+                }
+
                 const formData = new FormData();
                 formData.append('subject', this.form.subject);
                 formData.append('name', this.form.name);
