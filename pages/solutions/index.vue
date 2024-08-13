@@ -1,6 +1,9 @@
 <template>
     <div>
         <SectionsAboutSection5 />
+        <SectionsAboutSection3 />
+        <SectionsAboutSection13 />
+        <SectionsAboutSection14 />
         <!-- <SectionsAboutSection10 /> -->
         <!-- <SectionsAboutSection11 /> -->
         <!-- <SectionsAboutSection12 />

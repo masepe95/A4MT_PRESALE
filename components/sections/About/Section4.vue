@@ -1,5 +1,5 @@
 <template>
-    <section class="bg--04 bg--fixed py-100 ct-01 content-section division">
+    <section class="bg--02 bg--fixed py-100 ct-01 content-section division mt-5">
         <div class="container">
             <div class="row d-flex align-items-center">
                 <!-- TEXT BLOCK -->

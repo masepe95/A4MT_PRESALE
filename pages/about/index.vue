@@ -2,7 +2,7 @@
     <div id="about">
         <SectionsAboutSection1 />
         <SectionsAboutSection2 />
-        <SectionsAboutSection3 />
+        <!-- <SectionsAboutSection3 /> -->
         <SectionsAboutSection4 />
         <!-- <SectionsAboutSection5 /> -->
         <SectionsAboutSection6 />
@@ -12,8 +12,8 @@
         <SectionsAboutSection10 />
         <!-- <SectionsAboutSection11 /> -->
         <!-- <SectionsAboutSection12 /> -->
-        <SectionsAboutSection13 />
-        <SectionsAboutSection14 />
+        <!-- <SectionsAboutSection13 /> -->
+        <!-- <SectionsAboutSection14 /> -->
     </div>
 </template>
 <script setup>
