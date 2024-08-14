@@ -113,11 +113,10 @@ export default {
             }
         },
         handleFormSubmit() {
-            if (this.searchQuery.trim() === '') {
-                alert("Please, select an option to search.");
-            } else {
-                this.$emit('form-submit', this.searchQuery);
-            }
+            this.showSuggestions = true;
+            this.$nextTick(() => {
+                this.$refs.searchInput.focus();
+            });
         },
         handleFocus() {
             this.previousQuery = this.searchQuery;

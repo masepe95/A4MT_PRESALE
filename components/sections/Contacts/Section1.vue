@@ -140,7 +140,7 @@ export default {
                 company: '',
                 employees: '',
                 message: '',
-                checkbox: false
+                checkbox: true,
             },
             feedbackMessage: '',
             feedbackClass: ''  // Aggiungi una variabile per la classe del messaggio di feedback
@@ -219,7 +219,7 @@ export default {
             this.form.company = '';
             this.form.employees = '';
             this.form.message = '';
-            this.form.checkbox = false;
+            this.form.checkbox = true;
         }
     }
 }

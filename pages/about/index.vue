@@ -9,7 +9,7 @@
         <!-- <SectionsAboutSection8 /> -->
         <!-- <SectionsAboutSection9 /> -->
         <SectionsAboutSection7 />
-        <SectionsAboutSection10 />
+        <!-- <SectionsAboutSection10 /> -->
         <!-- <SectionsAboutSection11 /> -->
         <!-- <SectionsAboutSection12 /> -->
         <!-- <SectionsAboutSection13 /> -->
