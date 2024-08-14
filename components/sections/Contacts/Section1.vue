@@ -29,7 +29,8 @@
                                 <select v-model="form.subject" class="form-select subject"
                                     aria-label="Default select example">
                                     <option selected>This question is about...</option>
-                                    <option>I would like a quotation</option>
+                                    <option>Subscribe me to receive news and value before the public.</option>
+                                    <option>I would like a quotation.</option>
                                     <option>I would like to assess my organisation and establish an action plan.
                                     </option>
                                     <option>I would like to candidate myself as an Associate Success Manager / Partner.
