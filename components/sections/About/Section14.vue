@@ -6,7 +6,7 @@
                     <!-- NEWSLETTER TEXT -->
                     <div class="col">
                         <div class="newsletter-txt">
-                            <h4 class="s-34 w-700">Enhance your skills!
+                            <h4 class="s-34 w-700">Receive a Case Study!
                             </h4>
                             <p class="p-lg">We commit to offering you concrete, immediately applicable value.</p>
                         </div>

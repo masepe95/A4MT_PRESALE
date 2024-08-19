@@ -35,7 +35,7 @@
                                     <!-- Data -->
                                     <div class="review-author">
                                         <h6 class="s-18 w-700">Eng. Simone Pin</h6>
-                                        <p class="p-sm">Manager @ Swiss Federal Railways Ltd.</p>
+                                        <p class="p-sm">Executive Manager @ Swiss Federal Railways Ltd.</p>
                                     </div>
                                 </div>
                                 <!-- End Author -->

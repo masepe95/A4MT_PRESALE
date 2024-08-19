@@ -29,7 +29,8 @@
                                 <select v-model="form.subject" class="form-select subject"
                                     aria-label="Default select example">
                                     <option selected>This question is about...</option>
-                                    <option>Subscribe me to receive news and value before the public.</option>
+                                    <option>Subscribe me to receive a case study, articles and news before the public.
+                                    </option>
                                     <option>I would like a quotation.</option>
                                     <option>I would like to assess my organisation and establish an action plan.
                                     </option>
@@ -100,7 +101,7 @@
                                     <input v-model="form.checkbox" class="form-check-input" type="checkbox"
                                         id="flexCheckDefault" checked>
                                     <label class="form-check-label" for="flexCheckDefault">
-                                        Yes, I would like to know what happens in before the public.
+                                        Yes, I would like to receive a case study, articles and news before the public.
                                     </label>
                                 </div>
                             </div>
