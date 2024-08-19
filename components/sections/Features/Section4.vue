@@ -37,7 +37,7 @@
                 <!-- IMAGE BLOCK -->
                 <div class="col-md-6 mt-3">
                     <div class="img-block left-column wow fadeInRight">
-                        <img class="img-fluid" src="/assets/images/img-13.png" alt="content-image" />
+                        <img class="img-fluid" src="/assets/images/picture2.png" alt="content-image" />
                     </div>
                 </div>
             </div>

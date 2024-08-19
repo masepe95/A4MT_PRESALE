@@ -47,7 +47,7 @@
                 <!-- IMAGE BLOCK -->
                 <div class="col-md-6 order-first order-md-2">
                     <div class="img-block right-column wow fadeInLeft">
-                        <img class="img-fluid" src="/assets/images/img-11.png" alt="content-image" />
+                        <img class="img-fluid" src="/assets/images/picture1.png" alt="content-image" />
                     </div>
                 </div>
             </div>
