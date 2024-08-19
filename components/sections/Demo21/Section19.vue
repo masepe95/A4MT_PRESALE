@@ -6,6 +6,7 @@
             <div class="search-input">
                 <AppSearchTerm @prompt-id-change="onPromptIdChange" @form-submit="handleFormSubmit" />
             </div>
+            <img src="../../../assets/images/swiss-quality.png" alt="Swiss Quality" class="swiss-quality">
             <!-- <SectionsAboutSection6 style="width: 100%;" /> -->
         </div>
     </div>
@@ -121,6 +122,17 @@ onMounted(() => {
     margin-top: 1rem;
 }
 
+.swiss-quality {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    /* Adjust the size as needed */
+    height: auto;
+    z-index: 2;
+    /* Ensure it is above the background and other elements */
+}
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2rem;
@@ -132,6 +144,11 @@ onMounted(() => {
 
     .search-input {
         width: 90%;
+    }
+
+    .swiss-quality {
+        width: 100px;
+        /* Adjust the size for smaller screens */
     }
 }
 
@@ -147,6 +164,12 @@ onMounted(() => {
     .search-input {
         width: 100%;
     }
+
+    .swiss-quality {
+        width: 80px;
+        /* Adjust the size for even smaller screens */
+    }
+
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
