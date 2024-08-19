@@ -5,15 +5,16 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="card">
-                        <div class="card-img-top-wrapper position-relative">
+                        <div class="card-img-top-wrapper position-relative mt-4">
                             <img class="card-img-top"
                                 :src="tool && tool.image ? '/assets/images/' + tool.image : '/assets/images/A4XXX_Hidden_Banner.jpg'"
                                 alt="Tool Image">
                             <button type="button" class="close btn-close" @click="closeModal">&times;</button>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title mb-4 text-center">{{ tool ? tool.name : 'Tool Details' }}</h5>
-                            <div v-if="tool" class="row">
+                            <h5 class="card-title mb-4 text-center mt-3">{{ tool ? tool.name : 'Tool Details' }}
+                            </h5>
+                            <div v-if="tool" class="row mt-5">
                                 <div class="col-md-6">
                                     <h6 class="mb-3 ms-3">Key Results</h6>
                                     <ul class="list-group list-group-flush mb-5" v-html="formattedKeyResults"></ul>
@@ -101,6 +102,8 @@ export default {
 .card {
     max-height: 80vh;
     overflow-y: auto;
+    background-color: rgb(247, 247, 247);
+
 }
 
 .card-title {
@@ -124,6 +127,11 @@ export default {
     height: auto;
     object-fit: contain;
 }
+
+.list-group {
+    --bs-list-group-bg: transparent;
+}
+
 
 @media (min-width: 992px) {
     .card-img-top {
