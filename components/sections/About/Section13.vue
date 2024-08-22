@@ -17,26 +17,22 @@
                 <!-- BLOG POST #1 -->
                 <div class="col-md-6 col-lg-4">
                     <div id="bp-1-1" class="blog-post wow fadeInUp">
-                        <!-- BLOG POST IMAGE -->
-                        <!-- <div class="blog-post-img mb-35">
-                            <img class="img-fluid r-16" src="/assets/images/blog/post-8-img.jpg"
-                                alt="blog-post-image" />
-                        </div> -->
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
                             <!-- Post Tag -->
                             <span class="post-tag color--pink-400">Intro</span>
                             <!-- Post Link -->
                             <h6 class="s-20 w-700">
-                                <NuxtLink tp="/single-post">Introduction to micro-articles for executives.
+                                <NuxtLink to="/single-post#article1">Introduction to micro-articles for executives.
                                 </NuxtLink>
                             </h6>
                             <!-- Text -->
                             <p>Our micro-articles are a valuable resource for disseminating advanced techniques in
-                                business
-                                management
+                                business management
                                 and personnel leadership. We support continuous learning and the adoption of refined
                                 business practices ...</p>
+                            <!-- Read More Link -->
+                            <NuxtLink to="/single-post#article1" class="color--pink-400">Read more</NuxtLink>
                             <!-- Post Meta -->
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
@@ -59,25 +55,21 @@
                 <!-- BLOG POST #2 -->
                 <div class="col-md-6 col-lg-4">
                     <div id="bp-1-2" class="blog-post wow fadeInUp">
-                        <!-- BLOG POST IMAGE -->
-                        <!-- <div class="blog-post-img mb-35">
-                            <img class="img-fluid r-16" src="/assets/images/blog/post-2-img.jpg"
-                                alt="blog-post-image" />
-                        </div> -->
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
                             <!-- Post Tag -->
                             <span class="post-tag color--green-400">Self Improvements</span>
                             <!-- Post Link -->
                             <h6 class="s-20 w-700">
-                                <NuxtLink tp="/single-post">Becoming an Executive</NuxtLink>
+                                <NuxtLink to="/single-post#article2">Becoming an Executive</NuxtLink>
                             </h6>
                             <!-- Text -->
                             <p>Whether you are trained as an architect, lawyer, technician, or entrepreneur, leading a
-                                team, managing
-                                projects, or running an entire company requires additional skills. The role of a manager
-                                adds to the
-                                expertise acquired during your years of training ...</p>
+                                team, managing projects, or running an entire company requires additional skills. The
+                                role of a manager
+                                adds to the expertise acquired during your years of training ...</p>
+                            <!-- Read More Link -->
+                            <NuxtLink to="/single-post#article2" class="color--green-400">Read more</NuxtLink>
                             <!-- Post Meta -->
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
@@ -100,20 +92,14 @@
                 <!-- BLOG POST #3 -->
                 <div class="col-md-12 col-lg-4">
                     <div id="bp-1-3" class="blog-post wow fadeInUp">
-                        <!-- BLOG POST IMAGE -->
-                        <!-- <div class="blog-post-img mb-35">
-                            <img class="img-fluid r-16" src="/assets/images/blog/post-5-img.jpg"
-                                alt="blog-post-image" />
-                        </div> -->
                         <!-- BLOG POST TEXT -->
                         <div class="blog-post-txt">
                             <!-- Post Tag -->
                             <span class="post-tag color--purple-400">Business Improvements</span>
                             <!-- Post Link -->
                             <h6 class="s-20 w-700">
-                                <NuxtLink tp="/single-post">Creating
-                                    value and
-                                    omitting the superfluous</NuxtLink>
+                                <NuxtLink to="/single-post#article3">Creating
+                                    value and omitting the superfluous</NuxtLink>
                             </h6>
                             <!-- Text -->
                             <p>Is it possible to enhance the value of the content in a document with a simple action?
@@ -121,6 +107,8 @@
                                 During the review of certification projects for an executive Master's program, we
                                 observed an average
                                 quality of content ...</p>
+                            <!-- Read More Link -->
+                            <NuxtLink to="/single-post#article3" class="color--purple-400">Read more</NuxtLink>
                             <!-- Post Meta -->
                             <div class="blog-post-meta mt-20">
                                 <ul class="post-meta-list ico-10">
