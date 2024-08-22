@@ -18,7 +18,6 @@
                     <li class="nl-simple" aria-haspopup="true">
                         <NuxtLink to="/about" class="h-link" @click="handleLinkClick">About</NuxtLink>
                     </li>
-                    <!-- SIMPLE NAVIGATION LINK -->
                     <li class="nl-simple" aria-haspopup="true">
                         <NuxtLink to="/solutions" class="h-link" @click="handleLinkClick">Solutions</NuxtLink>
                     </li>
@@ -31,67 +30,160 @@
                     <li class="nl-simple" aria-haspopup="true">
                         <NuxtLink to="/contacts" class="h-link" @click="handleLinkClick">Contact</NuxtLink>
                     </li>
-                    <!-- SIGN IN LINK -->
                     <li class="nl-simple reg-fst-link mobile-last-link" aria-haspopup="true">
                         <NuxtLink to="/login-2" class="h-link" @click="handleLinkClick">Sign in</NuxtLink>
                     </li>
-                    <!-- SIGN UP BUTTON -->
-                    <!-- <li class="nl-simple" aria-haspopup="true">
-                        <NuxtLink to="/signup-2" class="btn r-04 btn--theme hover--tra-black last-link"
-                            @click="handleLinkClick">Sign up</NuxtLink>
-                    </li> -->
+                    <!-- LANGUAGE SELECTOR -->
+                    <li class="nl-simple" aria-haspopup="true">
+                        <div class="language-selector" ref="languageDropdown">
+                            <button @click="toggleLanguageDropdown" class="h-link">English &#9662;</button>
+                            <ul v-if="isLanguageDropdownOpen" class="language-dropdown">
+                                <li @click="closeLanguageDropdown">
+                                    <NuxtLink to="https://ita.a4managementtools.com">Italiano</NuxtLink>
+                                </li>
+                                <li class="disabled">Français</li>
+                                <li class="disabled">Deutsch</li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </nav>
-            <!-- END MAIN MENU -->
         </div>
     </div>
 </template>
 
-<script>
-import { reactive } from 'vue';
-export default {
-    setup() {
-        const state = reactive({
-            isOpen: [false, false]
-        });
-        const toggle = (index) => {
-            state.isOpen[index] = !state.isOpen[index];
-        };
-        const toggleMobileMenu = () => {
-            document.body.classList.toggle("wsactive");
-        };
-        return {
-            toggle,
-            toggleMobileMenu,
-            isOpen: state.isOpen
-        };
-    },
-    mounted() {
-        window.addEventListener("scroll", this.handleScroll);
-    },
-    destroyed() {
-        window.removeEventListener("scroll", this.handleScroll);
-    },
-    methods: {
-        handleScroll() {
-            const menu = document.getElementById("main-menu");
-            const header = document.getElementById("header");
-            if (window.pageYOffset > 100) {
-                menu.classList.add("scroll");
-                header.classList.add("scroll");
-            } else {
-                menu.classList.remove("scroll");
-                header.classList.remove("scroll");
-            }
-        },
-        handleLinkClick() {
-            if (window.innerWidth <= 768) {
-                this.toggleMobileMenu();
-            }
-        },
-        toggleMobileMenu() {
-            document.body.classList.toggle("wsactive");
-        }
+
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+const isLanguageDropdownOpen = ref(false);
+const languageDropdown = ref(null);
+
+const toggleLanguageDropdown = (event) => {
+    isLanguageDropdownOpen.value = !isLanguageDropdownOpen.value;
+    if (languageDropdown.value) {
+        languageDropdown.value.classList.toggle('open', isLanguageDropdownOpen.value);
+    }
+    event.stopPropagation();
+};
+
+const closeLanguageDropdown = () => {
+    isLanguageDropdownOpen.value = false;
+    if (languageDropdown.value) {
+        languageDropdown.value.classList.remove('open');
     }
 };
+
+const handleClickOutside = (event) => {
+    if (languageDropdown.value && !languageDropdown.value.contains(event.target)) {
+        closeLanguageDropdown();
+    }
+};
+
+onMounted(() => {
+    document.addEventListener('click', handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+    document.removeEventListener('click', handleClickOutside);
+});
 </script>
+
+
+<style scoped>
+/* Stile per il contenitore del selettore di lingua */
+.language-selector {
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding-top: 11px;
+}
+
+/* Stile per il bottone del selettore di lingua */
+.language-selector .h-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Dropdown del selettore di lingua */
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    border-radius: 4px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    list-style: none;
+    min-width: 140px;
+    z-index: 9999;
+    font-family: inherit;
+}
+
+/* Stato aperto del dropdown */
+.language-selector.open .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Stile dei link all'interno del dropdown */
+.language-dropdown li a {
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.language-dropdown li.disabled {
+    color: #ccc;
+    cursor: default;
+    padding: 10px 15px;
+}
+
+/* Modalità mobile */
+@media (max-width: 768px) {
+    .language-selector .h-link {
+        color: black;
+    }
+
+    .language-dropdown {
+        position: static;
+        background-color: white;
+        border: none;
+        padding: 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .language-dropdown li a {
+        color: black;
+        padding: 10px;
+    }
+
+    .language-dropdown li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .language-selector {
+        margin-top: 10px;
+    }
+}
+
+a:hover {
+    color: white !important;
+    text-decoration: none;
+}
+</style>
