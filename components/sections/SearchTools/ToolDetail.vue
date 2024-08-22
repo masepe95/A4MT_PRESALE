@@ -8,7 +8,7 @@
                         <div class="card-img-top-wrapper position-relative mt-4">
                             <img class="card-img-top"
                                 :src="tool && tool.image ? '/assets/images/' + tool.image : '/assets/images/A4XXX_Hidden_Banner.jpg'"
-                                alt="Tool Image">
+                                alt="Tool Image" @contextmenu.prevent>
                             <button type="button" class="close btn-close" @click="closeModal">&times;</button>
                         </div>
                         <div class="card-body">
@@ -120,12 +120,14 @@ export default {
     width: 100%;
     height: auto;
     position: relative;
+
 }
 
 .card-img-top {
     width: 100%;
     height: auto;
     object-fit: contain;
+
 }
 
 .list-group {
