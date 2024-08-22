@@ -52,7 +52,6 @@
     </div>
 </template>
 
-
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
@@ -80,12 +79,30 @@ const handleClickOutside = (event) => {
     }
 };
 
+const handleScroll = () => {
+    const menu = document.getElementById("main-menu");
+    const header = document.getElementById("header");
+    if (window.pageYOffset > 100) {
+        menu.classList.add("scroll");
+        if (header) {
+            header.classList.add("scroll");
+        }
+    } else {
+        menu.classList.remove("scroll");
+        if (header) {
+            header.classList.remove("scroll");
+        }
+    }
+};
+
 onMounted(() => {
     document.addEventListener('click', handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
 });
 
 onBeforeUnmount(() => {
     document.removeEventListener('click', handleClickOutside);
+    window.removeEventListener("scroll", handleScroll);
 });
 </script>
 
@@ -147,11 +164,38 @@ onBeforeUnmount(() => {
     transition: background-color 0.3s ease;
 }
 
-
 .language-dropdown li.disabled {
     color: #ccc;
     cursor: default;
     padding: 10px 15px;
+}
+
+/* Stile per lo scroll */
+.scroll {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Esempio: cambia lo sfondo del menu e dell'header */
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+#main-menu.scroll {
+    padding: 10px 0;
+    /* Riduce il padding quando si scrolla */
+}
+
+#header.scroll {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Aggiunge un'ombra per separare l'header dal contenuto */
+}
+
+/* Cambia il colore del testo quando il menu è in stato di scroll */
+#main-menu.scroll .h-link {
+    color: rgb(71, 71, 71);
+    /* Cambia il colore del testo in bianco (o qualsiasi colore preferito) */
+}
+
+#main-menu.scroll .language-selector .h-link {
+    color: rgb(71, 71, 71);
+    /* Assicura che il colore del testo del selettore di lingua sia coerente con gli altri link */
 }
 
 /* Modalità mobile */
