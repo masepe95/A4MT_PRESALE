@@ -79,21 +79,25 @@ export default {
             this.$emit('form-submit', suggestion.description);
         },
         handleInput() {
-            if (this.searchQuery.length > 0) {
-                // Split the search query into individual words
-                const searchWords = this.searchQuery.toLowerCase().split(' ').filter(Boolean);
+        if (this.searchQuery.length > 0) {
+            // Lowercase the search query for case-insensitive matching
+            const lowerCaseQuery = this.searchQuery.toLowerCase();
 
-                // Filter prompts to include any that contain at least one search word
-                this.suggestions = this.allPrompts.filter(prompt => {
-                    const promptText = prompt.description.toLowerCase();
-                    // Check if at least one search word is included in the prompt text
-                    return searchWords.some(word => promptText.includes(word));
-                });
-            } else {
-                this.suggestions = this.allPrompts;
-            }
-            this.showSuggestions = true;
-        },
+            // Split the search query into individual words
+            const searchWords = lowerCaseQuery.split(' ').filter(Boolean);
+
+            // Filter prompts based on whether they contain the full query or any of the search words
+            this.suggestions = this.allPrompts.filter(prompt => {
+                const promptText = prompt.description.toLowerCase();
+                
+                // Check if the full query matches or at least one word matches
+                return promptText.includes(lowerCaseQuery) || searchWords.some(word => promptText.includes(word));
+            });
+        } else {
+            this.suggestions = this.allPrompts;
+        }
+        this.showSuggestions = true;
+    },
         async fetchAllPrompts() {
             const apiUrl = `https://antiquewhite-squid-521659.hostingersite.com/api/prompts`;
 
