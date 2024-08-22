@@ -80,9 +80,15 @@ export default {
         },
         handleInput() {
             if (this.searchQuery.length > 0) {
-                this.suggestions = this.allPrompts.filter(prompt =>
-                    prompt.description.toLowerCase().includes(this.searchQuery.toLowerCase())
-                );
+                // Split the search query into individual words
+                const searchWords = this.searchQuery.toLowerCase().split(' ').filter(Boolean);
+
+                // Filter prompts to include any that contain at least one search word
+                this.suggestions = this.allPrompts.filter(prompt => {
+                    const promptText = prompt.description.toLowerCase();
+                    // Check if at least one search word is included in the prompt text
+                    return searchWords.some(word => promptText.includes(word));
+                });
             } else {
                 this.suggestions = this.allPrompts;
             }
