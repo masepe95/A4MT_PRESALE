@@ -154,17 +154,17 @@ export default {
                 console.log(this.form); // Aggiungi questo per vedere cosa stai inviando
 
                 const domainBlacklist = [
-                    'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'live.com', 'aol.com',
-                    'icloud.com', 'mail.com', 'protonmail.com', 'yandex.com', 'gmx.com', 'zoho.com',
-                    'inbox.com', 'me.com', 'mac.com', 'msn.com', 'aim.com', 'rediffmail.com',
-                    'lycos.com', 'comcast.net', 'sbcglobal.net', 'frontier.com', 'verizon.net',
-                    'att.net', 'charter.net', 'optonline.net', 'rocketmail.com', 'fastmail.com',
-                    'hushmail.com', 'btinternet.com'
+                    'gmail', 'google', 'yahoo', 'hotmail', 'outlook', 'live', 'aol', 'icloud', 'mail', 'protonmail',
+                    'yandex', 'gmx', 'zoho', 'inbox', 'me', 'mac', 'msn', 'aim', 'rediffmail', 'lycos',
+                    'comcast', 'sbcglobal', 'frontier', 'verizon', 'att', 'charter', 'optonline',
+                    'rocketmail', 'fastmail', 'hushmail', 'btinternet',
                 ];
 
+                // Estrai il dominio dell'email e controlla il dominio principale (prima del punto)
                 const emailDomain = this.form.email.split('@')[1].toLowerCase();
+                const domainBase = emailDomain.split('.')[0]; // Prende la parte prima del primo "."
 
-                if (domainBlacklist.includes(emailDomain)) {
+                if (domainBlacklist.includes(domainBase)) {
                     this.feedbackMessage = 'Please use a professional or company email address.';
                     this.feedbackClass = 'text-danger';
                     window.scrollTo({ top: 0, behavior: 'smooth' });
