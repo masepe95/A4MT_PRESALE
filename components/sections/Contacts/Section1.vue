@@ -21,13 +21,14 @@
             <div class="row justify-content-center">
                 <div class="col-md-11 col-lg-10 col-xl-8">
                     <div class="form-holder">
-                        <form @submit.prevent="handleSubmit" name="contactform" class="row contact-form">
+                        <form @submit.prevent="handleSubmit" name="contactform" class="row contact-form"
+                            autocomplete="on">
                             <!-- Form Select -->
                             <div class="col-md-12 input-subject">
                                 <p class="p-lg">This question is about:</p>
                                 <span>Choose a topic, so we know who to send your request to: </span>
                                 <select v-model="form.subject" class="form-select subject"
-                                    aria-label="Default select example">
+                                    aria-label="Default select example" autocomplete="off">
                                     <option selected>This question is about...</option>
                                     <option>Subscribe me to receive a case study, articles and news before the public.
                                     </option>
@@ -46,32 +47,32 @@
                                 <p class="p-lg">Your Name:</p>
                                 <span>Please enter your real name: </span>
                                 <input v-model="form.name" type="text" name="name" class="form-control name"
-                                    placeholder="Your Name*" />
+                                    placeholder="Your Name*" autocomplete="name" />
                             </div>
                             <div class="col-md-12">
                                 <p class="p-lg">Your Professional Email Address:</p>
                                 <span>We do not accept personal e-mail addresses.</span>
                                 <input v-model="form.email" type="text" name="email" class="form-control email"
-                                    placeholder="Email Address*" />
+                                    placeholder="Email Address*" autocomplete="email" />
                             </div>
                             <div class="col-md-12">
                                 <p class="p-lg">Your Phone Number:</p>
                                 <span>Please include your country code (Ex. +41)</span>
                                 <input v-model="form.tel" type="tel" name="tel" class="form-control phone"
-                                    placeholder="+41 ## ### ## ##" />
+                                    placeholder="+41 ## ### ## ##" autocomplete="tel" />
                             </div>
                             <div class="col-md-12">
                                 <p class="p-lg">Organization Name:</p>
                                 <span>Please enter your organization name: </span>
                                 <input v-model="form.company" type="text" name="company" class="form-control company"
-                                    placeholder="Organization Name" />
+                                    placeholder="Organization Name" autocomplete="organization" />
                             </div>
                             <!-- Form Select -->
                             <div class="col-md-12 input-subject">
                                 <p class="p-lg">Number of collaborators</p>
                                 <span>Choose a range, so we know what is best suited for you: </span>
                                 <select v-model="form.employees" class="form-select subject"
-                                    aria-label="Default select example">
+                                    aria-label="Default select example" autocomplete="off">
                                     <option selected disabled>Number of Employees...</option>
                                     <option value="<10">
                                         < 10</option>
@@ -94,7 +95,7 @@
                                 <p class="p-lg">Explain your question in details:</p>
                                 <span>Be VERY precise so we can help you super fast.</span>
                                 <textarea v-model="form.message" class="form-control message" name="message" rows="6"
-                                    placeholder=""></textarea>
+                                    placeholder="" autocomplete="off"></textarea>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-check">
