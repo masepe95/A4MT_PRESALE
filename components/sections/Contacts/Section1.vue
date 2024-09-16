@@ -30,16 +30,16 @@
                                 <select v-model="form.subject" class="form-select subject"
                                     aria-label="Default select example" autocomplete="off">
                                     <option selected>This question is about...</option>
-                                    <option>Subscribe me to receive a case study, articles and news before the public.
+                                    <option value="subscribe">Subscribe me to receive a case study, articles and news before the public.
                                     </option>
-                                    <option>I would like a quotation.</option>
-                                    <option>I would like to assess my organisation and establish an action plan.
+                                    <option value="quotation">I would like a quotation.</option>
+                                    <option value="assessment">I would like to assess my organisation and establish an action plan.
                                     </option>
-                                    <option>I would like to candidate myself as an Associate Success Manager / Partner.
+                                    <option value="candidate">I would like to candidate myself as an Associate Success Manager / Partner.
                                     </option>
-                                    <option>I am a customer. I have a request.
+                                    <option value="request">I am a customer. I have a request.
                                     </option>
-                                    <option>Other...</option>
+                                    <option value="other">Other...</option>
                                 </select>
                             </div>
                             <!-- Contact Form Input -->
@@ -136,7 +136,7 @@ export default {
     data() {
         return {
             form: {
-                subject: '',
+                subject: this.$route.query.subject || '', // Precompila il subject con il valore dalla query string
                 name: '',
                 email: this.$route.query.email || '', // Precompila il campo email se presente nella query string
                 tel: '',

@@ -160,10 +160,11 @@ export default {
     },
     methods: {
         handleSubmit() {
-            if (this.email) {
-                const encodedEmail = encodeURIComponent(this.email);
-                this.$router.push(`/contacts?email=${encodedEmail}`);
-            }
+        if (this.email) {
+            const encodedEmail = encodeURIComponent(this.email);
+            // Aggiungi il valore del subject alla query string
+            this.$router.push(`/contacts?email=${encodedEmail}&subject=subscribe`);
+        }
         }
     }
 }
