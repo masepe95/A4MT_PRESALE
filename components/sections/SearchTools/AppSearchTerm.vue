@@ -73,31 +73,48 @@ export default {
             this.searchQuery = suggestion.description;
             this.suggestions = [];
             this.showSuggestions = false;
+
+            // Invia l'evento al genitore
             this.$emit('query-change', suggestion.description);
             this.$emit('prompt-id-change', suggestion.id);
             this.$emit('prompt-selected', suggestion.id);
             this.$emit('form-submit', suggestion.description);
+
+            // Effettua una chiamata per incrementare il contatore di click del prompt
+            fetch(`https://antiquewhite-squid-521659.hostingersite.com/api/prompts/${suggestion.id}/increment-click`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Click count updated', data);
+                })
+                .catch(error => {
+                    console.error('Errore nell\'incrementare il conteggio dei click:', error);
+                });
         },
         handleInput() {
-        if (this.searchQuery.length > 0) {
-            // Lowercase the search query for case-insensitive matching
-            const lowerCaseQuery = this.searchQuery.toLowerCase();
+            if (this.searchQuery.length > 0) {
+                // Lowercase the search query for case-insensitive matching
+                const lowerCaseQuery = this.searchQuery.toLowerCase();
 
-            // Split the search query into individual words
-            const searchWords = lowerCaseQuery.split(' ').filter(Boolean);
+                // Split the search query into individual words
+                const searchWords = lowerCaseQuery.split(' ').filter(Boolean);
 
-            // Filter prompts based on whether they contain the full query or any of the search words
-            this.suggestions = this.allPrompts.filter(prompt => {
-                const promptText = prompt.description.toLowerCase();
-                
-                // Check if the full query matches or at least one word matches
-                return promptText.includes(lowerCaseQuery) || searchWords.some(word => promptText.includes(word));
-            });
-        } else {
-            this.suggestions = this.allPrompts;
-        }
-        this.showSuggestions = true;
-    },
+                // Filter prompts based on whether they contain the full query or any of the search words
+                this.suggestions = this.allPrompts.filter(prompt => {
+                    const promptText = prompt.description.toLowerCase();
+
+                    // Check if the full query matches or at least one word matches
+                    return promptText.includes(lowerCaseQuery) || searchWords.some(word => promptText.includes(word));
+                });
+            } else {
+                this.suggestions = this.allPrompts;
+            }
+            this.showSuggestions = true;
+        },
         async fetchAllPrompts() {
             const apiUrl = `https://antiquewhite-squid-521659.hostingersite.com/api/prompts`;
 
