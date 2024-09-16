@@ -1,135 +1,146 @@
 <template>
-    <section id="contacts-1" class="pb-50 inner-page-hero contacts-section division">
-        <div class="container">
-            <!-- FEEDBACK MESSAGE -->
-            <div v-if="feedbackMessage" :class="['feedback-message', feedbackClass]" class="text-center mb-4">
-                <h1>{{ feedbackMessage }}</h1>
-            </div>
-            <!-- SECTION TITLE -->
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-9">
-                    <div class="section-title text-center mb-80">
-                        <!-- Title -->
-                        <h2 class="s-52 w-700">Questions? Let's Talk</h2>
-                        <!-- Text -->
-                        <p class="p-lg">Want to learn more about A4ManagementTools, get a quote, or speak with an
-                            expert? Let us know what you are looking for and we’ll get back to you right away</p>
+    <section id="contacts-1" class="pb-50 contacts-section division">
+        <div class="background-blur">
+            <div class="container mt-6">
+                <!-- FEEDBACK MESSAGE -->
+                <div v-if="feedbackMessage" :class="['feedback-message', feedbackClass]" class="text-center mb-4">
+                    <h1>{{ feedbackMessage }}</h1>
+                </div>
+                <!-- SECTION TITLE -->
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-9">
+                        <div class="section-title text-center mb-80">
+                            <!-- Title -->
+                            <h2 class="s-52 w-700 text-white">Questions? Let's Talk</h2>
+                            <!-- Text -->
+                            <p class="p-lg text-white">Want to learn more about A4ManagementTools, get a quote, or speak
+                                with an
+                                expert? Let us know what you are looking for and we’ll get back to you right away</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- CONTACT FORM -->
-            <div class="row justify-content-center">
-                <div class="col-md-11 col-lg-10 col-xl-8">
-                    <div class="form-holder">
-                        <form @submit.prevent="handleSubmit" name="contactform" class="row contact-form"
-                            autocomplete="on">
-                            <!-- Form Select -->
-                            <div class="col-md-12 input-subject">
-                                <p class="p-lg">This question is about:</p>
-                                <span>Choose a topic, so we know who to send your request to: </span>
-                                <select required v-model="form.subject" class="form-select subject"
-                                    aria-label="Default select example" autocomplete="off">
-                                    <option selected>This question is about...</option>
-                                    <option value="subscribe">Subscribe me to receive a case study, articles and news
-                                        before the public.
-                                    </option>
-                                    <option value="quotation">I would like a quotation.</option>
-                                    <option value="assessment">I would like to assess my organisation and establish an
-                                        action plan.
-                                    </option>
-                                    <option value="candidate">I would like to candidate myself as an Associate Success
-                                        Manager / Partner.
-                                    </option>
-                                    <option value="request">I am a customer. I have a request.
-                                    </option>
-                                    <option value="other">Other...</option>
-                                </select>
-                            </div>
-                            <!-- Contact Form Input -->
-                            <div class="col-md-12">
-                                <p class="p-lg">Your Name:</p>
-                                <span>Please enter your real name: </span>
-                                <input required v-model="form.name" type="text" name="name" class="form-control name"
-                                    placeholder="Your Name*" autocomplete="name" />
-                            </div>
-                            <div class="col-md-12">
-                                <p class="p-lg">Your Professional Email Address:</p>
-                                <span>We do not accept personal e-mail addresses.</span>
-                                <input required v-model="form.email" type="text" name="email" class="form-control email"
-                                    placeholder="Email Address*" autocomplete="email" />
-                            </div>
-                            <div class="col-md-12">
-                                <p class="p-lg">Your Phone Number:</p>
-                                <span>Please include your country code (Ex. +41)</span>
-                                <input required v-model="form.tel" type="tel" name="tel" class="form-control phone"
-                                    placeholder="+41 ## ### ## ##" autocomplete="tel" />
-                            </div>
-                            <div class="col-md-12">
-                                <p class="p-lg">Organization Name:</p>
-                                <span>Please enter your organization name: </span>
-                                <input v-model="form.company" type="text" name="company" class="form-control company"
-                                    placeholder="Organization Name" autocomplete="organization" />
-                            </div>
-                            <!-- Form Select -->
-                            <div class="col-md-12 input-subject">
-                                <p class="p-lg">Number of collaborators</p>
-                                <span>Choose a range, so we know what is best suited for you: </span>
-                                <select v-model="form.employees" class="form-select subject"
-                                    aria-label="Default select example" autocomplete="off">
-                                    <option selected disabled>Number of Employees...</option>
-                                    <option value="<10">
-                                        < 10</option>
-                                    <option value="<50">
-                                        < 50</option>
-                                    <option value="<100">
-                                        < 100</option>
-                                    <option value="<200">
-                                        < 200</option>
-                                    <option value="<500">
-                                        < 500</option>
-                                    <option value="<1000">
-                                        < 1000</option>
-                                    <option value="<9999">
-                                        < 9999</option>
-                                    <option value=">10000">> 10'000</option>
-                                </select>
-                            </div>
-                            <div class="col-md-12">
-                                <p class="p-lg">Explain your question in details:</p>
-                                <span>Be VERY precise so we can help you super fast.</span>
-                                <textarea v-model="form.message" class="form-control message" name="message" rows="6"
-                                    placeholder="" autocomplete="off"></textarea>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-check">
-                                    <input v-model="form.checkbox" class="form-check-input" type="checkbox"
-                                        id="flexCheckDefault" checked>
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Yes, I would like to receive a case study, articles and news before the public.
-                                    </label>
+                <!-- CONTACT FORM -->
+                <div class="row justify-content-center text-overlay">
+                    <div class="col-md-11 col-lg-10 col-xl-8">
+                        <div class="form-holder">
+                            <form @submit.prevent="handleSubmit" name="contactform" class="row contact-form"
+                                autocomplete="on">
+                                <!-- Form Select -->
+                                <div class="col-md-12 input-subject">
+                                    <p class="p-lg">This question is about:</p>
+                                    <span>Choose a topic, so we know who to send your request to: </span>
+                                    <select required v-model="form.subject" class="form-select subject"
+                                        aria-label="Default select example" autocomplete="off">
+                                        <option selected>This question is about...</option>
+                                        <option value="subscribe">Subscribe me to receive a case study, articles and
+                                            news
+                                            before the public.
+                                        </option>
+                                        <option value="quotation">I would like a quotation.</option>
+                                        <option value="assessment">I would like to assess my organisation and establish
+                                            an
+                                            action plan.
+                                        </option>
+                                        <option value="candidate">I would like to candidate myself as an Associate
+                                            Success
+                                            Manager / Partner.
+                                        </option>
+                                        <option value="request">I am a customer. I have a request.
+                                        </option>
+                                        <option value="other">Other...</option>
+                                    </select>
                                 </div>
-                            </div>
-                            <!-- Contact Form Button -->
-                            <div class="col-md-12 mt-15 form-btn text-right">
-                                <button type="submit" class="btn btn--theme hover--theme submit">Submit Request</button>
-                            </div>
-                            <div class="contact-form-notice">
-                                <p class="p-sm">We are committed to your privacy. A4ManagementTools uses the information
-                                    you provide us to contact you about our relevant content, products, and services.
-                                    You may unsubscribe from these communications at any time. For more information,
-                                    check out our <NuxtLink to="/privacy">Privacy Policy</NuxtLink>.</p>
-                            </div>
-                            <!-- Contact Form Message -->
-                            <div class="col-lg-12 contact-form-msg">
-                                <span class="loading"></span>
-                            </div>
-                        </form>
+                                <!-- Contact Form Input -->
+                                <div class="col-md-12">
+                                    <p class="p-lg">Your Name:</p>
+                                    <span>Please enter your real name: </span>
+                                    <input required v-model="form.name" type="text" name="name"
+                                        class="form-control name" placeholder="Your Name*" autocomplete="name" />
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="p-lg">Your Professional Email Address:</p>
+                                    <span>We do not accept personal e-mail addresses.</span>
+                                    <input required v-model="form.email" type="text" name="email"
+                                        class="form-control email" placeholder="Email Address*" autocomplete="email" />
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="p-lg">Your Phone Number:</p>
+                                    <span>Please include your country code (Ex. +41)</span>
+                                    <input required v-model="form.tel" type="tel" name="tel" class="form-control phone"
+                                        placeholder="+41 ## ### ## ##" autocomplete="tel" />
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="p-lg">Organization Name:</p>
+                                    <span>Please enter your organization name: </span>
+                                    <input v-model="form.company" type="text" name="company"
+                                        class="form-control company" placeholder="Organization Name"
+                                        autocomplete="organization" />
+                                </div>
+                                <!-- Form Select -->
+                                <div class="col-md-12 input-subject">
+                                    <p class="p-lg">Number of collaborators</p>
+                                    <span>Choose a range, so we know what is best suited for you: </span>
+                                    <select v-model="form.employees" class="form-select subject"
+                                        aria-label="Default select example" autocomplete="off">
+                                        <option selected disabled>Number of Employees...</option>
+                                        <option value="<10">
+                                            < 10</option>
+                                        <option value="<50">
+                                            < 50</option>
+                                        <option value="<100">
+                                            < 100</option>
+                                        <option value="<200">
+                                            < 200</option>
+                                        <option value="<500">
+                                            < 500</option>
+                                        <option value="<1000">
+                                            < 1000</option>
+                                        <option value="<9999">
+                                            < 9999</option>
+                                        <option value=">10000">> 10'000</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="p-lg">Explain your question in details:</p>
+                                    <span>Be VERY precise so we can help you super fast.</span>
+                                    <textarea v-model="form.message" class="form-control message" name="message"
+                                        rows="6" placeholder="" autocomplete="off"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-check">
+                                        <input v-model="form.checkbox" class="form-check-input" type="checkbox"
+                                            id="flexCheckDefault" checked>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Yes, I would like to receive a case study, articles and news before the
+                                            public.
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Contact Form Button -->
+                                <div class="col-md-12 mt-15 form-btn text-right">
+                                    <button type="submit" class="btn btn--theme hover--theme submit">Submit
+                                        Request</button>
+                                </div>
+                                <div class="contact-form-notice">
+                                    <p class="p-sm">We are committed to your privacy. A4ManagementTools uses the
+                                        information
+                                        you provide us to contact you about our relevant content, products, and
+                                        services.
+                                        You may unsubscribe from these communications at any time. For more information,
+                                        check out our <NuxtLink to="/privacy">Privacy Policy</NuxtLink>.</p>
+                                </div>
+                                <!-- Contact Form Message -->
+                                <div class="col-lg-12 contact-form-msg">
+                                    <span class="loading"></span>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
+                <!-- END CONTACT FORM -->
             </div>
-            <!-- END CONTACT FORM -->
+            <!-- End container -->
         </div>
-        <!-- End container -->
     </section>
     <hr class="divider" />
 </template>
@@ -231,7 +242,70 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+/* Applica uno sfondo fisso, sfocatura e text overlay */
+.background-blur {
+    position: relative;
+    background-image: url(../../../assets/images/main_background.jpeg);
+    /* Usa la stessa immagine di sfondo */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px 0;
+    min-height: 100vh;
+    /* Altezza minima per dare respiro alla sezione */
+}
+
+.background-blur::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    /* Applicare effetto sfocatura */
+    pointer-events: none;
+    /* Rendere cliccabile il contenuto */
+    z-index: 0;
+    /* Mettere l'overlay dietro il contenuto */
+}
+
+.mt-6 {
+    margin-top: 4.5rem;
+}
+
+.text-overlay {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.738);
+    /* Overlay semitrasparente */
+    padding: 40px;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+/* Stili per la responsività */
+@media (max-width: 768px) {
+    .text-overlay {
+        padding: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-overlay {
+        padding: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Feedback message styling */
 .feedback-message.text-success h1 {
     color: green;
 }
