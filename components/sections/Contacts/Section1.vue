@@ -27,15 +27,18 @@
                             <div class="col-md-12 input-subject">
                                 <p class="p-lg">This question is about:</p>
                                 <span>Choose a topic, so we know who to send your request to: </span>
-                                <select v-model="form.subject" class="form-select subject"
+                                <select required v-model="form.subject" class="form-select subject"
                                     aria-label="Default select example" autocomplete="off">
                                     <option selected>This question is about...</option>
-                                    <option value="subscribe">Subscribe me to receive a case study, articles and news before the public.
+                                    <option value="subscribe">Subscribe me to receive a case study, articles and news
+                                        before the public.
                                     </option>
                                     <option value="quotation">I would like a quotation.</option>
-                                    <option value="assessment">I would like to assess my organisation and establish an action plan.
+                                    <option value="assessment">I would like to assess my organisation and establish an
+                                        action plan.
                                     </option>
-                                    <option value="candidate">I would like to candidate myself as an Associate Success Manager / Partner.
+                                    <option value="candidate">I would like to candidate myself as an Associate Success
+                                        Manager / Partner.
                                     </option>
                                     <option value="request">I am a customer. I have a request.
                                     </option>
@@ -46,19 +49,19 @@
                             <div class="col-md-12">
                                 <p class="p-lg">Your Name:</p>
                                 <span>Please enter your real name: </span>
-                                <input v-model="form.name" type="text" name="name" class="form-control name"
+                                <input required v-model="form.name" type="text" name="name" class="form-control name"
                                     placeholder="Your Name*" autocomplete="name" />
                             </div>
                             <div class="col-md-12">
                                 <p class="p-lg">Your Professional Email Address:</p>
                                 <span>We do not accept personal e-mail addresses.</span>
-                                <input v-model="form.email" type="text" name="email" class="form-control email"
+                                <input required v-model="form.email" type="text" name="email" class="form-control email"
                                     placeholder="Email Address*" autocomplete="email" />
                             </div>
                             <div class="col-md-12">
                                 <p class="p-lg">Your Phone Number:</p>
                                 <span>Please include your country code (Ex. +41)</span>
-                                <input v-model="form.tel" type="tel" name="tel" class="form-control phone"
+                                <input required v-model="form.tel" type="tel" name="tel" class="form-control phone"
                                     placeholder="+41 ## ### ## ##" autocomplete="tel" />
                             </div>
                             <div class="col-md-12">
