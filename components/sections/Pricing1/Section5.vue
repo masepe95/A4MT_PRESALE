@@ -14,7 +14,8 @@
                                 <p class="p-xl">Submit your request so that we can grant you access in order of arrival.
                                 </p>
                                 <!-- Button -->
-                                <NuxtLink to="`/contacts?subject=subscribe`" class="btn r-04 btn--theme hover--tra-white">Get Started!
+                                <NuxtLink to="/contacts?subject=subscribe" class="btn r-04 btn--theme hover--tra-white">
+                                    Get Started!
                                 </NuxtLink>
                                 <!-- Button Text -->
                                 <!-- <p class="p-sm btn-txt ico-15 o-85"><span class="flaticon-check"></span> Free for 14

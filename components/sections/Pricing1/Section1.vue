@@ -40,7 +40,7 @@
                                 <h5 class="s-24 w-700">Starter Plan</h5>
 
                                 <!-- Button -->
-                                <a href="`/contacts?subject=quotation`"
+                                <a href="/contacts?subject=quotation"
                                     class="pt-btn btn r-04 btn--theme hover--theme mt-3">Offer</a>
                                 <!-- Price -->
                                 <!-- <div class="price mt-3">
@@ -160,7 +160,7 @@
                                 <!-- Title -->
                                 <h5 class="s-24">Scaling</h5>
                                 <!-- Button -->
-                                <a href="`/contacts?subject=quotation`"
+                                <a href="/contacts?subject=quotation"
                                     class="pt-btn btn r-04 btn--theme hover--theme mt-3">Offer</a>
                                 <!-- Price -->
                                 <!-- <div class="price mt-3"> -->
@@ -231,7 +231,7 @@
                                 <!-- Title -->
                                 <h5 class="s-24">Advanced</h5>
                                 <!-- Button -->
-                                <a href="`/contacts?subject=quotation`"
+                                <a href="/contacts?subject=quotation"
                                     class="pt-btn btn r-04 btn--theme hover--theme mt-3">Offer</a>
                                 <!-- Price -->
                                 <!-- <div class="price mt-3"> -->
@@ -328,7 +328,7 @@
                                 <!-- Title -->
                                 <h5 class="s-24">Enterprise</h5>
                                 <!-- Button -->
-                                <a href="`/contacts?subject=quotation`"
+                                <a href="/contacts?subject=quotation"
                                     class="pt-btn btn r-04 btn--theme hover--theme mt-3">Offer</a>
 
                             </div>
