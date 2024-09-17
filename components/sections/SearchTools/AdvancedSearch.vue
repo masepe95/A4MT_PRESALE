@@ -108,7 +108,16 @@ export default {
 
         const updatePromptId = (id) => {
             routeQueryPromptId.value = id;
+            // Resetta i filtri quando il prompt cambia
+            form.value.selectedCategories = [];
+            form.value.selectedLevels = [];
+            form.value.selectedPrograms = [];
+
+            // Aggiorna l'URL per riflettere il nuovo prompt_id
             router.push({ query: { ...route.query, prompt_id: id } });
+
+            // Applica i filtri (che ora sono resettati) con il nuovo prompt
+            filteredTools();
         };
 
         const toggleDropdown = (dropdown) => {
