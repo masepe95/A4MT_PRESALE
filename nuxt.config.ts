@@ -14,7 +14,7 @@ export default defineNuxtConfig({
             script: [
                 {
                     hid: 'gtag',
-                    src: 'https://www.googletagmanager.com/gtag/js?id=G-GG7P21F453', // Sostituisci con il tuo Measurement ID
+                    src: 'https://www.googletagmanager.com/gtag/js?id=G-DSJH0RRWFY', // Sostituisci con il tuo Measurement ID
                     async: true,
                 },
                 {
@@ -23,7 +23,7 @@ export default defineNuxtConfig({
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', 'G-GG7P21F453'); // Sostituisci con il tuo Measurement ID
+                    gtag('config', 'G-DSJH0RRWFY'); // Sostituisci con il tuo Measurement ID
                     `,
                     type: 'text/javascript',
                     charset: 'utf-8'
